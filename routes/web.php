@@ -37,6 +37,6 @@ Route::get('/about-us', function () {
     return view('transaero-transport-logistics-html-template/html/06_about');
 });
 
-Route::get('/contacts', function () {
+Route::get('/contact', function () {
     return view('transaero-transport-logistics-html-template/html/13_contacts');
 });

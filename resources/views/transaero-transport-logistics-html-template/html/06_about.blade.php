@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Responsive Bootstrap Logistic Html Template">
-<meta name="keywords" content="Trans, Aero, Bootstrap, Html, Template, Logistic, Blog, Transport, Corporate, Cargo, Truck">
-<meta name="author" content="Vadzim Liashkevich">
+<meta name="description" content="Trucking we transport food @ clothing we have a refrigerated trailer so refrigerated or dry goods">
+<meta name="keywords" content="Trans, refrigerated trailer , Logistic, Transport, Corporate, Cargo, Truck,Trucking ">
+<meta name="author" content="Shane Johnson">
 
 <!-- SITE TITLE -->
-<title>TransAero - Transport & Logistics HTML Template</title>
+<title>Burns & Gainer Transport & Logistics</title>
 
 <!-- =========================
       FAV AND TOUCH ICONS  
@@ -51,7 +51,7 @@
 	<div class="main-navbar main-navbar-1">
 		<div class="container">
 			<div class="row">
-                 
+				     
 				<!-- === TOP LOGO === -->
 				 
 				<div class="logo" id="main-logo">
@@ -59,9 +59,15 @@
 						<img src="assets/img/logo.png" alt="" />
 					</div>
 					<div class="logo-text">
-						Trans <span class="color-primary">Aero</span>
+						Burns & Gainer <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
+
+			</div>
+
+
+			<div class="row">
+            
 				 
 				<!-- === TOP SEARCH === -->
 				 
@@ -113,41 +119,39 @@
 					<ul class="nav navbar-nav">
 											
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Home</a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
+						<li>
+							<a href="/">Home</a>
+						</li>
+					<!-- 	<li class="active dropdown">
+							<a data-toggle="dropdown" href="/">Home</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li class="active">
 									<a href="/">Home 1</a>
 								</li>
-								<li>
-									<a href="/home2">Home 2</a>
-								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Service</a>
-							<ul class="dropdown-menu" role="menu">
-								<li >
+						<li>
+							<a  href="/service">Services</a>
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/service">Service</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
 									<a href="/services3">Service 1</a>
 								</li>
-								<li >
+								<li>
 									<a href="/services4">Service 2</a>
 								</li>
 								<li>
 									<a href="/service-detail">Service Details</a>
 								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="active">
-							<a href="/about">About us</a>
-						</li> 
-						<li class="main-menu-separator"></li>
-						<!-- === top menu item === -->
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a data-toggle="dropdown" href="#">Elements</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
@@ -163,24 +167,50 @@
 									<a href="/alerts">Alerts</a>
 								</li>
 							</ul>
-						</li> 
+						</li>  -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Blog</a>
-							<ul class="dropdown-menu" role="menu">
+						<li >
+							<a href="/login">LOGIN</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/login">LOGIN</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
 								<li>
 									<a href="/blog">Blog items</a>
 								</li>
 								<li>
 									<a href="/blog_2">Single Post</a>
 								</li>
-							</ul>
-						</li> 
+							</ul> -->
+						<!-- </li>  -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li >
-							<a class="latest" href="/contacts">Contacts</a>
+							<a href="/signup">SIGNUP</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/signup">SIGNUP</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/blog">Blog items</a>
+								</li>
+								<li>
+									<a href="/blog_2">Single Post</a>
+								</li>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li class="active">
+							<a href="#">About us</a>
+						</li> 
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li>
+								<a class="latest" href="/contact">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -203,7 +233,7 @@
 			<div class="row">
 				
 				<!-- === PAGE HEADER TITLE === -->
-				<div class="page-header-title">
+				<div class="page-header-title" style="margin-top: 3em;">
 					<h2>ABOUT US</h2>
 				</div>
 				
@@ -216,8 +246,8 @@
 				</div>
 				
 				<!-- === PAGE HEADER BUTTON === -->
-				<div class="page-header-button">
-					<a href="#">
+				<div class="page-header-button" style="margin-top: 3em;">
+					<a href="/quote">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
@@ -239,18 +269,18 @@
 	============================== -->
     <div class="def-section about-text">
 		<div class="container">
-			<div class="about-text-image">
+			<!-- <div class="about-text-image">
 				<img src="assets/media/about/1.jpg" alt="" />
-			</div>
-			<h2>We Offer Best Shopping Experience</h2>
-			<p>
+			</div> -->
+			<h2>We Offer Best Shipping Experience</h2>
+			<!-- <p>
 				Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum 
 				In lorem felis sollicit udin sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
 				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
 				aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
 				proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 				doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-			</p>
+			</p> -->
 		</div>
 	</div>
 	<!-- =========================
@@ -267,9 +297,9 @@
 				
 				<!-- === TEAM ITEM === -->
 				
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 					<div class="team-item">
-						<div class="team-item-image">
+						<!-- <div class="team-item-image">
 							<div class="team-item-image-overlay">
 								<div class="team-item-icons">
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -278,21 +308,21 @@
 								</div>
 							</div>
 							<img src="assets/media/team/1.jpg" alt="" />
-						</div>
+						</div> -->
 						<div class="team-item-name">
-							Ted Walmart
+							Barbra
 						</div>
 						<div class="team-item-position">
-							DIRECTOR
+							DIRECTOR - CDL DRIVER
 						</div>
 					</div>
 				</div>
 				
 				<!-- === TEAM ITEM === -->
 				
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 					<div class="team-item">
-						<div class="team-item-image">
+						<!-- <div class="team-item-image">
 							<div class="team-item-image-overlay">
 								<div class="team-item-icons">
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -301,18 +331,18 @@
 								</div>
 							</div>
 							<img src="assets/media/team/2.jpg" alt="" />
-						</div>
+						</div> -->
 						<div class="team-item-name">
-							John Simon
+							Gainer 
 						</div>
 						<div class="team-item-position">
-							SHOP DIRECTOR
+							DIRECTOR - CDL DRIVER
 						</div>
 					</div>
 				</div>
 				
 				<!-- === TEAM ITEM === -->
-				
+				<!-- 
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 					<div class="team-item">
 						<div class="team-item-image">
@@ -333,10 +363,10 @@
 						</div>
 					</div>
 				</div>
-				
+				 -->
 				<!-- === TEAM ITEM === -->
 				
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				<!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 					<div class="team-item">
 						<div class="team-item-image">
 							<div class="team-item-image-overlay">
@@ -356,12 +386,12 @@
 						</div>
 					</div>
 				</div>
-				
+				 -->
 				<!-- === TEAM ITEM === -->
 				
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 					<div class="team-item">
-						<div class="team-item-image">
+						<!-- <div class="team-item-image">
 							<div class="team-item-image-overlay">
 								<div class="team-item-icons">
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -370,19 +400,19 @@
 								</div>
 							</div>
 							<img src="assets/media/team/5.jpg" alt="" />
-						</div>
+						</div> -->
 						<div class="team-item-name">
-							Simon Paul 
+							Shane
 						</div>
 						<div class="team-item-position">
-							DEVELOPER
+							Software Engineer
 						</div>
 					</div>
 				</div>
 				
 				<!-- === TEAM ITEM === -->
 				
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+			<!-- 	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 					<div class="team-item">
 						<div class="team-item-image">
 							<div class="team-item-image-overlay">
@@ -401,7 +431,7 @@
 							SENIOR
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 			</div>
 		</div>
@@ -415,34 +445,34 @@
 	 <!-- ===================================
 	    SECTION REVIEWS AND FAQ
 	======================================== -->
-	<section class="def-section">
+<!-- 	<section class="def-section">
 		<div class="container">
-			<div class="row">
+			<div class="row"> -->
 				
 				<!-- === REVIEWS === -->
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="home-review">
-						
+						 -->
 						<!-- === TITLE GROUP === -->
-						<div class="title-group">
+					<!-- 	<div class="title-group">
 							<h2>TESTIMONIALS</h2>
 							<div class="subtitle with-square">INTEGER CONGUE ELIT NON</div>
-						</div>
+						</div> -->
 						
 						<!-- === OWL CAROUSEL === -->
-						<div class="home-review-carousel owl-carousel owl-theme" id="owl-review">
+						<!-- <div class="home-review-carousel owl-carousel owl-theme" id="owl-review"> -->
 							
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-review-carousel-item">
+							<!-- <div class="home-review-carousel-item">
 								<div class="home-review-carousel-text">
 									<div class="home-review-carousel-quote"><div><i class="fa fa-quote-left"></i></div></div>
 									<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.
 									Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit 
 									amet eros.</p>
-								</div>
+								</div> -->
 								
 								<!-- === OWL CAROUSEL ITEM AUTHOR=== -->
-								<div class="home-review-carousel-people">
+							<!-- 	<div class="home-review-carousel-people">
 									<div class="home-review-carousel-avatar">
 										<img src="assets/media/avatars/avatar1.png" alt="" />
 									</div>
@@ -454,18 +484,18 @@
 									</div>
 								</div>
 							</div>
-							
+							 -->
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-review-carousel-item">
+							<!-- <div class="home-review-carousel-item">
 								<div class="home-review-carousel-text">
 									<div class="home-review-carousel-quote"><div><i class="fa fa-quote-left"></i></div></div>
 									<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.
 									Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit 
 									amet eros.</p> 
-								</div>
+								</div> -->
 								
 								<!-- === OWL CAROUSEL ITEM AUTHOR=== -->
-								<div class="home-review-carousel-people">
+							<!-- 	<div class="home-review-carousel-people">
 									<div class="home-review-carousel-avatar">
 										<img src="assets/media/avatars/avatar1.png" alt="" />
 									</div>
@@ -476,19 +506,19 @@
 										Happy client
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-review-carousel-item">
+							<!-- <div class="home-review-carousel-item">
 								<div class="home-review-carousel-text">
 									<div class="home-review-carousel-quote"><div><i class="fa fa-quote-left"></i></div></div>
 									<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.
 									Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit 
 									amet eros.</p>
-								</div>
+								</div> -->
 								
 								<!-- === OWL CAROUSEL ITEM AUTHOR=== -->
-								<div class="home-review-carousel-people">
+							<!-- 	<div class="home-review-carousel-people">
 									<div class="home-review-carousel-avatar">
 										<img src="assets/media/avatars/avatar1.png" alt="" />
 									</div>
@@ -502,23 +532,23 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 				<!-- === FAQ === -->
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="home-faq">
+			<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="home-faq"> -->
 						
 						<!-- === TITLE GROUP === -->
-						<div class="title-group">
+						<!-- <div class="title-group">
 							<h2>WHY CHOSE US</h2>
 							<div class="subtitle with-square">PELENTESQUE INYD URNA</div>
 						</div>
-						
+						 -->
 						<!-- === ACCORDION === -->
-						<div class="panel-group" id="accordion">
+						<!-- <div class="panel-group" id="accordion"> -->
 							
 							<!-- === ACCORDION ITEM === -->
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
@@ -533,10 +563,10 @@
 										rhoncus pede.</p>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!-- === ACCORDION ITEM === -->
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
@@ -551,10 +581,10 @@
 										rhoncus pede.</p>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!-- === ACCORDION ITEM === -->
-							<div class="panel panel-default">
+					<!-- 		<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -576,7 +606,7 @@
 			
 			</div>
 		</div>
-	</section>
+	</section> -->
 	 <!-- ===================================
 		END SECTION REVIEWS AND FAQ
 	======================================== -->
@@ -621,94 +651,11 @@
 	======================================== -->
      
 	
-	<!-- ===================================
+	
+<!-- ===================================
 		FOOTER
 	======================================== -->
-	<footer class="def-section footer">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-1">
-					<div class="logo with-border-bottom">
-						<div class="logo-image">
-							<img src="assets/img/logo.png" alt="" />
-						</div>
-						<div class="logo-text">
-							Trans <span class="color-primary">Aero</span>
-						</div>
-					</div>
-					<div class="footer-1-text">
-						<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis. 
-						Etiam sollicitudin, ipsum pulvinar rutrum,tellus ipsum. laoreet </p>
-					</div>
-					<div class="footer-1-button">
-						<a href="06_about.html"><div class="my-btn my-btn-primary">
-							<div class="my-btn-bg-top"></div>
-							<div class="my-btn-bg-bottom"></div>
-							<div class="my-btn-text">
-								MORE
-							</div>
-						</div></a>
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-2">
-					<h4 class="with-square with-border-bottom">LINKS</h4>
-					<div class="footer-2-links">
-						<div class="footer-2-links-1">
-							<ul>
-								<li><a href="">Home</a></li>
-								<li><a href="">Service</a></li>
-								<li><a href="">About us</a></li>
-								<li><a href="">Testimonial</a></li>
-								<li><a href="">Blog</a></li>
-								<li><a href="">Clients</a></li>
-							</ul>
-						</div>
-						<div class="footer-2-links-2">
-							<ul>
-								<li><a href="">Contact</a></li>
-								<li><a href="">Quote</a></li>
-								<li><a href="">Policy</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-3">
-					<h4 class="with-square with-border-bottom">ADRESS</h4>
-					<div class="footer-3-phone footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-phone"></i></span>
-						Telephone:  + 390 12 345 6789
-					</div>
-					<div class="footer-3-fax footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-fax"></i></span>
-						Fax/phone:  + 390 12 345 6789
-					</div>
-					<div class="footer-3-mail footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-envelope"></i></span>
-						E-mail:  sale@transaero.com
-					</div>
-					<div class="footer-3-adress footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-map-marker"></i></span>
-						Adress: Transaero ltd. inc.  USA Jones McLean Drive , Los Angeles, California VA 22108 
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-4">
-					<h4 class="with-square with-border-bottom">INSTAGRAM FEED</h4>
-					<div class="footer-4-widget">
-						<iframe src="http://widget.websta.me/in/tag:truck/?s=76&amp;w=3&amp;h=2&amp;b=0&amp;p=13"></iframe> <!-- websta - web.stagram.com -->
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</footer>
+	@include('transaero-transport-logistics-html-template/html/components/footer')
 	<!-- ===================================
 		END FOOTER
 	======================================== -->
@@ -717,144 +664,19 @@
 	<!-- ===================================
 		BOTTOM SECTION
 	======================================== -->
-	<div class="bottom">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === BOTTOM LEFT === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-1">
-					COPYRIGHT 2015 | TRANS <span class="color-primary">AERO</span>
-				</div>
-				
-				<!-- === BOTTOM CENTER === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-2">
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-twitter"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-facebook"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-google-plus"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-pinterest-p"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-instagram"></i>
-						</div>
-					</div></a>
-				</div>
-				
-				<!-- === BOTTOM RIGHT === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-3">
-					<a href="#">TERM OF USE</a> | 
-					MADE BY <a href="#">TRANS <span class="color-primary">AERO</span></a>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+	@include('transaero-transport-logistics-html-template/html/components/bottom-section')
 	<!-- ===================================
 		END BOTTOM SECTION
 	======================================== -->
 	
-	
 	<!-- =========================
 	   SLIDE MENU
 	============================== -->
-	<aside id="slide-menu" class="slide-menu">
-		
-		<!-- === CLOSE MENU BUTON === -->	
-		<div class="close-menu" id="close-menu">
-			<i class="fa fa-close"></i>
-		</div>
-		
-		<!-- === SLIDE MENU === -->	
-		<ul id="left-menu" class="left-menu">
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Home <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="index.html">Home 1</a></li>
-					<li><a href="02_home.html">Home 2</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Service <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="03_services.html">Service 1</a></li>
-					<li><a href="04_services.html">Service 2</a></li>
-					<li><a href="05_service_detail.html">Service Details</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="06_about.html">About us</a>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Elements <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="07_typography.html">Typography</a></li>
-					<li><a href="08_buttons.html">Buttons</a></li>
-					<li><a href="09_progress.html">Progress Bars</a></li>
-					<li><a href="10_alerts.html">Alerts</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li>
-				<a href="#">Blog <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="11_blog.html">Blog items</a></li>
-					<li><a href="12_blog_detail.html">Single Post</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li>
-				<a href="13_contacts.html">Contacts</a>
-			</li>
-			
-		</ul>
-		
-	</aside>
+	@include('transaero-transport-logistics-html-template/html/components/aside')
 	<!-- =========================
 	   END SLIDE MENU
 	============================== -->
+	
 	
 	
 	<!-- =========================

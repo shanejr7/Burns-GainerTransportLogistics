@@ -42,8 +42,8 @@
 						</div>
 						<div class="footer-2-links-2">
 							<ul>
-								<li><a href="/contact">Contact</a></li>
-								<li><a href="/quote">Quote</a></li>
+								<li><a href="/contact">Contact us</a></li>
+								<li><a href="/quote">Shipping quote</a></li>
 								<!-- <li><a href="/policy">Policy</a></li> -->
 							</ul>
 						</div>

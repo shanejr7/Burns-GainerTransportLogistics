@@ -207,7 +207,7 @@
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li >
-							<a class="latest" href="/contacts">Contacts</a>
+							<a class="latest" href="/contact">Contact Us</a>
 						</li>
 					</ul>
 				</div>

@@ -209,7 +209,7 @@
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li class="active">
-							<a class="latest" href="#">Contacts</a>
+								<a class="latest" href="#">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -232,20 +232,20 @@
 				
 				<!-- === PAGE HEADER TITLE === -->
 				<div class="page-header-title" style="margin-top: 3em;">
-					<h2>CONTACTS</h2>
+					<h2>CONTACTS US</h2>
 				</div>
 				
 				<!-- === PAGE HEADER BREADCRUMB === -->
 				<div class="page-header-breadcrumb">
 					<ol class="breadcrumb">
 						<li><a href="index.html">Home</a></li>
-						<li class="active">CONTACTS</li>
+						<li class="active">CONTACT US</li>
 					</ol>
 				</div>
 				
 				<!-- === PAGE HEADER BUTTON === -->
 				<div class="page-header-button" style="margin-top: 3em;">
-					<a href="#">
+					<a href="/quote">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
