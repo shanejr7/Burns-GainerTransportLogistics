@@ -227,7 +227,7 @@
 	<!-- ===================================
 		PAGE HEADER
 	======================================== -->
-	<div class="page-header" data-stellar-background-ratio="0.4">
+	<div class="page-header" data-stellar-background-ratio="0.4"  style="background-image: url('assets/media/main-slider/nav_img.jpg');">
 		<div class="page-header-overlay"></div>
 		<div class="container">
 			<div class="row">
