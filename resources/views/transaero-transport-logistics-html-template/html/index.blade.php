@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Responsive Bootstrap Logistic Html Template">
-<meta name="keywords" content="Trans, Aero, Bootstrap, Html, Template, Logistic, Blog, Transport, Corporate, Cargo, Truck">
-<meta name="author" content="Vadzim Liashkevich">
+<meta name="description" content="Trucking we transport food @ clothing we have a refrigerated trailer so refrigerated or dry goods">
+<meta name="keywords" content="Trans, refrigerated trailer , Logistic, Transport, Corporate, Cargo, Truck,Trucking ">
+<meta name="author" content="Shane Johnson">
 
 <!-- SITE TITLE -->
-<title>TransAero - Transport & Logistics HTML Template</title>
+<title>Burns & Gainer Transport & Logistics</title>
 
 <!-- =========================
       FAV AND TOUCH ICONS  
@@ -59,7 +59,7 @@
 						<img src="assets/img/logo.png" alt="" />
 					</div>
 					<div class="logo-text">
-						Trans <span class="color-primary">Aero</span>
+						Burns & Gainer  <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
 				 
@@ -113,22 +113,25 @@
 					<ul class="nav navbar-nav">
 											
 						<!-- === top menu item === -->
-						<li class="active dropdown">
-							<a data-toggle="dropdown" href="#">Home</a>
-							<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#">Home</a>
+						</li>
+					<!-- 	<li class="active dropdown">
+							<a data-toggle="dropdown" href="/">Home</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
 								<li class="active">
 									<a href="/">Home 1</a>
 								</li>
-								<li>
-									<a href="/home2">Home 2</a>
-								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Service</a>
-							<ul class="dropdown-menu" role="menu">
+						<li>
+							<a  href="/service">Services</a>
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/service">Service</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
 								<li>
 									<a href="/services3">Service 1</a>
 								</li>
@@ -138,16 +141,11 @@
 								<li>
 									<a href="/service-detail">Service Details</a>
 								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li>
-							<a href="/about">About us</a>
-						</li> 
-						<li class="main-menu-separator"></li>
-						<!-- === top menu item === -->
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a data-toggle="dropdown" href="#">Elements</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
@@ -163,19 +161,45 @@
 									<a href="/alerts">Alerts</a>
 								</li>
 							</ul>
-						</li> 
+						</li>  -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Blog</a>
-							<ul class="dropdown-menu" role="menu">
+						<li >
+							<a href="/login">LOGIN</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/login">LOGIN</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
 								<li>
 									<a href="/blog">Blog items</a>
 								</li>
 								<li>
 									<a href="/blog_2">Single Post</a>
 								</li>
-							</ul>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li >
+							<a href="/signup">SIGNUP</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/signup">SIGNUP</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/blog">Blog items</a>
+								</li>
+								<li>
+									<a href="/blog_2">Single Post</a>
+								</li>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li>
+							<a href="/about-us">About us</a>
 						</li> 
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
@@ -209,8 +233,8 @@
 				
 				<!-- === slide image === -->	
                 <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
-				data-src="assets/media/main-slider/1.jpg"
-				data-retina="assets/media/main-slider/1.jpg" alt="" />
+				data-src="assets/media/main-slider/nav_img.jpg"
+				data-retina="assets/media/main-slider/nav_img.jpg" alt="" />
 				
 				<!-- === slide container === -->	
 				<div class="container">
@@ -227,7 +251,7 @@
         					Quality services of cargo
         				</h2>
             
-                        <a class="sp-layer main-button" href="#"
+                        <a class="sp-layer main-button" href="/quote"
                             data-position="rightCenter" data-horizontal="15" data-vertical="55"
             				data-show-transition="left" data-hide-transition="left" data-show-delay="600" data-hide-delay="600">
 							<div class="my-btn my-btn-primary">
@@ -240,7 +264,7 @@
 						</a>
                         
 						<!-- === slide buttons === -->	
-                        <div class="sp-layer main-slider-buttons" 
+                      <!--   <div class="sp-layer main-slider-buttons" 
 							data-position="rightCenter" data-horizontal="15" data-vertical="165" data-hide-delay="600">
 							<a class="main-slider-button-prev" href="#">
 								<div class="my-btn my-btn-default">
@@ -260,7 +284,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> -->
                          
                     </div>
                 </div>
@@ -274,9 +298,9 @@
 				<div class="main-slider-overlay"></div>
 				
 				<!-- === slide image === -->	
-                <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
-				data-src="assets/media/main-slider/2.jpg"
-				data-retina="assets/media/main-slider/2.jpg" alt="" />
+           <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
+				data-src="assets/media/main-slider/nav_img.jpg"
+				data-retina="assets/media/main-slider/nav_img.jpg" alt="" />
 				
 				<!-- === slide container === -->	
 				<div class="container">
@@ -293,7 +317,7 @@
         					Quality services of cargo
         				</h2>
             
-                        <a class="sp-layer main-button" href="#"
+                        <a class="sp-layer main-button" href="/quote"
                             data-position="rightCenter" data-horizontal="15" data-vertical="55"
             				data-show-transition="down" data-hide-transition="down" data-show-delay="200" data-hide-delay="200">
 							<div class="my-btn my-btn-primary">
@@ -306,7 +330,7 @@
 						</a>
                         
 						<!-- === slide buttons === -->	
-                        <div class="sp-layer main-slider-1-buttons" 
+                     <!--    <div class="sp-layer main-slider-1-buttons" 
 							data-position="rightCenter" data-horizontal="15" data-vertical="165" data-hide-delay="600">
 							<a class="main-slider-button-prev" href="#">
 								<div class="my-btn my-btn-default">
@@ -326,7 +350,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> -->
                          
                     </div>
                 </div>
@@ -340,9 +364,9 @@
 				<div class="main-slider-overlay"></div>
 				
 				<!-- === slide image === -->	
-                <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
-				data-src="assets/media/main-slider/3.jpg"
-				data-retina="assets/media/main-slider/3.jpg" alt="" />
+             <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
+				data-src="assets/media/main-slider/nav_img.jpg"
+				data-retina="assets/media/main-slider/nav_img.jpg" alt="" />
 				
 				<!-- === slide container === -->	
 				<div class="container">
@@ -359,7 +383,7 @@
         					Quality services of cargo
         				</h2>
             
-                        <a class="sp-layer main-button" href="#"
+                        <a class="sp-layer main-button" href="/quote"
                             data-position="rightCenter" data-horizontal="15" data-vertical="55"
             				data-show-transition="up" data-hide-transition="up" data-show-delay="600" data-hide-delay="600">
 							<div class="my-btn my-btn-primary">
@@ -372,7 +396,7 @@
 						</a>
                         
 						<!-- === slide buttons === -->	
-                        <div class="sp-layer main-slider-buttons" 
+                      <!--   <div class="sp-layer main-slider-buttons" 
 							data-position="rightCenter" data-horizontal="15" data-vertical="165" data-hide-delay="600">
 							<a class="main-slider-button-prev" href="#">
 								<div class="my-btn my-btn-default">
@@ -392,7 +416,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> -->
                          
                     </div>
                 </div>
@@ -414,7 +438,7 @@
                  
 				<!-- === SERVICE ITEM === -->	
 				
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				
 					<div class="service">				
 						<div class="service-icon">
@@ -422,10 +446,10 @@
 						</div>
 						<h3>road freight</h3>
 						<div class="service-text">
-							<p>Integer congue, elit semper laoreet sed<br>lectus orci posuh nisl tempor<br>lacus felis ac mauris.<br>elit non in urna.</p>
+							<p >Trucking we transport food @ clothing we <br>have a refrigerated trailer <br>so refrigerated or <br>dry goods  </p>
 						</div>
 						<div class="service-button">
-							<a href="05_service_detail.html">
+							<a href="/service">
 								<div class="my-btn my-btn-default">
 									<div class="my-btn-bg-top"></div>
 									<div class="my-btn-bg-bottom"></div>
@@ -441,7 +465,7 @@
                 
 				<!-- === SERVICE ITEM === -->
 				
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="service-mark">
+				<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="service-mark">
 				
 					<div class="service-mark-border-top"></div>
 					<div class="service-mark-border-right"></div>
@@ -468,11 +492,11 @@
 						</div>
 					</div>
 					
-				</div>
+				</div> -->
                 
 				<!-- === SERVICE ITEM === -->
 				
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+				<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				
 					<div class="service">
 						<div class="service-icon">
@@ -495,11 +519,11 @@
 						</div>
                      </div>
 					 
-                 </div>
+                 </div> -->
                 
 				<!-- === SERVICE ITEM === -->
 				
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+				<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				
 					<div class="service">
 						<div class="service-icon">
@@ -522,7 +546,7 @@
 						</div>
                      </div>
 					 
-                 </div>
+                 </div> -->
 				 
              </div>
          </div>
@@ -547,15 +571,15 @@
 						<!-- === TITLE GROUP === -->	
 						<div class="title-group">
 							<h2>ABOUT US</h2>
-							<div class="subtitle with-square">ALIQUAM MALESUADA</div>
+							<div class="subtitle with-square">National Shipping</div>
 						</div>
 						
 						<!-- === ABOUT US TEXT === -->	
-						<p>
+					<!-- 	<p>
 							Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut nisl quis enim dignissim sagittis. 
 							Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. 
 							Proin magna. Duis vel nibh at velit scelerisque suscipit.
-						</p>
+						</p> -->
 						
 						<div class="home-about-video">
 							<!-- === PLAY VIDEO BUTTON === -->	
@@ -605,15 +629,13 @@
 						<!-- === TITLE GROUP === -->
 						<div class="title-group">
 							<h2>REQUEST A QUOTE</h2>
-							<div class="subtitle with-square">Curabitur laoreet convallis</div>
+							<div class="subtitle with-square">send us a shipping request</div>
 						</div>
 						
 						<!-- === GET QUOTE TEXT === -->
-						<p>
-							Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut nisl quis enim dignissim sagittis. 
-							Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. 
-							Proin magna. Duis vel nibh at velit scelerisque suscipit.
-						</p>
+					<!-- 	<p>
+							Receive an estimate. Accept our shipping. ! 
+						</p> -->
 						
 						<!-- === GET QUOTE FORM=== -->
 						<div class="get-quote-form">
@@ -669,34 +691,34 @@
 	 <!-- ===================================
 	    SECTION REVIEWS AND FAQ
 	======================================== -->
-	<section class="def-section">
+<!-- 	<section class="def-section">
 		<div class="container">
-			<div class="row">
+			<div class="row"> -->
 				
 				<!-- === REVIEWS === -->
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="home-review">
+		<!-- 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="home-review"> -->
 						
 						<!-- === TITLE GROUP === -->
-						<div class="title-group">
+						<!-- <div class="title-group">
 							<h2>TESTIMONIALS</h2>
 							<div class="subtitle with-square">INTEGER CONGUE ELIT NON</div>
-						</div>
+						</div> -->
 						
 						<!-- === OWL CAROUSEL === -->
-						<div class="home-review-carousel owl-carousel owl-theme" id="owl-review">
-							
+				<!-- 		<div class="home-review-carousel owl-carousel owl-theme" id="owl-review">
+							 -->
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-review-carousel-item">
+							<!-- <div class="home-review-carousel-item">
 								<div class="home-review-carousel-text">
 									<div class="home-review-carousel-quote"><div><i class="fa fa-quote-left"></i></div></div>
 									<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.
 									Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit 
 									amet eros.</p>
-								</div>
+								</div> -->
 								
 								<!-- === OWL CAROUSEL ITEM AUTHOR=== -->
-								<div class="home-review-carousel-people">
+								<!-- <div class="home-review-carousel-people">
 									<div class="home-review-carousel-avatar">
 										<img src="assets/media/avatars/avatar1.png" alt="" />
 									</div>
@@ -707,19 +729,19 @@
 										Happy client
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-review-carousel-item">
+							<!-- <div class="home-review-carousel-item">
 								<div class="home-review-carousel-text">
 									<div class="home-review-carousel-quote"><div><i class="fa fa-quote-left"></i></div></div>
 									<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.
 									Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit 
 									amet eros.</p> 
-								</div>
+								</div> -->
 								
 								<!-- === OWL CAROUSEL ITEM AUTHOR=== -->
-								<div class="home-review-carousel-people">
+							<!-- 	<div class="home-review-carousel-people">
 									<div class="home-review-carousel-avatar">
 										<img src="assets/media/avatars/avatar1.png" alt="" />
 									</div>
@@ -730,19 +752,19 @@
 										Happy client
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-review-carousel-item">
+						<!-- 	<div class="home-review-carousel-item">
 								<div class="home-review-carousel-text">
 									<div class="home-review-carousel-quote"><div><i class="fa fa-quote-left"></i></div></div>
 									<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.
 									Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit 
 									amet eros.</p>
-								</div>
+								</div> -->
 								
 								<!-- === OWL CAROUSEL ITEM AUTHOR=== -->
-								<div class="home-review-carousel-people">
+							<!-- 	<div class="home-review-carousel-people">
 									<div class="home-review-carousel-avatar">
 										<img src="assets/media/avatars/avatar1.png" alt="" />
 									</div>
@@ -756,23 +778,23 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 				<!-- === FAQ === -->
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="home-faq">
+			<!-- 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="home-faq"> -->
 						
 						<!-- === TITLE GROUP === -->
-						<div class="title-group">
+						<!-- <div class="title-group">
 							<h2>WHY CHOSE US</h2>
 							<div class="subtitle with-square">PELENTESQUE INYD URNA</div>
 						</div>
-						
+						 -->
 						<!-- === ACCORDION === -->
-						<div class="panel-group" id="accordion">
+						<!-- <div class="panel-group" id="accordion"> -->
 							
 							<!-- === ACCORDION ITEM === -->
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
@@ -788,9 +810,9 @@
 									</div>
 								</div>
 							</div>
-							
+							 -->
 							<!-- === ACCORDION ITEM === -->
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
@@ -805,10 +827,10 @@
 										rhoncus pede.</p>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!-- === ACCORDION ITEM === -->
-							<div class="panel panel-default">
+						<!-- 	<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -826,11 +848,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			
-			</div>
+	<!-- 		</div>
 		</div>
-	</section>
+	</section> -->
 	 <!-- ===================================
 		END SECTION REVIEWS AND FAQ
 	======================================== -->
@@ -915,18 +937,18 @@
 	<!-- ===================================
 		BLOG SECTION
 	======================================== -->
-	<section class="def-section home-blog">
+	<!-- <section class="def-section home-blog">
 		<div class="container">
-			<div class="row">
+			<div class="row"> -->
 			
 				<!-- === TITLE GROUP === -->
-				<div class="title-group">
+				<!-- <div class="title-group">
 					<h2>BLOG COMPANY</h2>
 					<div class="subtitle with-square">INTEGER CONGUE ELIT</div>
-				</div>
+				</div> -->
 				
 				<!-- === BLOG ITEM === -->
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<!-- 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="home-blog-item home-blog-item-mark">
 						<div class="home-blog-item-date">
 							<div class="home-blog-item-date-number">26</div>MAY
@@ -950,9 +972,9 @@
 						</div>
 					</div>
 				</div>
-				
+				 -->
 				<!-- === BLOG ITEM === -->
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<!-- 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="home-blog-item">
 						<div class="home-blog-item-date">
 							<div class="home-blog-item-date-number">22</div>MAY
@@ -975,10 +997,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 				<!-- === BLOG ITEM === -->				
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<!-- 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="home-blog-item">
 						<div class="home-blog-item-date">
 							<div class="home-blog-item-date-number">20</div>MAY
@@ -1002,9 +1024,9 @@
 						</div>
 					</div>
 				</div>
-						
+						 -->
 				<!-- === BLOG ITEM === -->
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="home-blog-item">
 						<div class="home-blog-item-date">
 							<div class="home-blog-item-date-number">15</div>MAY
@@ -1027,10 +1049,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 				<!-- === BLOG READ MORE BUTTON === -->
-				<div class="row home-blog-more">
+				<!-- <div class="row home-blog-more">
 					<a href="11_blog.html"><div class="my-btn my-btn-primary">
 						<div class="my-btn-bg-top"></div>
 						<div class="my-btn-bg-bottom"></div>
@@ -1042,7 +1064,7 @@
 				
 			</div>
 		</div>
-	</section>
+	</section> -->
     <!-- ===================================
 		END BLOG SECTION
 	======================================== -->
@@ -1050,116 +1072,116 @@
 	<!-- ===================================
 		CLIENTS SECTION
 	======================================== -->
-	<section class="def-section" id="clients-section">
+<!-- 	<section class="def-section" id="clients-section">
 		<div class="home-big-image" data-stellar-background-ratio="0.4"></div>
 		<div class="container">
 			<div class="row">
 			
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="home-clients">
+					<div class="home-clients"> -->
 						
 						<!-- === TITLE GROUP === -->
-						<div class="title-group">
+						<!-- <div class="title-group">
 							<h2>CLIENTS</h2>
 							<div class="subtitle with-square">ALIQUAM MALESUADA</div>
-						</div>
-						<p>
+						</div> -->
+						<!-- <p>
 						Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut nisl quis enim dignissim sagittis. 
 						Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio. 
-						</p>
+						</p> -->
 						
 						<!-- === OWL CAROUSEL === -->
-						<div class="home-clients-carousel owl-carousel owl-theme" id="owl-clients">
+					<!-- 	<div class="home-clients-carousel owl-carousel owl-theme" id="owl-clients"> -->
 							
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-clients-carousel-block">
+							<!-- <div class="home-clients-carousel-block"> -->
 								
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client1.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item ">
+								<!-- <div class="home-clients-carousel-item ">
 									<a href="#"><img src="assets/media/clients/client2.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client3.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client4.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client5.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+							<!-- 	<div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client6.png" alt="" /></a>
 								</div>
 								<div class="home-clients-carousel-hline"></div>
 								<div class="home-clients-carousel-vline1"></div>
 								<div class="home-clients-carousel-vline2"></div>
 							</div>
-							
+							 -->
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-clients-carousel-block">
+							<!-- <div class="home-clients-carousel-block"> -->
 								
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client1.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item ">
+								<!-- <div class="home-clients-carousel-item ">
 									<a href="#"><img src="assets/media/clients/client2.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client3.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client4.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client5.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client6.png" alt="" /></a>
 								</div>
 								<div class="home-clients-carousel-hline"></div>
 								<div class="home-clients-carousel-vline1"></div>
 								<div class="home-clients-carousel-vline2"></div>
-							</div>
+							</div> -->
 							
 							<!-- === OWL CAROUSEL ITEM === -->
-							<div class="home-clients-carousel-block">
+							<!-- <div class="home-clients-carousel-block"> -->
 								
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client1.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item ">
+								<!-- <div class="home-clients-carousel-item ">
 									<a href="#"><img src="assets/media/clients/client2.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client3.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+								<!-- <div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client4.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+							<!-- 	<div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client5.png" alt="" /></a>
-								</div>
+								</div> -->
 								<!-- === client item === -->
-								<div class="home-clients-carousel-item">
+							<!-- 	<div class="home-clients-carousel-item">
 									<a href="#"><img src="assets/media/clients/client6.png" alt="" /></a>
 								</div>
 								<div class="home-clients-carousel-hline"></div>
@@ -1167,9 +1189,9 @@
 								<div class="home-clients-carousel-vline2"></div>
 							</div>
 						</div>
-						
+						 -->
 						<!-- === OWL CAROUSEL BUTTONS === -->
-						<div class="home-clients-buttons">
+				<!-- 		<div class="home-clients-buttons">
 							<a id="prev-clients" href="#"><div class="my-btn my-btn-primary">
 								<div class="my-btn-bg-top"></div>
 								<div class="my-btn-bg-bottom"></div>
@@ -1191,7 +1213,7 @@
 
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- ===================================
 		END CLIENTS SECTION
 	======================================== -->
@@ -1238,91 +1260,7 @@
 	<!-- ===================================
 		FOOTER
 	======================================== -->
-	<footer class="def-section footer">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-1">
-					<div class="logo with-border-bottom">
-						<div class="logo-image">
-							<img src="assets/img/logo.png" alt="" />
-						</div>
-						<div class="logo-text">
-							Trans <span class="color-primary">Aero</span>
-						</div>
-					</div>
-					<div class="footer-1-text">
-						<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis. 
-						Etiam sollicitudin, ipsum pulvinar rutrum,tellus ipsum. laoreet </p>
-					</div>
-					<div class="footer-1-button">
-						<a href="06_about.html"><div class="my-btn my-btn-primary">
-							<div class="my-btn-bg-top"></div>
-							<div class="my-btn-bg-bottom"></div>
-							<div class="my-btn-text">
-								MORE
-							</div>
-						</div></a>
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-2">
-					<h4 class="with-square with-border-bottom">LINKS</h4>
-					<div class="footer-2-links">
-						<div class="footer-2-links-1">
-							<ul>
-								<li><a href="">Home</a></li>
-								<li><a href="">Service</a></li>
-								<li><a href="">About us</a></li>
-								<li><a href="">Testimonial</a></li>
-								<li><a href="">Blog</a></li>
-								<li><a href="">Clients</a></li>
-							</ul>
-						</div>
-						<div class="footer-2-links-2">
-							<ul>
-								<li><a href="">Contact</a></li>
-								<li><a href="">Quote</a></li>
-								<li><a href="">Policy</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-3">
-					<h4 class="with-square with-border-bottom">ADRESS</h4>
-					<div class="footer-3-phone footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-phone"></i></span>
-						Telephone:  + 390 12 345 6789
-					</div>
-					<div class="footer-3-fax footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-fax"></i></span>
-						Fax/phone:  + 390 12 345 6789
-					</div>
-					<div class="footer-3-mail footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-envelope"></i></span>
-						E-mail:  sale@transaero.com
-					</div>
-					<div class="footer-3-adress footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-map-marker"></i></span>
-						Adress: Transaero ltd. inc.  USA Jones McLean Drive , Los Angeles, California VA 22108 
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-4">
-					<h4 class="with-square with-border-bottom">INSTAGRAM FEED</h4>
-					<div class="footer-4-widget">
-						<iframe src="http://widget.websta.me/in/tag:truck/?s=76&amp;w=3&amp;h=2&amp;b=0&amp;p=13"></iframe> <!-- websta - web.stagram.com -->
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</footer>
+	@include('transaero-transport-logistics-html-template/html/components/footer')
 	<!-- ===================================
 		END FOOTER
 	======================================== -->
@@ -1331,63 +1269,7 @@
 	<!-- ===================================
 		BOTTOM SECTION
 	======================================== -->
-	<div class="bottom">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === BOTTOM LEFT === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-1">
-					COPYRIGHT 2015 | TRANS <span class="color-primary">AERO</span>
-				</div>
-				
-				<!-- === BOTTOM CENTER === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-2">
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-twitter"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-facebook"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-google-plus"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-pinterest-p"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-instagram"></i>
-						</div>
-					</div></a>
-				</div>
-				
-				<!-- === BOTTOM RIGHT === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-3">
-					<a href="#">TERM OF USE</a> | 
-					MADE BY <a href="#">TRANS <span class="color-primary">AERO</span></a>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+	@include('transaero-transport-logistics-html-template/html/components/bottom-section')
 	<!-- ===================================
 		END BOTTOM SECTION
 	======================================== -->
@@ -1395,76 +1277,7 @@
 	<!-- =========================
 	   SLIDE MENU
 	============================== -->
-	<aside id="slide-menu" class="slide-menu">
-		
-		<!-- === CLOSE MENU BUTON === -->	
-		<div class="close-menu" id="close-menu">
-			<i class="fa fa-close"></i>
-		</div>
-		
-		<!-- === SLIDE MENU === -->	
-		<ul id="left-menu" class="left-menu">
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Home <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="index.html">Home 1</a></li>
-					<li><a href="02_home.html">Home 2</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Service <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="03_services.html">Service 1</a></li>
-					<li><a href="04_services.html">Service 2</a></li>
-					<li><a href="05_service_detail.html">Service Details</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="06_about.html">About us</a>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Elements <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="07_typography.html">Typography</a></li>
-					<li><a href="08_buttons.html">Buttons</a></li>
-					<li><a href="09_progress.html">Progress Bars</a></li>
-					<li><a href="10_alerts.html">Alerts</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li>
-				<a href="#">Blog <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="11_blog.html">Blog items</a></li>
-					<li><a href="12_blog_detail.html">Single Post</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li>
-				<a href="13_contacts.html">Contacts</a>
-			</li>
-			
-		</ul>
-		
-	</aside>
+	@include('transaero-transport-logistics-html-template/html/components/aside')
 	<!-- =========================
 	   END SLIDE MENU
 	============================== -->

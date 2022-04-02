@@ -670,7 +670,7 @@
 	<script src="assets/js/jquery.stellar.min.js"></script>
 	
 	<!-- SLIDER PRO  -->
-	<script src="assets/assets/slider-pro/js/jquery.sliderPro.min.js"></script>
+	<script src="assets/slider-pro/js/jquery.sliderPro.min.js"></script>
 	
 	<!-- SCROLLSPY -->
 	<script src="assets/js/scrollspy.min.js"></script>

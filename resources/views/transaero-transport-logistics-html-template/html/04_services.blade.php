@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Responsive Bootstrap Logistic Html Template">
-<meta name="keywords" content="Trans, Aero, Bootstrap, Html, Template, Logistic, Blog, Transport, Corporate, Cargo, Truck">
-<meta name="author" content="Vadzim Liashkevich">
+<meta name="description" content="Trucking we transport food @ clothing we have a refrigerated trailer so refrigerated or dry goods">
+<meta name="keywords" content="Trans, refrigerated trailer , Logistic, Transport, Corporate, Cargo, Truck,Trucking ">
+<meta name="author" content="Shane Johnson">
 
 <!-- SITE TITLE -->
-<title>TransAero - Transport & Logistics HTML Template</title>
+<title>Burns & Gainer Transport & Logistics</title>
 
 <!-- =========================
       FAV AND TOUCH ICONS  
@@ -51,7 +51,7 @@
 	<div class="main-navbar main-navbar-1">
 		<div class="container">
 			<div class="row">
-                 
+				     
 				<!-- === TOP LOGO === -->
 				 
 				<div class="logo" id="main-logo">
@@ -59,9 +59,15 @@
 						<img src="assets/img/logo.png" alt="" />
 					</div>
 					<div class="logo-text">
-						Trans <span class="color-primary">Aero</span>
+						Burns & Gainer <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
+
+			</div>
+
+
+			<div class="row">
+            
 				 
 				<!-- === TOP SEARCH === -->
 				 
@@ -113,41 +119,39 @@
 					<ul class="nav navbar-nav">
 											
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Home</a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
+						<li>
+							<a href="/">Home</a>
+						</li>
+					<!-- 	<li class="active dropdown">
+							<a data-toggle="dropdown" href="/">Home</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li class="active">
 									<a href="/">Home 1</a>
 								</li>
-								<li>
-									<a href="/home2">Home 2</a>
-								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Service</a>
-							<ul class="dropdown-menu" role="menu">
-								<li >
+						<li>
+							<a  href="#">Services</a>
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/service">Service</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
 									<a href="/services3">Service 1</a>
 								</li>
-								<li class="active">
+								<li>
 									<a href="/services4">Service 2</a>
 								</li>
 								<li>
 									<a href="/service-detail">Service Details</a>
 								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li>
-							<a href="/about">About us</a>
-						</li> 
-						<li class="main-menu-separator"></li>
-						<!-- === top menu item === -->
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a data-toggle="dropdown" href="#">Elements</a>
 							<ul class="dropdown-menu" role="menu">
 								<li>
@@ -163,19 +167,45 @@
 									<a href="/alerts">Alerts</a>
 								</li>
 							</ul>
-						</li> 
+						</li>  -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Blog</a>
-							<ul class="dropdown-menu" role="menu">
+						<li >
+							<a href="/login">LOGIN</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/login">LOGIN</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
 								<li>
 									<a href="/blog">Blog items</a>
 								</li>
 								<li>
 									<a href="/blog_2">Single Post</a>
 								</li>
-							</ul>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li >
+							<a href="/signup">SIGNUP</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/signup">SIGNUP</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/blog">Blog items</a>
+								</li>
+								<li>
+									<a href="/blog_2">Single Post</a>
+								</li>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li>
+							<a href="/about-us">About us</a>
 						</li> 
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
@@ -197,27 +227,27 @@
 	<!-- ===================================
 		PAGE HEADER
 	======================================== -->
-	<div class="page-header" data-stellar-background-ratio="0.4">
+	<div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg');">
 		<div class="page-header-overlay"></div>
 		<div class="container">
 			<div class="row">
 				
 				<!-- === PAGE HEADER TITLE === -->
-				<div class="page-header-title">
+				<div class="page-header-title" style="margin-top: 3em;">
 					<h2>SERVICES</h2>
 				</div>
 				
 				<!-- === PAGE HEADER BREADCRUMB === -->
 				<div class="page-header-breadcrumb">
 					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="/">Home</a></li>
 						<li class="active">Services</li>
 					</ol>
 				</div>
 				
 				<!-- === PAGE HEADER BUTTON === -->
-				<div class="page-header-button">
-					<a href="#">
+				<div class="page-header-button" style="margin-top: 3em;">
+					<a href="/quote">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
@@ -246,26 +276,19 @@
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 					<ul class="service-menu">
 						<li class="active">
-							<a href="04_services.html">ALL SERVICES</a>
+							<a href="/">ALL SERVICES</a>
 						</li>
 						<li>
-							<a href="05_service_detail.html">road Freight</a>
+							<a href="05_service_detail.html">CLOTHING</a>
 						</li>
 						<li>
-							<a href="05_service_detail.html">AIR FREIGHT</a>
+							<a href="05_service_detail.html">REFRIGERATED GOODS</a>
 						</li>
 						<li>
-							<a href="05_service_detail.html">OCEAN Freight</a>
+							<a href="05_service_detail.html">DRY GOODS</a>
 						</li>
-						<li>
-							<a href="05_service_detail.html">EXPEDITED</a>
-						</li>
-						<li>
-							<a href="05_service_detail.html">warehousing</a>
-						</li>
-						<li>
-							<a href="05_service_detail.html">packaging & storage</a>
-						</li>
+		
+					
 					</ul>
 				</div>
 				
@@ -281,13 +304,13 @@
 									<img src="assets/media/service/1.jpg" alt="" />
 								</div>
 								<div class="service-1-title">
-									<h3>road Freight</h3>
+									<h3>CLOTHING</h3>
 								</div>
 								<div class="service-1-text">
-									<p>
+									<!-- <p>
 										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
 										Intega vitae felis vel magna posuere vestibulum.
-									</p>
+									</p> -->
 								</div>
 								<div class="service-1-button">
 									<a href="05_service_detail.html">
@@ -310,13 +333,13 @@
 									<img src="assets/media/service/2.jpg" alt="" />
 								</div>
 								<div class="service-1-title">
-									<h3>AIR FREIGHT</h3>
+									<h3>REFRIGERATED GOODS</h3>
 								</div>
 								<div class="service-1-text">
-									<p>
+									<!-- <p>
 										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
 										Intega vitae felis vel magna posuere vestibulum.
-									</p>
+									</p> -->
 								</div>
 								<div class="service-1-button">
 									<a href="05_service_detail.html">
@@ -339,13 +362,13 @@
 									<img src="assets/media/service/3.jpg" alt="" />
 								</div>
 								<div class="service-1-title">
-									<h3>OCEAN Freight</h3>
+									<h3>DRY GOODS</h3>
 								</div>
 								<div class="service-1-text">
-									<p>
+									<!-- <p>
 										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
 										Intega vitae felis vel magna posuere vestibulum.
-									</p>
+									</p> -->
 								</div>
 								<div class="service-1-button">
 									<a href="05_service_detail.html">
@@ -362,7 +385,7 @@
 						</div>
 						
 						<!-- === SERVICE ITEM === -->
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<!-- 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<div class="service-1">
 								<div class="service-1-image">
 									<img src="assets/media/service/4.jpg" alt="" />
@@ -388,10 +411,10 @@
 									</a>
 								</div>					
 							</div>
-						</div>
+						</div> -->
 						
 						<!-- === SERVICE ITEM === -->
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<!-- 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<div class="service-1">
 								<div class="service-1-image">
 									<img src="assets/media/service/5.jpg" alt="" />
@@ -418,9 +441,9 @@
 								</div>					
 							</div>
 						</div>
-						
+						 -->
 						<!-- === SERVICE ITEM === -->
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<!-- 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<div class="service-1">
 								<div class="service-1-image">
 									<img src="assets/media/service/6.jpg" alt="" />
@@ -446,7 +469,7 @@
 									</a>
 								</div>					
 							</div>
-						</div>
+						</div> -->
 					
 					</div>
 				</div>
@@ -494,94 +517,10 @@
 	======================================== -->
      
 	
-	<!-- ===================================
+<!-- ===================================
 		FOOTER
 	======================================== -->
-	<footer class="def-section footer">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-1">
-					<div class="logo with-border-bottom">
-						<div class="logo-image">
-							<img src="assets/img/logo.png" alt="" />
-						</div>
-						<div class="logo-text">
-							Trans <span class="color-primary">Aero</span>
-						</div>
-					</div>
-					<div class="footer-1-text">
-						<p>Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis. 
-						Etiam sollicitudin, ipsum pulvinar rutrum,tellus ipsum. laoreet </p>
-					</div>
-					<div class="footer-1-button">
-						<a href="06_about.html"><div class="my-btn my-btn-primary">
-							<div class="my-btn-bg-top"></div>
-							<div class="my-btn-bg-bottom"></div>
-							<div class="my-btn-text">
-								MORE
-							</div>
-						</div></a>
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-2">
-					<h4 class="with-square with-border-bottom">LINKS</h4>
-					<div class="footer-2-links">
-						<div class="footer-2-links-1">
-							<ul>
-								<li><a href="">Home</a></li>
-								<li><a href="">Service</a></li>
-								<li><a href="">About us</a></li>
-								<li><a href="">Testimonial</a></li>
-								<li><a href="">Blog</a></li>
-								<li><a href="">Clients</a></li>
-							</ul>
-						</div>
-						<div class="footer-2-links-2">
-							<ul>
-								<li><a href="">Contact</a></li>
-								<li><a href="">Quote</a></li>
-								<li><a href="">Policy</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-3">
-					<h4 class="with-square with-border-bottom">ADRESS</h4>
-					<div class="footer-3-phone footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-phone"></i></span>
-						Telephone:  + 390 12 345 6789
-					</div>
-					<div class="footer-3-fax footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-fax"></i></span>
-						Fax/phone:  + 390 12 345 6789
-					</div>
-					<div class="footer-3-mail footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-envelope"></i></span>
-						E-mail:  sale@transaero.com
-					</div>
-					<div class="footer-3-adress footer-3-item">
-						<span class="footer-3-icon"><i class="fa fa-map-marker"></i></span>
-						Adress: Transaero ltd. inc.  USA Jones McLean Drive , Los Angeles, California VA 22108 
-					</div>
-				</div>
-				
-				<!-- === FOOTER COLUMN === -->
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-4">
-					<h4 class="with-square with-border-bottom">INSTAGRAM FEED</h4>
-					<div class="footer-4-widget">
-						<iframe src="http://widget.websta.me/in/tag:truck/?s=76&amp;w=3&amp;h=2&amp;b=0&amp;p=13"></iframe> <!-- websta - web.stagram.com -->
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</footer>
+	@include('transaero-transport-logistics-html-template/html/components/footer')
 	<!-- ===================================
 		END FOOTER
 	======================================== -->
@@ -590,66 +529,18 @@
 	<!-- ===================================
 		BOTTOM SECTION
 	======================================== -->
-	<div class="bottom">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === BOTTOM LEFT === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-1">
-					COPYRIGHT 2015 | TRANS <span class="color-primary">AERO</span>
-				</div>
-				
-				<!-- === BOTTOM CENTER === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-2">
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-twitter"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-facebook"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-google-plus"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-pinterest-p"></i>
-						</div>
-					</div></a>
-					<a href="#"><div class="my-btn my-btn-grey">
-						<div class="my-btn-bg-top"></div>
-						<div class="my-btn-bg-bottom"></div>
-						<div class="my-btn-text">
-							<i class="fa fa-instagram"></i>
-						</div>
-					</div></a>
-				</div>
-				
-				<!-- === BOTTOM RIGHT === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bottom-3">
-					<a href="#">TERM OF USE</a> | 
-					MADE BY <a href="#">TRANS <span class="color-primary">AERO</span></a>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+	@include('transaero-transport-logistics-html-template/html/components/bottom-section')
 	<!-- ===================================
 		END BOTTOM SECTION
 	======================================== -->
+	
+	<!-- =========================
+	   SLIDE MENU
+	============================== -->
+	@include('transaero-transport-logistics-html-template/html/components/aside')
+	<!-- =========================
+	   END SLIDE MENU
+	============================== -->
 	
 	
 	<!-- =========================

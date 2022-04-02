@@ -10,6 +10,7 @@
 
 <!-- SITE TITLE -->
 <title>Burns & Gainer Transport & Logistics</title>
+
 <!-- =========================
       FAV AND TOUCH ICONS  
 ============================== -->
@@ -49,27 +50,25 @@
 	============================== -->
 	<div class="main-navbar main-navbar-1">
 		<div class="container">
+
 			<div class="row">
-				     
-				<!-- === TOP LOGO === -->
+					<!-- === TOP LOGO === -->
 				 
 				<div class="logo" id="main-logo">
 					<div class="logo-image">
 						<img src="assets/img/logo.png" alt="" />
 					</div>
 					<div class="logo-text">
-						Burns & Gainer <span class="color-primary">Transport & Logistics</span>
+						Burns & Gainer  <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
-
 			</div>
-
-
 			<div class="row">
-            
+                 
 				 
 				<!-- === TOP SEARCH === -->
 				 
+					 
 				<div class="main-search-input" id="main-search-input">
 					<form>
 						<input type="text" id="main-search" name="main-search" placeholder="Try and type enter..." />
@@ -169,8 +168,8 @@
 						</li>  -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li >
-							<a href="/login">LOGIN</a>
+						<li class="active">
+							<a href="#">LOGIN</a>
 
 						</li>
 					<!-- 	<li class="dropdown">
@@ -208,8 +207,8 @@
 						</li> 
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="active">
-							<a class="latest" href="#">Contacts</a>
+						<li >
+							<a class="latest" href="/contacts">Contacts</a>
 						</li>
 					</ul>
 				</div>
@@ -217,6 +216,7 @@
 			</div>
 		</div>
 	</div>
+	 
 	 <!-- =========================
 		END TOP MAIN NAVBAR
 	============================== -->
@@ -225,14 +225,14 @@
 	<!-- ===================================
 		PAGE HEADER
 	======================================== -->
-	<div class="page-header" data-stellar-background-ratio="0.4">
+	<div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg');">
 		<div class="page-header-overlay"></div>
 		<div class="container">
 			<div class="row">
 				
 				<!-- === PAGE HEADER TITLE === -->
 				<div class="page-header-title" style="margin-top: 3em;">
-					<h2>CONTACTS</h2>
+					<h2>LOGIN</h2>
 				</div>
 				
 				<!-- === PAGE HEADER BREADCRUMB === -->
@@ -436,7 +436,6 @@
 	======================================== -->
      
 	
-		
 	<!-- ===================================
 		FOOTER
 	======================================== -->
