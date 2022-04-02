@@ -68,6 +68,18 @@
 						Burns & Gainer  <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
+					<div class="show-menu-control">
+					<!-- === top search button show === -->
+					<a id="show-menu" class="show-menu" href="#">
+						<div class="my-btn my-btn-primary">
+                            <div class="my-btn-bg-top"></div>
+                            <div class="my-btn-bg-bottom"></div>
+                            <div class="my-btn-text">
+                                <i class="fa fa-bars"></i>
+                            </div>
+						</div>
+					</a>
+				</div>
 				 
 
          
@@ -102,9 +114,9 @@
 					</a>
 				</div>
 				 -->
-				<div class="show-menu-control">
+				<!-- <div class="show-menu-control"> -->
 					<!-- === top search button show === -->
-					<a id="show-menu" class="show-menu" href="#">
+				<!-- 	<a id="show-menu" class="show-menu" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -113,7 +125,7 @@
                             </div>
 						</div>
 					</a>
-				</div>
+				</div> -->
 				 
 				<!-- === TOP MENU === -->
 								 
