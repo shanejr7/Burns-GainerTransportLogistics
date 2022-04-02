@@ -50,8 +50,8 @@
 	============================== -->
 	<div class="main-navbar main-navbar-1" id="main-navbar">
 		<div class="container">
+
 			<div class="row">
-                 
 				<!-- === TOP LOGO === -->
 				 
 				<div class="logo" id="main-logo">
@@ -63,6 +63,10 @@
 					</div>
 				</div>
 				 
+			</div>
+			
+			<div class="row">
+                 
 				<!-- === TOP SEARCH === -->
 				 
 				<div class="main-search-input" id="main-search-input">

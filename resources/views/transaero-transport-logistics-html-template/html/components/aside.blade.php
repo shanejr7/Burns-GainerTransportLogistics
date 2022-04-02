@@ -11,7 +11,7 @@
 			<!-- === SLIDE MENU ITEM === -->	
 			<li> 
 
-				<a href="/">Home </a>
+				<a href="/">Home</a>
 				<!-- <a href="/">Home <i class="fa fa-plus arrow"></i></a> -->
 				
 				<!-- === slide menu child === -->	
@@ -36,7 +36,13 @@
 				</ul> -->
 			</li>
 			
-			<!-- === SLIDE MENU ITEM === -->	
+			<!-- === SLIDE MENU ITEM === -->
+			<li> 
+				<a href="/login">Login</a>
+			</li>
+			<li> 
+				<a href="/signup">Signup</a>
+			</li>	
 			<li> 
 				<a href="/about-us">About us</a>
 			</li>
@@ -67,7 +73,7 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 			<li>
-				<a href="/contact">Contacts</a>
+				<a href="/contact">Contact us</a>
 			</li>
 			
 		</ul>
