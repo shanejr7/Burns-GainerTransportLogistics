@@ -52,9 +52,13 @@
 		<div class="container">
 
 
-			<div class="row">
+
 				        
-				<!-- === TOP LOGO === -->
+			
+
+			<div class="row">
+
+					<!-- === TOP LOGO === -->
 				 
 				<div class="logo" id="main-logo">
 					<div class="logo-image">
@@ -65,21 +69,19 @@
 					</div>
 				</div>
 				 
-			</div>
 
-			<div class="row">
          
 				<!-- === TOP SEARCH === -->
 				 
-				<div class="main-search-input" id="main-search-input">
+				<!-- <div class="main-search-input" id="main-search-input">
 					<form>
 						<input type="text" id="main-search" name="main-search" placeholder="Try and type enter..." />
 					</form>
-				</div>
+				</div> -->
 				 
-				<div class="search-control">
+			<!-- 	<div class="search-control"> -->
 					<!-- === top search button show === -->
-					<a id="show-search" class="show-search latest" href="#">
+					<!-- <a id="show-search" class="show-search latest" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -87,9 +89,9 @@
                                 <i class="fa fa-search"></i>
                             </div>
 						</div>
-					</a>
+					</a> -->
 					<!-- === top search button close === -->
-					<a id="close-search" class="close-search latest" href="#">
+				<!-- 	<a id="close-search" class="close-search latest" href="#">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
@@ -99,10 +101,10 @@
 						</div>
 					</a>
 				</div>
-				
-				<div class="show-menu-control">
+				 -->
+				<!-- <div class="show-menu-control"> -->
 					<!-- === top search button show === -->
-					<a id="show-menu" class="show-menu" href="#">
+					<!-- <a id="show-menu" class="show-menu" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -111,7 +113,7 @@
                             </div>
 						</div>
 					</a>
-				</div>
+				</div> -->
 				 
 				<!-- === TOP MENU === -->
 								 
@@ -223,7 +225,7 @@
 		END TOP MAIN NAVBAR
 	============================== -->
      
-     <div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg');">
+     <div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg'); ">
 		<div class="page-header-overlay"></div>
 		<div class="container">
 			<div class="row">
