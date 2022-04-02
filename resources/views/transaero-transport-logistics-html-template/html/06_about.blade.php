@@ -133,7 +133,7 @@
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li>
-							<a  href="/service">Services</a>
+							<a  href="/services"\>Services</a>
 						</li>
 					<!-- 	<li class="dropdown">
 							<a data-toggle="dropdown" href="/service">Service</a> -->
@@ -313,7 +313,7 @@
 							Barbra
 						</div>
 						<div class="team-item-position">
-							DIRECTOR - CDL DRIVER
+							OWNER - CDL DRIVER
 						</div>
 					</div>
 				</div>
@@ -336,7 +336,7 @@
 							Gainer 
 						</div>
 						<div class="team-item-position">
-							DIRECTOR - CDL DRIVER
+							OWNER - CDL DRIVER
 						</div>
 					</div>
 				</div>

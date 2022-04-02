@@ -97,6 +97,19 @@ class PortalController extends Controller
     }
 
 
+   /**
+     * admin submit tax return.
+     *
+     * @return \Illuminate\View\View
+     */
+
+    public function test(Request $request)
+    {
+
+
+    return view('transaero-transport-logistics-html-template/html/quote');
+
+}
     /**
      * admin submit tax return.
      *

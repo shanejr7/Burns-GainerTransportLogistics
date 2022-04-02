@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PortalController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +21,7 @@ Route::get('/', function () {
     return view('transaero-transport-logistics-html-template/html/index');
 });
 
-Route::get('/service', function () {
+Route::get('/services', function () {
     return view('transaero-transport-logistics-html-template/html/04_services');
 });
 
@@ -33,9 +37,17 @@ Route::get('/service-detail', function () {
     return view('transaero-transport-logistics-html-template/html/05_service_detail');
 });
 
+
 Route::get('/quote', function () {
-    return view('transaero-transport-logistics-html-template/html/quote');
+    return view('transaero-transport-logistics-html-template/html/quote')->name('quote');
 });
+
+// Route::get('/quote/{type}', function () {
+//     return view('transaero-transport-logistics-html-template/html/quote');
+// });
+
+// Route::get('/quote/{type}', [PortalController::class,'test']);
+
 
 Route::get('/about-us', function () {
     return view('transaero-transport-logistics-html-template/html/06_about');

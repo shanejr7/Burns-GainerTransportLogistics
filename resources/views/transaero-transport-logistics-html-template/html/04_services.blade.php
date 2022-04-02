@@ -132,7 +132,7 @@
 						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li>
+						<li class="active">
 							<a  href="#">Services</a>
 						</li>
 					<!-- 	<li class="dropdown">
@@ -279,13 +279,13 @@
 							<a href="#">ALL SERVICES</a>
 						</li>
 						<li>
-							<a href="/qoute?type=clothing">CLOTHING</a>
+							<a href="/quote/clothing">CLOTHING</a>
 						</li>
 						<li>
-							<a href="/qoute?type=refrigerated+goods">REFRIGERATED GOODS</a>
+							<a href="/quote/refrigerated+goods">REFRIGERATED GOODS</a>
 						</li>
 						<li>
-							<a href="/qoute?type=dry+goods">DRY GOODS</a>
+							<a href="/quote/dry+goods">DRY GOODS</a>
 						</li>
 		
 					

@@ -113,7 +113,7 @@
 					<ul class="nav navbar-nav">
 											
 						<!-- === top menu item === -->
-						<li>
+						<li class="active">
 							<a href="#">Home</a>
 						</li>
 					<!-- 	<li class="active dropdown">
@@ -127,7 +127,7 @@
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li>
-							<a  href="/service">Services</a>
+							<a  href="/services">Services</a>
 						</li>
 					<!-- 	<li class="dropdown">
 							<a data-toggle="dropdown" href="/service">Service</a> -->
