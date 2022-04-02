@@ -10,7 +10,6 @@
 
 <!-- SITE TITLE -->
 <title>Burns & Gainer Transport & Logistics</title>
-
 <!-- =========================
       FAV AND TOUCH ICONS  
 ============================== -->
@@ -133,7 +132,7 @@
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li>
-							<a  href="#">Services</a>
+							<a  href="/service">Services</a>
 						</li>
 					<!-- 	<li class="dropdown">
 							<a data-toggle="dropdown" href="/service">Service</a> -->
@@ -210,7 +209,7 @@
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li >
-							<a class="latest" href="/contact">Contact Us</a>
+								<a class="latest" href="/contact">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -218,7 +217,6 @@
 			</div>
 		</div>
 	</div>
-	 
 	 <!-- =========================
 		END TOP MAIN NAVBAR
 	============================== -->
@@ -234,29 +232,17 @@
 				
 				<!-- === PAGE HEADER TITLE === -->
 				<div class="page-header-title" style="margin-top: 3em;">
-					<h2>SERVICES</h2>
+					<h2>QUOTE</h2>
 				</div>
 				
 				<!-- === PAGE HEADER BREADCRUMB === -->
 				<div class="page-header-breadcrumb">
 					<ol class="breadcrumb">
 						<li><a href="/">Home</a></li>
-						<li class="active">Services</li>
+						<li class="active">QUOTE</li>
 					</ol>
 				</div>
-				
-				<!-- === PAGE HEADER BUTTON === -->
-				<div class="page-header-button" style="margin-top: 3em;">
-					<a href="/quote">
-						<div class="my-btn my-btn-primary">
-							<div class="my-btn-bg-top"></div>
-							<div class="my-btn-bg-bottom"></div>
-							<div class="my-btn-text">
-								GET A FREE QUOTE
-							</div>
-						</div>
-					</a>
-				</div>
+			
 			</div>
 		</div>
 	</div>
@@ -265,218 +251,139 @@
 	======================================== -->
 	
 	<!-- =========================
-		SERVICES
+		CONTACTS
 	============================== -->
-    <div class="def-section services-1">
+    <div class="def-section">
 		<div class="container">
 			<div class="row">
 				
-				<!-- === SERVICES MENU === -->
-				
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-					<ul class="service-menu">
-						<li class="active">
-							<a href="#">ALL SERVICES</a>
-						</li>
-						<li>
-							<a href="/qoute?type=clothing">CLOTHING</a>
-						</li>
-						<li>
-							<a href="/qoute?type=refrigerated+goods">REFRIGERATED GOODS</a>
-						</li>
-						<li>
-							<a href="/qoute?type=dry+goods">DRY GOODS</a>
-						</li>
-		
-					
-					</ul>
-				</div>
-				
-				<!-- === SERVICES ITEMS === -->
-				
-				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-					<div class="row">
-						
-						<!-- === SERVICE ITEM === -->
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="service-1">
-								<div class="service-1-image">
-									<img src="assets/media/service/1.jpg" alt="" />
-								</div>
-								<div class="service-1-title">
-									<h3>CLOTHING</h3>
-								</div>
-								<div class="service-1-text">
-									<!-- <p>
-										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
-										Intega vitae felis vel magna posuere vestibulum.
-									</p> -->
-								</div>
-								<div class="service-1-button">
-									<a href="/qoute?type=clothing">
-										<div class="my-btn my-btn-default">
-											<div class="my-btn-bg-top"></div>
-											<div class="my-btn-bg-bottom"></div>
-											<div class="my-btn-text">
-												MORE
-											</div>
-										</div>
-									</a>
-								</div>					
+				<!-- === CONTACTS INFO === -->
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					<div class="contacts-info">
+						<div class="contacts-info-title">
+							<div class="contacts-info-title-icon">
+								<i class="fa fa-comments"></i>
+							</div>
+							<h3>We will be glad<br>to help you</h3>
+						</div>
+						<div class="contacts-info-text">
+							Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. 
+							Nam quam nunc, blandit vel, luctus pulvinar. 
+						</div>
+						<div class="contacts-info-people">
+							<div class="contacts-info-people-avatar">
+								<img src="assets/media/avatars/avatar1.png" alt="" />
+							</div>
+							<div class="contacts-info-people-name">
+								RICHARD GEAR
+							</div>
+							<div class="contacts-info-people-company">
+								Director
 							</div>
 						</div>
-						
-						<!-- === SERVICE ITEM === -->
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="service-1">
-								<div class="service-1-image">
-									<img src="assets/media/service/2.jpg" alt="" />
-								</div>
-								<div class="service-1-title">
-									<h3>REFRIGERATED GOODS</h3>
-								</div>
-								<div class="service-1-text">
-									<!-- <p>
-										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
-										Intega vitae felis vel magna posuere vestibulum.
-									</p> -->
-								</div>
-								<div class="service-1-button">
-									<a href="/qoute?type=refrigerated+goods">
-										<div class="my-btn my-btn-default">
-											<div class="my-btn-bg-top"></div>
-											<div class="my-btn-bg-bottom"></div>
-											<div class="my-btn-text">
-												MORE
-											</div>
-										</div>
-									</a>
-								</div>					
-							</div>
-						</div>
-						
-						<!-- === SERVICE ITEM === -->
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="service-1">
-								<div class="service-1-image">
-									<img src="assets/media/service/3.jpg" alt="" />
-								</div>
-								<div class="service-1-title">
-									<h3>DRY GOODS</h3>
-								</div>
-								<div class="service-1-text">
-									<!-- <p>
-										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
-										Intega vitae felis vel magna posuere vestibulum.
-									</p> -->
-								</div>
-								<div class="service-1-button">
-									<a href="/qoute?type=dry+goods">
-										<div class="my-btn my-btn-default">
-											<div class="my-btn-bg-top"></div>
-											<div class="my-btn-bg-bottom"></div>
-											<div class="my-btn-text">
-												MORE
-											</div>
-										</div>
-									</a>
-								</div>					
-							</div>
-						</div>
-						
-						<!-- === SERVICE ITEM === -->
-					<!-- 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="service-1">
-								<div class="service-1-image">
-									<img src="assets/media/service/4.jpg" alt="" />
-								</div>
-								<div class="service-1-title">
-									<h3>EXPEDITED</h3>
-								</div>
-								<div class="service-1-text">
-									<p>
-										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
-										Intega vitae felis vel magna posuere vestibulum.
-									</p>
-								</div>
-								<div class="service-1-button">
-									<a href="05_service_detail.html">
-										<div class="my-btn my-btn-default">
-											<div class="my-btn-bg-top"></div>
-											<div class="my-btn-bg-bottom"></div>
-											<div class="my-btn-text">
-												MORE
-											</div>
-										</div>
-									</a>
-								</div>					
-							</div>
-						</div> -->
-						
-						<!-- === SERVICE ITEM === -->
-					<!-- 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="service-1">
-								<div class="service-1-image">
-									<img src="assets/media/service/5.jpg" alt="" />
-								</div>
-								<div class="service-1-title">
-									<h3>warehousing</h3>
-								</div>
-								<div class="service-1-text">
-									<p>
-										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
-										Intega vitae felis vel magna posuere vestibulum.
-									</p>
-								</div>
-								<div class="service-1-button">
-									<a href="05_service_detail.html">
-										<div class="my-btn my-btn-default">
-											<div class="my-btn-bg-top"></div>
-											<div class="my-btn-bg-bottom"></div>
-											<div class="my-btn-text">
-												MORE
-											</div>
-										</div>
-									</a>
-								</div>					
-							</div>
-						</div>
-						 -->
-						<!-- === SERVICE ITEM === -->
-					<!-- 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="service-1">
-								<div class="service-1-image">
-									<img src="assets/media/service/6.jpg" alt="" />
-								</div>
-								<div class="service-1-title">
-									<h3>packaging & storage</h3>
-								</div>
-								<div class="service-1-text">
-									<p>
-										Integer congue elit non semper laoreet sed lectus orci posue nisl tempor lacus felis ac mauris. Pellentesque in urna. 
-										Intega vitae felis vel magna posuere vestibulum. 
-									</p>
-								</div>
-								<div class="service-1-button">
-									<a href="05_service_detail.html">
-										<div class="my-btn my-btn-default">
-											<div class="my-btn-bg-top"></div>
-											<div class="my-btn-bg-bottom"></div>
-											<div class="my-btn-text">
-												MORE
-											</div>
-										</div>
-									</a>
-								</div>					
-							</div>
-						</div> -->
-					
 					</div>
 				</div>
+				
+				<!-- === CONTACTS FORM === -->
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+					<div class="contacts-form row">
+						<div class="send-result"></div>
+						<form name="contact-form" id="contact-form" method="POST" action="javascript:void(null);" onsubmit="sendmail_2();">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+								<input type="text" name="contact-name" placeholder="Full Name" />
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+								<input type="text" name="contact-email" placeholder="Email" />
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+								<input type="text" name="contact-phone" placeholder="Phone" />
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+								<input type="text" name="contact-site" placeholder="Website" />
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item">
+								<textarea name="contact-message" placeholder="How can we help?"></textarea>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+								<button><span class="my-btn my-btn-grey">
+									<span class="my-btn-bg-top"></span>
+									<span class="my-btn-bg-bottom"></span>
+									<span class="my-btn-text">
+										SEND MESSAGE
+									</span>
+								</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				
 				
 			</div>
 		</div>
 	</div>
+	
+	<!-- =========================
+		CONTACTS DETAILS
+	============================== -->
+    <div class="def-section contact-details">
+		<div class="container">
+			<div class="row">
+				
+				<!-- === CONTACTS DETAILS ITEM === -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 contact-detail">
+					<div class="contact-detail-icon">
+						<i class="flaticon-map58"></i>
+					</div>
+					<div class="contact-detail-title">
+						<h3>LOCATION</h3>
+					</div>
+					<div class="contact-detail-text">
+						McLean Drive , Los Angeles,<br>California VA 22108
+					</div>
+				</div>
+				
+				<!-- === CONTACTS DETAILS ITEM === -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 contact-detail contact-detail-mark">
+					<div class="contact-detail-icon">
+						<i class="flaticon-telephone5"></i>
+					</div>
+					<div class="contact-detail-title">
+						<h3>PHONE | EMAIL</h3>
+					</div>
+					<div class="contact-detail-text">
+						+ 390 12 345 6789<br>info@domain.com
+					</div>
+				</div>
+				
+				<!-- === CONTACTS DETAILS ITEM === -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 contact-detail">
+					<div class="contact-detail-icon">
+						<i class="flaticon-clock96"></i>
+					</div>
+					<div class="contact-detail-title">
+						<h3>WORKING HOURS</h3>
+					</div>
+					<div class="contact-detail-text">
+						Mon - Fri : 08.00 17.00<br>Sat : 09.00  14.00
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	<!-- =========================
+		END CONTACTS DETAILS
+	============================== -->
+	
+	
+	<!-- =========================
+		CONTACTS MAP
+	============================== -->
+    <div class="contact-map" id="contact-map">
+	</div>
+	<!-- =========================
+		END CONTACTS MAP
+	============================== -->
 	
 	<!-- ===================================
 		SUBSCRIBE SECTION
@@ -517,7 +424,8 @@
 	======================================== -->
      
 	
-<!-- ===================================
+		
+	<!-- ===================================
 		FOOTER
 	======================================== -->
 	@include('transaero-transport-logistics-html-template/html/components/footer')
@@ -544,91 +452,12 @@
 	
 	
 	<!-- =========================
-	   SLIDE MENU
-	============================== -->
-	<aside id="slide-menu" class="slide-menu">
-		
-		<!-- === CLOSE MENU BUTON === -->	
-		<div class="close-menu" id="close-menu">
-			<i class="fa fa-close"></i>
-		</div>
-		
-		<!-- === SLIDE MENU === -->	
-		<ul id="left-menu" class="left-menu">
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Home <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="index.html">Home 1</a></li>
-					<li><a href="02_home.html">Home 2</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Service <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="03_services.html">Service 1</a></li>
-					<li><a href="04_services.html">Service 2</a></li>
-					<li><a href="05_service_detail.html">Service Details</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="06_about.html">About us</a>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li> 
-				<a href="#">Elements <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="07_typography.html">Typography</a></li>
-					<li><a href="08_buttons.html">Buttons</a></li>
-					<li><a href="09_progress.html">Progress Bars</a></li>
-					<li><a href="10_alerts.html">Alerts</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li>
-				<a href="#">Blog <i class="fa fa-plus arrow"></i></a>
-				
-				<!-- === slide menu child === -->	
-				<ul class="slide-menu-child">
-					<li><a href="11_blog.html">Blog items</a></li>
-					<li><a href="12_blog_detail.html">Single Post</a></li>
-				</ul>
-			</li>
-			
-			<!-- === SLIDE MENU ITEM === -->	
-			<li>
-				<a href="13_contacts.html">Contacts</a>
-			</li>
-			
-		</ul>
-		
-	</aside>
-	<!-- =========================
-	   END SLIDE MENU
-	============================== -->
-	
-	
-	<!-- =========================
 	   BLACK OVERLAY
 	============================== -->
 	<div class="black-overlay" id="black-overlay"></div>
 	<!-- =========================
 	   END BLACK OVERLAY
 	============================== -->
-     
      
 	<!-- =========================
 		 SCRIPTS   
@@ -663,6 +492,9 @@
 	
 	<!-- CUSTOM SCRIPT -->
 	<script src="assets/js/theme.min.js"></script>
+	
+	<!-- GOOGLE MAPS API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAHDFaUVFTKqrrUtBXubJbrUxKKq-t8Fw&amp;callback=initMap" async defer></script>
 	
 </body>
 </html>

@@ -33,6 +33,10 @@ Route::get('/service-detail', function () {
     return view('transaero-transport-logistics-html-template/html/05_service_detail');
 });
 
+Route::get('/quote', function () {
+    return view('transaero-transport-logistics-html-template/html/quote');
+});
+
 Route::get('/about-us', function () {
     return view('transaero-transport-logistics-html-template/html/06_about');
 });
