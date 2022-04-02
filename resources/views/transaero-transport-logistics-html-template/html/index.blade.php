@@ -102,9 +102,9 @@
 					</a>
 				</div>
 				 -->
-				<!-- <div class="show-menu-control"> -->
+				<div class="show-menu-control">
 					<!-- === top search button show === -->
-					<!-- <a id="show-menu" class="show-menu" href="#">
+					<a id="show-menu" class="show-menu" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -113,7 +113,7 @@
                             </div>
 						</div>
 					</a>
-				</div> -->
+				</div>
 				 
 				<!-- === TOP MENU === -->
 								 
@@ -239,10 +239,12 @@
 				<!-- === PAGE HEADER BREADCRUMB === -->
 				<div class="page-header-breadcrumb" style="margin-top: 4em;">
 					<ol class="breadcrumb">
-				<h2>We are your reliable shipping partner</h2>
+				<h3>We are your reliable shipping partner</h3>
 				
 					</ol>
 				</div>
+
+
 				
 				<!-- === PAGE HEADER BUTTON === -->
 				<div class="page-header-button" style="margin-top: 3em;">

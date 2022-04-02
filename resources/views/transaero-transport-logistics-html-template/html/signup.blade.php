@@ -238,7 +238,7 @@
 				<div class="page-header-breadcrumb">
 					<ol class="breadcrumb">
 						<li><a href="/s">Home</a></li>
-						<li class="active">CONTACTS</li>
+						<li class="active">SIGNUP</li>
 					</ol>
 				</div>
 				
