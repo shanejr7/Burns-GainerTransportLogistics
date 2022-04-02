@@ -71,15 +71,15 @@
 				 
 				<!-- === TOP SEARCH === -->
 				 
-				<div class="main-search-input" id="main-search-input">
+			<!-- 	<div class="main-search-input" id="main-search-input">
 					<form>
 						<input type="text" id="main-search" name="main-search" placeholder="Try and type enter..." />
 					</form>
-				</div>
+				</div> -->
 				 
-				<div class="search-control">
+				<!-- <div class="search-control"> -->
 					<!-- === top search button show === -->
-					<a id="show-search" class="show-search latest" href="#">
+				<!-- 	<a id="show-search" class="show-search latest" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -87,10 +87,10 @@
                                 <i class="fa fa-search"></i>
                             </div>
 						</div>
-					</a>
+					</a> -->
 					<!-- === top search button close === -->
-					<a id="close-search" class="close-search latest" href="#">
-						<div class="my-btn my-btn-primary">
+					<!-- <a id="close-search" class="close-search latest" href="#"> -->
+				<!-- 		<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
 							<div class="my-btn-text">
@@ -98,7 +98,7 @@
 							</div>
 						</div>
 					</a>
-				</div>
+				</div> -->
 				
 				<div class="show-menu-control">
 					<!-- === top search button show === -->
