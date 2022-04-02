@@ -10,7 +10,9 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 			<li> 
-				<a href="/">Home <i class="fa fa-plus arrow"></i></a>
+
+				<a href="/">Home </a>
+				<!-- <a href="/">Home <i class="fa fa-plus arrow"></i></a> -->
 				
 				<!-- === slide menu child === -->	
 				<!-- <ul class="slide-menu-child">
@@ -21,7 +23,10 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 			<li> 
-				<a href="/service">Service <i class="fa fa-plus arrow"></i></a>
+
+				<a href="/services">Services</a>
+
+				<!-- <a href="/services">Service <i class="fa fa-plus arrow"></i></a> -->
 				
 				<!-- === slide menu child === -->	
 				<!-- <ul class="slide-menu-child">

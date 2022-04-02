@@ -39,7 +39,7 @@ Route::get('/service-detail', function () {
 
 
 Route::get('/quote', function () {
-    return view('transaero-transport-logistics-html-template/html/quote')->name('quote');
+    return view('transaero-transport-logistics-html-template/html/quote');
 });
 
 // Route::get('/quote/{type}', function () {

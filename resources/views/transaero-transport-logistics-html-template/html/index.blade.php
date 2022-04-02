@@ -449,7 +449,7 @@
 							<p >Trucking we transport food @ clothing we <br>have a refrigerated trailer <br>so refrigerated or <br>dry goods  </p>
 						</div>
 						<div class="service-button">
-							<a href="/service">
+							<a href="/services">
 								<div class="my-btn my-btn-default">
 									<div class="my-btn-bg-top"></div>
 									<div class="my-btn-bg-bottom"></div>
