@@ -232,7 +232,7 @@
 				
 				<!-- === PAGE HEADER TITLE === -->
 				<div class="page-header-title" style="margin-top: 3em;">
-					<h2>CONTACTS US</h2>
+					<h2>CONTACT US</h2>
 				</div>
 				
 				<!-- === PAGE HEADER BREADCRUMB === -->

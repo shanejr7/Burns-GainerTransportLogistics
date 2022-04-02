@@ -51,7 +51,9 @@
 	<div class="main-navbar main-navbar-1" id="main-navbar">
 		<div class="container">
 
+
 			<div class="row">
+				        
 				<!-- === TOP LOGO === -->
 				 
 				<div class="logo" id="main-logo">
@@ -64,9 +66,9 @@
 				</div>
 				 
 			</div>
-			
+
 			<div class="row">
-                 
+         
 				<!-- === TOP SEARCH === -->
 				 
 				<div class="main-search-input" id="main-search-input">
@@ -221,40 +223,74 @@
 		END TOP MAIN NAVBAR
 	============================== -->
      
+     <div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg');">
+		<div class="page-header-overlay"></div>
+		<div class="container">
+			<div class="row">
+				
+				<!-- === PAGE HEADER TITLE === -->
+		<!-- 		<div class="page-header-title" style="margin-top: 3em;">
+					<h2>We are your reliable partner</h2>
+					<h2>Quality services of cargo</h2>
+				</div>
+				 -->
+				<!-- === PAGE HEADER BREADCRUMB === -->
+				<div class="page-header-breadcrumb" style="margin-top: 4em;">
+					<ol class="breadcrumb">
+				<h2>We are your reliable shipping partner</h2>
+				
+					</ol>
+				</div>
+				
+				<!-- === PAGE HEADER BUTTON === -->
+				<div class="page-header-button" style="margin-top: 3em;">
+					<a href="/quote">
+						<div class="my-btn my-btn-primary">
+							<div class="my-btn-bg-top"></div>
+							<div class="my-btn-bg-bottom"></div>
+							<div class="my-btn-text">
+								GET A FREE QUOTE
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	 
 	 <!-- =========================
 		MAIN SLIDER
 	============================== -->
-	<div id="main-slider-1" class="main-slider main-slider-1">
-		<div class="sp-slides">
+<!-- 	<div id="main-slider-1" class="main-slider main-slider-1">
+		<div class="sp-slides"> -->
 			
 			<!-- === SLIDER ITEM === -->	
 			
-			<div class="sp-slide">
+	<!-- 		<div class="sp-slide"> -->
 				
 				<!-- === slide overlay === -->	
-				<div class="main-slider-overlay"></div>
+				<!-- <div class="main-slider-overlay"></div> -->
 				
 				<!-- === slide image === -->	
-                <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
+    <!--             <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
 				data-src="assets/media/main-slider/nav_img.jpg"
-				data-retina="assets/media/main-slider/nav_img.jpg" alt="" />
+				data-retina="assets/media/main-slider/nav_img.jpg" alt="" /> -->
 				
 				<!-- === slide container === -->	
-				<div class="container">
+				<!-- <div class="container">
                     <div class="main-slider-content">
         				<h2 class="sp-layer"
                             data-position="rightCenter" data-horizontal="15" data-vertical="-92"
         					data-show-transition="left" data-hide-transition="left" data-show-delay="200" data-hide-delay="200">
         					We are your reliable partner
-        				</h2>
+        				</h2> -->
         
-        				<h2 class="sp-layer color-primary"
+        				<!-- <h2 class="sp-layer color-primary"
                             data-position="rightCenter" data-horizontal="15" data-vertical="-40"
         					data-show-transition="left" data-hide-transition="left" data-show-delay="400" data-hide-delay="400">
         					Quality services of cargo
-        				</h2>
-            
+        				</h2> -->
+            <!-- 
                         <a class="sp-layer main-button" href="/quote"
                             data-position="rightCenter" data-horizontal="15" data-vertical="55"
             				data-show-transition="left" data-hide-transition="left" data-show-delay="600" data-hide-delay="600">
@@ -265,7 +301,7 @@
 									GET A FREE QUOTE
 								</div>
 							</div>
-						</a>
+						</a> -->
                         
 						<!-- === slide buttons === -->	
                       <!--   <div class="sp-layer main-slider-buttons" 
@@ -290,24 +326,24 @@
 							</a>
 						</div> -->
                          
-                    </div>
+        <!--             </div>
                 </div>
 			</div>
-
+ -->
             <!-- === SLIDER ITEM === -->	
 			
-			<div class="sp-slide">
+			<!-- <div class="sp-slide"> -->
 				
 				<!-- === slide overlay === -->	
-				<div class="main-slider-overlay"></div>
+				<!-- <div class="main-slider-overlay"></div> -->
 				
 				<!-- === slide image === -->	
-           <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
+<!--            <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
 				data-src="assets/media/main-slider/nav_img.jpg"
-				data-retina="assets/media/main-slider/nav_img.jpg" alt="" />
+				data-retina="assets/media/main-slider/nav_img.jpg" alt="" /> -->
 				
 				<!-- === slide container === -->	
-				<div class="container">
+				<!-- <div class="container">
                     <div class="main-slider-content">
         				<h2 class="sp-layer"
                             data-position="rightCenter" data-horizontal="15" data-vertical="-92"
@@ -331,7 +367,7 @@
 									GET A FREE QUOTE
 								</div>
 							</div>
-						</a>
+						</a> -->
                         
 						<!-- === slide buttons === -->	
                      <!--    <div class="sp-layer main-slider-1-buttons" 
@@ -356,24 +392,24 @@
 							</a>
 						</div> -->
                          
-                    </div>
+            <!--         </div>
                 </div>
 			</div>
-   
+    -->
             <!-- === SLIDER ITEM === -->	
 			
-			<div class="sp-slide">
+			<!-- <div class="sp-slide"> -->
 				
 				<!-- === slide overlay === -->	
-				<div class="main-slider-overlay"></div>
+				<!-- <div class="main-slider-overlay"></div> -->
 				
 				<!-- === slide image === -->	
-             <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
+<!--              <img class="sp-image" src="assets/slider-pro/css/images/blank.gif"
 				data-src="assets/media/main-slider/nav_img.jpg"
-				data-retina="assets/media/main-slider/nav_img.jpg" alt="" />
+				data-retina="assets/media/main-slider/nav_img.jpg" alt="" /> -->
 				
 				<!-- === slide container === -->	
-				<div class="container">
+	<!-- 			<div class="container">
                     <div class="main-slider-content">
         				<h2 class="sp-layer"
                             data-position="rightCenter" data-horizontal="15" data-vertical="-92"
@@ -398,7 +434,7 @@
 								</div>
 							</div>
 						</a>
-                        
+                         -->
 						<!-- === slide buttons === -->	
                       <!--   <div class="sp-layer main-slider-buttons" 
 							data-position="rightCenter" data-horizontal="15" data-vertical="165" data-hide-delay="600">
@@ -422,12 +458,12 @@
 							</a>
 						</div> -->
                          
-                    </div>
+      <!--               </div>
                 </div>
 			</div>
 
 		</div>
-    </div>
+    </div> -->
 	<!-- =========================
 		END MAIN SLIDER
 	============================== -->
