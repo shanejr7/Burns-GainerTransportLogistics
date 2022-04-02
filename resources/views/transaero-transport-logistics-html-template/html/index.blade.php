@@ -68,18 +68,6 @@
 						Burns & Gainer  <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
-					<div class="show-menu-control">
-					<!-- === top search button show === -->
-					<a id="show-menu" class="show-menu" href="#">
-						<div class="my-btn my-btn-primary">
-                            <div class="my-btn-bg-top"></div>
-                            <div class="my-btn-bg-bottom"></div>
-                            <div class="my-btn-text">
-                                <i class="fa fa-bars"></i>
-                            </div>
-						</div>
-					</a>
-				</div>
 				 
 
          
@@ -114,9 +102,9 @@
 					</a>
 				</div>
 				 -->
-				<!-- <div class="show-menu-control"> -->
+				<div class="show-menu-control">
 					<!-- === top search button show === -->
-				<!-- 	<a id="show-menu" class="show-menu" href="#">
+					<a id="show-menu" class="show-menu" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -125,7 +113,7 @@
                             </div>
 						</div>
 					</a>
-				</div> -->
+				</div>
 				 
 				<!-- === TOP MENU === -->
 								 
@@ -237,29 +225,26 @@
 		END TOP MAIN NAVBAR
 	============================== -->
      
-     <div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg'); ">
+   <div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg');">
 		<div class="page-header-overlay"></div>
 		<div class="container">
 			<div class="row">
 				
 				<!-- === PAGE HEADER TITLE === -->
-		<!-- 		<div class="page-header-title" style="margin-top: 3em;">
-					<h2>We are your reliable partner</h2>
-					<h2>Quality services of cargo</h2>
+				<div class="page-header-title" style="margin-top: 3em;">
+					<h2>SHIPPING</h2>
 				</div>
-				 -->
-				<!-- === PAGE HEADER BREADCRUMB === -->
-				<div class="page-header-breadcrumb" style="margin-top: 6em;">
-					<ol class="breadcrumb">
-				<h3>We are your reliable shipping partner</h3>
 				
+				<!-- === PAGE HEADER BREADCRUMB === -->
+				<div class="page-header-breadcrumb">
+					<ol class="breadcrumb">
+						<li>We are your reliable partner</li>
+					
 					</ol>
 				</div>
-
-
 				
 				<!-- === PAGE HEADER BUTTON === -->
-				<div class="page-header-button" style="margin-top: 4em;">
+				<div class="page-header-button" style="margin-top: 3em;">
 					<a href="/quote">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
