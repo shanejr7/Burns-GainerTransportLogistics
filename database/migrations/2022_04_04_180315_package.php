@@ -13,7 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('package', function (Blueprint $table) {
+            $table->id()->unique();
+            $table->integer('product_id');
+            $table->integer('cargo_id');
+            $table->string('code_ean_product')->nullable();
+            $table->string('sku')->nullable();
+            $table->string('volume')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('height')->nullable();
+            $table->rememberToken();
+            $table->timestamps();
+
+        
+        });
     }
 
     /**
@@ -23,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('package');
     }
 };

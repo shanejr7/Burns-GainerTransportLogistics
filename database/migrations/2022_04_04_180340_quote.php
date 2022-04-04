@@ -13,7 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('quote', function (Blueprint $table) {
+            $table->id()->unique();
+            $table->integer('client_id')->nullable();
+            $table->integer('category_id');
+            $table->string('name')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->unique();
+            $table->string('shipping_pickup_address');
+            $table->string('shipping_dropoff_address');
+            $table->string('message')->nullable();
+            $table->rememberToken();
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('quote');
     }
 };

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('volume')->nullable();
+            $table->string('weight')->nullable();
             $table->string('height')->nullable();
             $table->float('unit_price')->nullable();
             $table->string('image_url')->nullable();

@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('state', function (Blueprint $table) {
+            $table->id()->unique();
+            $table->string('country_id');
+            $table->string('name');
+            $table->rememberToken();
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+          Schema::dropIfExists('state');
     }
 };

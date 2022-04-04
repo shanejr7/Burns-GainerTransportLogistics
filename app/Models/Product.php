@@ -23,6 +23,7 @@ class Product extends Model
         'name',
         'description',
         'volume',
+        'weight',
         'height',
         'unit_price',
         'image_url',

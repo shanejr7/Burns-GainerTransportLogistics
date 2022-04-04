@@ -13,7 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('shipping', function (Blueprint $table) {
+            $table->id()->unique();
+            $table->string('street');
+            $table->string('city');
+            $table->string('state');
+            $table->string('country');
+            $table->string('zip_code');
+            $table->rememberToken();
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+            Schema::dropIfExists('shipping');
     }
 };
