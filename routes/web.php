@@ -45,13 +45,7 @@ Route::get('/quote', function () {
     return view('transaero-transport-logistics-html-template/html/quote');
 });
 
-// Route::get('/quote/{type}', function () {
-//     return view('transaero-transport-logistics-html-template/html/quote');
-// });
-
-// Route::get('/quote/{type}', [PortalController::class,'test']);
-
-// TAX DASHBOARD REQUEST ROUTE <403>
+//DASHBOARD REQUEST ROUTE <403>
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
 
 Route::get('/about-us', function () {

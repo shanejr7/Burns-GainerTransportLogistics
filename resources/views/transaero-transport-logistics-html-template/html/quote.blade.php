@@ -70,15 +70,15 @@
 
 					<!-- === TOP SEARCH === -->
 
-					<div class="main-search-input" id="main-search-input">
+					<!-- <div class="main-search-input" id="main-search-input">
 						<form>
 							<input type="text" id="main-search" name="main-search" placeholder="Try and type enter..." />
 						</form>
 					</div>
 
-					<div class="search-control">
+					<div class="search-control"> -->
 						<!-- === top search button show === -->
-						<a id="show-search" class="show-search latest" href="#">
+						<!-- <a id="show-search" class="show-search latest" href="#">
 							<div class="my-btn my-btn-primary">
 								<div class="my-btn-bg-top"></div>
 								<div class="my-btn-bg-bottom"></div>
@@ -86,9 +86,9 @@
 									<i class="fa fa-search"></i>
 								</div>
 							</div>
-						</a>
+						</a> -->
 						<!-- === top search button close === -->
-						<a id="close-search" class="close-search latest" href="#">
+					<!-- 	<a id="close-search" class="close-search latest" href="#">
 							<div class="my-btn my-btn-primary">
 								<div class="my-btn-bg-top"></div>
 								<div class="my-btn-bg-bottom"></div>
@@ -98,29 +98,29 @@
 							</div>
 						</a>
 					</div>
-
-					<div class="show-menu-control">
-						<!-- === top search button show === -->
-						<a id="show-menu" class="show-menu" href="#">
-							<div class="my-btn my-btn-primary">
-								<div class="my-btn-bg-top"></div>
-								<div class="my-btn-bg-bottom"></div>
-								<div class="my-btn-text">
-									<i class="fa fa-bars"></i>
-								</div>
+				-->
+				<div class="show-menu-control">
+					<!-- === top search button show === -->
+					<a id="show-menu" class="show-menu" href="#">
+						<div class="my-btn my-btn-primary">
+							<div class="my-btn-bg-top"></div>
+							<div class="my-btn-bg-bottom"></div>
+							<div class="my-btn-text">
+								<i class="fa fa-bars"></i>
 							</div>
-						</a>
-					</div>
+						</div>
+					</a>
+				</div>
 
-					<!-- === TOP MENU === -->
+				<!-- === TOP MENU === -->
 
-					<div class="collapse navbar-collapse main-menu main-menu-1" id="main-menu">
-						<ul class="nav navbar-nav">
+				<div class="collapse navbar-collapse main-menu main-menu-1" id="main-menu">
+					<ul class="nav navbar-nav">
 
-							<!-- === top menu item === -->
-							<li>
-								<a href="/">Home</a>
-							</li>
+						<!-- === top menu item === -->
+						<li>
+							<a href="/">Home</a>
+						</li>
 					<!-- 	<li class="active dropdown">
 						<a data-toggle="dropdown" href="/">Home</a> -->
 							<!-- <ul class="dropdown-menu" role="menu">
@@ -265,6 +265,9 @@
 						<div class="contacts-form row">
 							<div class="send-result"></div>
 							<form name="contact-form" id="contact-form" method="POST">
+
+								@csrf
+
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
 									<input type="text" name="contact-name" placeholder="Full Name" />
 								</div>

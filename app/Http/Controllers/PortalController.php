@@ -23,6 +23,20 @@ class PortalController extends Controller
 {
 
 
+/**
+     * admin page.
+     *
+     * @return \Illuminate\View\View
+     */
+
+    public function test(string $category_id)
+    {
+
+
+        // return view('transaero-transport-logistics-html-template/html/quote');
+
+          return redirect()->route('quote', compact('category_id'));
+    }
 
     /**
      * admin page.

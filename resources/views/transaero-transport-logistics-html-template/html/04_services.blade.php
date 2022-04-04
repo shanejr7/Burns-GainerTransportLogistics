@@ -279,13 +279,13 @@
 							<a href="#">ALL SERVICES</a>
 						</li>
 						<li>
-							<a href="/quote/clothing">CLOTHING</a>
+							<a href="/quote">CLOTHING</a>
 						</li>
 						<li>
-							<a href="/quote/refrigerated+goods">REFRIGERATED GOODS</a>
+							<a href="/quote">REFRIGERATED GOODS</a>
 						</li>
 						<li>
-							<a href="/quote/dry+goods">DRY GOODS</a>
+							<a href="/quote">DRY GOODS</a>
 						</li>
 		
 					
@@ -313,7 +313,7 @@
 									</p> -->
 								</div>
 								<div class="service-1-button">
-									<a href="/qoute?type=clothing">
+									<a href="/quote">
 										<div class="my-btn my-btn-default">
 											<div class="my-btn-bg-top"></div>
 											<div class="my-btn-bg-bottom"></div>
@@ -342,7 +342,7 @@
 									</p> -->
 								</div>
 								<div class="service-1-button">
-									<a href="/qoute?type=refrigerated+goods">
+									<a href="/quote">
 										<div class="my-btn my-btn-default">
 											<div class="my-btn-bg-top"></div>
 											<div class="my-btn-bg-bottom"></div>
@@ -371,7 +371,7 @@
 									</p> -->
 								</div>
 								<div class="service-1-button">
-									<a href="/qoute?type=dry+goods">
+									<a href="/quote">
 										<div class="my-btn my-btn-default">
 											<div class="my-btn-bg-top"></div>
 											<div class="my-btn-bg-bottom"></div>

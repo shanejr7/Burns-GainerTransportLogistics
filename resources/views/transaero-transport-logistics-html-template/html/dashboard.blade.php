@@ -280,7 +280,7 @@
 								<a href="#default" onclick="orderHistory()">ORDER HISTORY</a>
 							</li>
 							<li>
-								<a href="#orderHistory" onclick="orderTracking() ">ORDER TRACKING</a>
+								<a href="#default" onclick="orderTracking() ">ORDER TRACKING</a>
 							</li>
 							<li>
 								<a href="/quote">REQUEST SHIPPING</a>
