@@ -487,7 +487,7 @@
 						</div>
 						<h3>road freight</h3>
 						<div class="service-text">
-							<p >Trucking we transport food @ clothing we <br>have a refrigerated trailer <br>so refrigerated or <br>dry goods  </p>
+							<p >Trucking we transport food and clothing we <br>have a refrigerated trailer <br>so refrigerated or <br>dry goods  </p>
 						</div>
 						<div class="service-button">
 							<a href="/services">

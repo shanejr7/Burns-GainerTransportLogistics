@@ -37,7 +37,7 @@ class RegisterController extends Controller
 
     public function createRegister()
     {
-        return view('/emg-main/web/MalexHTML/App/dist/registration');
+        return view('transaero-transport-logistics-html-template/html/signup');
     }
 
 
@@ -53,7 +53,9 @@ class RegisterController extends Controller
         // validator pipeline unique:users not working for unique email
 
         $attributes =  $request->validate([
+            'name'=>'required|min:3|max:25',
             'email'=> 'required|email|max:255|unique:users',
+            'phone'=> 'required|digits:10',
             'password' => 'required|min:7|max:255'
         ]);
 
@@ -64,31 +66,31 @@ class RegisterController extends Controller
 
 
               # Instantiate the client.
-            $mgClient = Mailgun::create('fd00846c1f2fff1319fd0a375c8825e9-cac494aa-53c6b775'); // For US servers
-            $domain = "mg.emgbusinessconsulting.com";
-            $params = array(
-            'from'    => 'egreen@emgbusinessconsulting.com',
-            'to'      => $user->email,
-            'subject' => 'Hello',
-            'text'    => 'Thanks for signing up in our app!'
-            );
+            // $mgClient = Mailgun::create('fd00846c1f2fff1319fd0a375c8825e9-cac494aa-53c6b775'); // For US servers
+            // $domain = "mg.emgbusinessconsulting.com";
+            // $params = array(
+            // 'from'    => 'egreen@emgbusinessconsulting.com',
+            // 'to'      => $user->email,
+            // 'subject' => 'Hello',
+            // 'text'    => 'Thanks for signing up in our app!'
+            // );
 
              # Make the call to the client.
-            $mgClient->messages()->send($domain, $params);
+            // $mgClient->messages()->send($domain, $params);
 
 
-        $notification1 = [
-            'user_id' =>Auth::id(),
-            'title' => 'New Client Information Document',
-            'body' =>'View our business portal for more information.'];
+        // $notification1 = [
+        //     'user_id' =>Auth::id(),
+        //     'title' => 'New Client Information Document',
+        //     'body' =>'View our business portal for more information.'];
 
-        $notification2 = [
-            'user_id' =>Auth::id(),
-            'title' => 'Tax Season Is Approaching',
-            'body' =>'Would you like to get started on your tax preparation'];
+        // $notification2 = [
+        //     'user_id' =>Auth::id(),
+        //     'title' => 'Tax Season Is Approaching',
+        //     'body' =>'Would you like to get started on your tax preparation'];
 
-        Notification::create($notification1);
-        Notification::create($notification2);
+        // Notification::create($notification1);
+        // Notification::create($notification2);
 
 
         $request->session()->regenerate();

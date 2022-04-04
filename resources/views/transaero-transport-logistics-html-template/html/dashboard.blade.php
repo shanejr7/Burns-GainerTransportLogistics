@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Responsive Bootstrap Logistic Html Template">
-<meta name="keywords" content="Trans, Aero, Bootstrap, Html, Template, Logistic, Blog, Transport, Corporate, Cargo, Truck">
-<meta name="author" content="Vadzim Liashkevich">
+<meta name="description" content="Trucking we transport food @ clothing we have a refrigerated trailer so refrigerated or dry goods">
+<meta name="keywords" content="Trans, refrigerated trailer , Logistic, Transport, Corporate, Cargo, Truck,Trucking ">
+<meta name="author" content="Shane Johnson">
 
 <!-- SITE TITLE -->
-<title>TransAero - Transport & Logistics HTML Template</title>
+<title>Burns & Gainer Transport & Logistics</title>
 
 <!-- =========================
       FAV AND TOUCH ICONS  
@@ -59,21 +59,21 @@
 						<img src="assets/img/logo.png" alt="" />
 					</div>
 					<div class="logo-text">
-						Trans <span class="color-primary">Aero</span>
+						Burns & Gainer  <span class="color-primary">Transport & Logistics</span>
 					</div>
 				</div>
 				 
 				<!-- === TOP SEARCH === -->
 				 
-				<div class="main-search-input" id="main-search-input">
+			<!-- 	<div class="main-search-input" id="main-search-input">
 					<form>
 						<input type="text" id="main-search" name="main-search" placeholder="Try and type enter..." />
 					</form>
-				</div>
+				</div> -->
 				 
-				<div class="search-control">
+				<!-- <div class="search-control"> -->
 					<!-- === top search button show === -->
-					<a id="show-search" class="show-search latest" href="#">
+				<!-- 	<a id="show-search" class="show-search latest" href="#">
 						<div class="my-btn my-btn-primary">
                             <div class="my-btn-bg-top"></div>
                             <div class="my-btn-bg-bottom"></div>
@@ -81,9 +81,9 @@
                                 <i class="fa fa-search"></i>
                             </div>
 						</div>
-					</a>
+					</a> -->
 					<!-- === top search button close === -->
-					<a id="close-search" class="close-search latest" href="#">
+					<!-- <a id="close-search" class="close-search latest" href="#">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
@@ -92,7 +92,7 @@
 							</div>
 						</div>
 					</a>
-				</div>
+				</div> -->
 				
 				<div class="show-menu-control">
 					<!-- === top search button show === -->
@@ -109,81 +109,107 @@
 				  
 				<!-- === TOP MENU === -->
 								 
-				<div class="collapse navbar-collapse main-menu main-menu-1" id="main-menu">
-						<ul class="nav navbar-nav">
+			<div class="collapse navbar-collapse main-menu main-menu-1" id="main-menu">
+					<ul class="nav navbar-nav">
 											
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Home</a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
+						<li>
+							<a href="/">Home</a>
+						</li>
+					<!-- 	<li class="active dropdown">
+							<a data-toggle="dropdown" href="/">Home</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li class="active">
 									<a href="/">Home 1</a>
 								</li>
-								<li>
-									<a href="/home2">Home 2</a>
-								</li>
-							</ul>
-						</li>
+							</ul> -->
+						<!-- </li> -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Service</a>
-							<ul class="dropdown-menu" role="menu">
-								<li >
+						<li>
+							<a  href="/services">Services</a>
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/service">Service</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
 									<a href="/services3">Service 1</a>
 								</li>
-								<li >
+								<li>
 									<a href="/services4">Service 2</a>
 								</li>
 								<li>
 									<a href="/service-detail">Service Details</a>
 								</li>
-							</ul>
+							</ul> -->
+						<!-- </li> -->
+						<li class="main-menu-separator"></li>
+						<li class="active">
+								<a  href="#">Dashboard</a>
 						</li>
-						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li >
-							<a href="/about">About us</a>
-						</li> 
-						<li class="main-menu-separator"></li>
-						<!-- === top menu item === -->
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a data-toggle="dropdown" href="#">Elements</a>
 							<ul class="dropdown-menu" role="menu">
-								<li >
+								<li>
 									<a href="/typogrpaphy">Typography</a>
 								</li>
-								<li >
+								<li>
 									<a href="/buttons">Buttons</a>
 								</li>
-								<li >
+								<li>
 									<a href="/progress">Progress Bars</a>
 								</li>
 								<li>
 									<a href="/alerts">Alerts</a>
 								</li>
 							</ul>
-						</li> 
+						</li>  -->
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
-						<li class="dropdown">
-							<a data-toggle="dropdown" href="#">Blog</a>
-							<ul class="dropdown-menu" role="menu">
+
+						<li >
+							<a href="/logout">LOGOUT</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/login">LOGIN</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
 								<li>
 									<a href="/blog">Blog items</a>
 								</li>
-								<li class="active">
+								<li>
 									<a href="/blog_2">Single Post</a>
 								</li>
-							</ul>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+					
+					<!-- 	<li class="dropdown">
+							<a data-toggle="dropdown" href="/signup">SIGNUP</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/blog">Blog items</a>
+								</li>
+								<li>
+									<a href="/blog_2">Single Post</a>
+								</li>
+							</ul> -->
+						<!-- </li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li>
+							<a href="/about-us">About us</a>
 						</li> 
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 						<li >
-							<a class="latest" href="/contacts">Contacts</a>
+							<a class="latest" href="/contact">Contact Us</a>
 						</li>
 					</ul>
 				</div>
+			
 
 			</div>
 		</div>
@@ -197,27 +223,27 @@
 	<!-- ===================================
 		PAGE HEADER
 	======================================== -->
-	<div class="page-header" data-stellar-background-ratio="0.4">
+	<div class="page-header" data-stellar-background-ratio="0.4" style="background-image: url('assets/media/main-slider/nav_img.jpg');">
 		<div class="page-header-overlay"></div>
 		<div class="container">
 			<div class="row">
 				
 				<!-- === PAGE HEADER TITLE === -->
-				<div class="page-header-title">
-					<h2>SINGLE POST</h2>
+				<div class="page-header-title" style="margin-top: 3em;">
+					<h2>DASHBOARD</h2>
 				</div>
 				
 				<!-- === PAGE HEADER BREADCRUMB === -->
 				<div class="page-header-breadcrumb">
 					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="11_blog.html">Blog</a></li>
-						<li class="active">Single Post</li>
+						<li><a href="/">Home</a></li>
+	<!-- 					<li><a href="11_blog.html">ORDER HISTORY</a></li> -->
+						<li class="active">DASHBOARD</li>
 					</ol>
 				</div>
 				
 				<!-- === PAGE HEADER BUTTON === -->
-				<div class="page-header-button">
+				<div class="page-header-button" style="margin-top: 3em;">
 					<a href="#">
 						<div class="my-btn my-btn-primary">
 							<div class="my-btn-bg-top"></div>

@@ -30,7 +30,7 @@ class LoginController extends Controller
 
     public function createLogin()
     {
-        return view('/emg-main/web/MalexHTML/App/dist/login');
+        return view('transaero-transport-logistics-html-template/html/login');
     }
     /**
      * log validated user to dashboard.

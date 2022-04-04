@@ -256,33 +256,9 @@
     <div class="def-section">
 		<div class="container">
 			<div class="row">
-				
-				<!-- === CONTACTS INFO === -->
-				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					<div class="contacts-info">
-						<div class="contacts-info-title">
-							<div class="contacts-info-title-icon">
-								<i class="fa fa-comments"></i>
-							</div>
-							<h3>We will be glad<br>to help you</h3>
-						</div>
-						<div class="contacts-info-text">
-							Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. 
-							Nam quam nunc, blandit vel, luctus pulvinar. 
-						</div>
-						<div class="contacts-info-people">
-							<div class="contacts-info-people-avatar">
-								<img src="assets/media/avatars/avatar1.png" alt="" />
-							</div>
-							<div class="contacts-info-people-name">
-								RICHARD GEAR
-							</div>
-							<div class="contacts-info-people-company">
-								Director
-							</div>
-						</div>
-					</div>
-				</div>
+		
+			<!-- === CONTACTS INFO === -->
+				@include('transaero-transport-logistics-html-template/html/components/owner-contact')
 				
 				<!-- === CONTACTS FORM === -->
 				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -325,52 +301,7 @@
 	<!-- =========================
 		CONTACTS DETAILS
 	============================== -->
-    <div class="def-section contact-details">
-		<div class="container">
-			<div class="row">
-				
-				<!-- === CONTACTS DETAILS ITEM === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 contact-detail">
-					<div class="contact-detail-icon">
-						<i class="flaticon-map58"></i>
-					</div>
-					<div class="contact-detail-title">
-						<h3>LOCATION</h3>
-					</div>
-					<div class="contact-detail-text">
-						McLean Drive , Los Angeles,<br>California VA 22108
-					</div>
-				</div>
-				
-				<!-- === CONTACTS DETAILS ITEM === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 contact-detail contact-detail-mark">
-					<div class="contact-detail-icon">
-						<i class="flaticon-telephone5"></i>
-					</div>
-					<div class="contact-detail-title">
-						<h3>PHONE | EMAIL</h3>
-					</div>
-					<div class="contact-detail-text">
-						+ 390 12 345 6789<br>info@domain.com
-					</div>
-				</div>
-				
-				<!-- === CONTACTS DETAILS ITEM === -->
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 contact-detail">
-					<div class="contact-detail-icon">
-						<i class="flaticon-clock96"></i>
-					</div>
-					<div class="contact-detail-title">
-						<h3>WORKING HOURS</h3>
-					</div>
-					<div class="contact-detail-text">
-						Mon - Fri : 08.00 17.00<br>Sat : 09.00  14.00
-					</div>
-				</div>
-			
-			</div>
-		</div>
-	</div>
+   	@include('transaero-transport-logistics-html-template/html/components/contact-details')
 	<!-- =========================
 		END CONTACTS DETAILS
 	============================== -->
@@ -379,8 +310,7 @@
 	<!-- =========================
 		CONTACTS MAP
 	============================== -->
-    <div class="contact-map" id="contact-map">
-	</div>
+ 	@include('transaero-transport-logistics-html-template/html/components/map')
 	<!-- =========================
 		END CONTACTS MAP
 	============================== -->
@@ -492,9 +422,6 @@
 	
 	<!-- CUSTOM SCRIPT -->
 	<script src="assets/js/theme.min.js"></script>
-	
-	<!-- GOOGLE MAPS API -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAHDFaUVFTKqrrUtBXubJbrUxKKq-t8Fw&amp;callback=initMap" async defer></script>
 	
 </body>
 </html>

@@ -13,7 +13,7 @@
 						</div>
 					</div>
 					<div class="footer-1-text">
-						<p>Trucking we transport food @ clothing we have a refrigerated trailer so refrigerated or dry goods </p>
+						<p>Trucking we transport food and clothing we have a refrigerated trailer so refrigerated or dry goods </p>
 					</div>
 					<div class="footer-1-button">
 						<a href="/about-us"><div class="my-btn my-btn-primary">

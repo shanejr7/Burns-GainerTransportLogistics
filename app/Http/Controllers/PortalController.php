@@ -70,123 +70,123 @@ class PortalController extends Controller
      * @return \Illuminate\View\View
      */
 
-    public function viewTaxSubmission()
-    {
+//     public function viewTaxSubmission()
+//     {
 
-        $dependents = Dependents::latest('created_at')->get();
+//         $dependents = Dependents::latest('created_at')->get();
 
-        $questionnaires = Questionnaires::latest('created_at')->get();
-        $questionnaires = $questionnaires->toArray();
+//         $questionnaires = Questionnaires::latest('created_at')->get();
+//         $questionnaires = $questionnaires->toArray();
 
-        $documentation = Documentations::latest('created_at')->get();
-        $documentation = $documentation->toArray();
-
-
-        $s3=" ";
-        $s3 = new Aws\S3\S3Client([
-            'version'  => 'latest',
-            'region'   => 'us-east-1',
-        ]);
+//         $documentation = Documentations::latest('created_at')->get();
+//         $documentation = $documentation->toArray();
 
 
+//         $s3=" ";
+//         $s3 = new Aws\S3\S3Client([
+//             'version'  => 'latest',
+//             'region'   => 'us-east-1',
+//         ]);
 
 
-        return view('/emg-main/web/MalexHTML/App/dist/admin-taxes',['notifications' => Notification::where('user_id','=',Auth::id())->get()],['taxpayer' => Taxpayer::latest('created_at')->get()])->with('questionnaires',$questionnaires)->with('dependents',$dependents)->with('documentations',$documentation)->with('s3',$s3);
+
+
+//         return view('/emg-main/web/MalexHTML/App/dist/admin-taxes',['notifications' => Notification::where('user_id','=',Auth::id())->get()],['taxpayer' => Taxpayer::latest('created_at')->get()])->with('questionnaires',$questionnaires)->with('dependents',$dependents)->with('documentations',$documentation)->with('s3',$s3);
     
 
-    }
+//     }
 
 
-   /**
-     * admin submit tax return.
-     *
-     * @return \Illuminate\View\View
-     */
+//    /**
+//      * admin submit tax return.
+//      *
+//      * @return \Illuminate\View\View
+//      */
 
-    public function test(Request $request)
-    {
+//     public function test(Request $request)
+//     {
 
 
-    return view('transaero-transport-logistics-html-template/html/quote');
+//     return view('transaero-transport-logistics-html-template/html/quote');
 
-}
+// }
     /**
      * admin submit tax return.
      *
      * @return \Illuminate\View\View
      */
 
-    public function submitTaxRequest(Request $request)
-    {
+    // public function submitTaxRequest(Request $request)
+    // {
 
 
-        $attributes =  $request->validate([
-            'amount' => 'required',
-            'tax_service_deduction_amount' => 'required',
-            'user_id' => 'required'
-        ]);
+    //     $attributes =  $request->validate([
+    //         'amount' => 'required',
+    //         'tax_service_deduction_amount' => 'required',
+    //         'user_id' => 'required'
+    //     ]);
 
-        if ($attributes) {
+    //     if ($attributes) {
 
-        $user_id = $request->input('user_id');
-
-
-        $taxpayer = Taxpayer::where('user_id','=',$user_id)->first();
-        $taxpayer->tax_submission_status = "Awaiting tax return approval";
-        $taxpayer->tax_submission_return_amount = $request->input('amount');
-        $taxpayer->tax_service_deduction_amount = $request->input('tax_service_deduction_amount');
-
-        $taxpayer->save();
+    //     $user_id = $request->input('user_id');
 
 
-               # Instantiate the client.
-            $mgClient = Mailgun::create('fd00846c1f2fff1319fd0a375c8825e9-cac494aa-53c6b775'); // For US servers
-            $domain = "mg.emgbusinessconsulting.com";
-            $params = array(
-            'from'    => 'egreen@emgbusinessconsulting.com',
-            'to'      => Auth::user()->email,
-            'subject' => 'Hello',
-            'text'    => 'your tax refund amount and filing fee is ready for processing!'
-            );
+    //     $taxpayer = Taxpayer::where('user_id','=',$user_id)->first();
+    //     $taxpayer->tax_submission_status = "Awaiting tax return approval";
+    //     $taxpayer->tax_submission_return_amount = $request->input('amount');
+    //     $taxpayer->tax_service_deduction_amount = $request->input('tax_service_deduction_amount');
 
-             # Make the call to the client.
-            $mgClient->messages()->send($domain, $params);
+    //     $taxpayer->save();
 
 
-            return redirect()->route('adminTaxes');
+    //            # Instantiate the client.
+    //         $mgClient = Mailgun::create('fd00846c1f2fff1319fd0a375c8825e9-cac494aa-53c6b775'); // For US servers
+    //         $domain = "mg.emgbusinessconsulting.com";
+    //         $params = array(
+    //         'from'    => 'egreen@emgbusinessconsulting.com',
+    //         'to'      => Auth::user()->email,
+    //         'subject' => 'Hello',
+    //         'text'    => 'your tax refund amount and filing fee is ready for processing!'
+    //         );
+
+    //          # Make the call to the client.
+    //         $mgClient->messages()->send($domain, $params);
+
+
+    //         return redirect()->route('adminTaxes');
         
 
         
-        }
+    //     }
 
 
-       return redirect()->back()->withErrors();
-    }
+    //    return redirect()->back()->withErrors();
+    // }
 
 
 
 
 
-    /**
-     * Show the form to register a new account.
-     *
-     * @return \Illuminate\View\View
-     */
+    // /**
+    //  * Show the form to register a new account.
+    //  *
+    //  * @return \Illuminate\View\View
+    //  */
 
-    public function createRegister()
-    {
-        return view('/emg-main/web/MalexHTML/App/dist/registration');
-    }
+    // public function createRegister()
+    // {
+    //     return view('/emg-main/web/MalexHTML/App/dist/registration');
+    // }
 
-    /**
-     * Show the form to login to account.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function createLogin()
-    {
-        return view('/emg-main/web/MalexHTML/App/dist/login');
-    }
+    // /**
+    //  * Show the form to login to account.
+    //  *
+    //  * @return \Illuminate\View\View
+    //  */
+    // public function createLogin()
+    // {
+    //     return view('/emg-main/web/MalexHTML/App/dist/login');
+    // }
 
 
     /**
@@ -204,7 +204,7 @@ class PortalController extends Controller
               
 
        if (auth()->user()->is_admin != true) {
-            return view('/emg-main/web/MalexHTML/App/dist/dashboard',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
+            return view('transaero-transport-logistics-html-template/html/dashboard');
        }
 
        if (auth()->user()->is_admin == true) {
