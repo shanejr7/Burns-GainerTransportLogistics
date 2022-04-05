@@ -256,6 +256,64 @@
 		<div class="def-section">
 			<div class="container">
 				<div class="row">
+					
+					@if (\Session::has('success'))
+					<div class="alert alert-success">
+						<ul>
+							<li>{!! \Session::get('success') !!}</li>
+						</ul>
+					</div>
+					@endif
+
+					@error('name')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('phone')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('email')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('location')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('category')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+
+						@error('message')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
 
 					<!-- === CONTACTS INFO === -->
 					@include('transaero-transport-logistics-html-template/html/components/owner-contact')
@@ -264,41 +322,63 @@
 					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
 						<div class="contacts-form row">
 							<div class="send-result"></div>
-							<form name="contact-form" id="contact-form" method="POST">
+							<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
 
 								@csrf
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
 									<input type="text" name="name" placeholder="FULL NAME" />
+									@error('name')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
 									<input type="text" name="email" placeholder="EMAIL" />
+									@error('email')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
 									<input type="text" name="location" placeholder="LOCATION" />
+									@error('location')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
 									<input type="text" name="destination" placeholder="TO DESTINATION" />
+									@error('destination')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
 								</div>
 
-									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
 									<input type="text" name="phone" placeholder="PHONE" />
+									@error('phone')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item" style="margin-top:24px">
 									<label>Expected shipping goods </label>
-									<select name="category_type">
-										<option value="1">Clothing</option>
+									<select name="category">
+										<option value="1" selected>Clothing</option>
 										<option value="2">Refrigerated goods</option>
 										<option value="3">Dry goods</option>
 									</select>
+									@error('category')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
 
 								</div>
 
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item">
 									<textarea name="contact-message" placeholder="How can we help?"></textarea>
+									@error('message')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
 									<button type="submit"><span class="my-btn my-btn-grey">

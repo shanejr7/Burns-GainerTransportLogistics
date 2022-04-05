@@ -380,12 +380,13 @@ class PortalController extends Controller
         // }
 
       $attributes =  $request->validate([
-        'name' => 'required',
-        'phone' => 'required',
-        'email' => 'required',
-        'location' => 'required',
-        'category_id' =>'required',
-        'message' =>'required',
+        'name' => 'required|min:3|max:25',
+        'phone' => 'required|digits:10',
+        'email' => 'required|email|max:255',
+        'location' => 'required|max:255',
+        'destination' => 'required|max:255',
+        'category' =>'required',
+        'message' =>'required|max:255',
     ]);
 
 
@@ -400,7 +401,7 @@ class PortalController extends Controller
         $quote->email = $request->input('email');
         $quote->location = $request->input('location');
         $quote->destination = $request->input('destination');
-        $quote->category_id = $request->input('category_id');
+        $quote->category_id = $request->input('category');
         $quote->message = $request->input('message');
 
 

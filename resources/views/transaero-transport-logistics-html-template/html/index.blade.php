@@ -485,6 +485,67 @@
 					</div>
 					@endif
 
+					@error('name')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('phone')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('email')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('location')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('category')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+
+						@error('message')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+
+
+
+
+				<!-- 	@if (\Session::has('error'))
+					<div class="alert alert-success">
+						<ul>
+							<li>{!! \Session::get('error') !!}</li>
+						</ul>
+					</div>
+					@endif -->
+
 					<!-- === SERVICE ITEM === -->	
 
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -495,7 +556,7 @@
 							</div>
 							<h3>road freight</h3>
 							<div class="service-text">
-								<p >Trucking we transport food and clothing we <br>have a refrigerated trailer <br>so refrigerated or <br>dry goods  </p>
+								<p >Trucking transport for food and clothing.<br>We have a refrigerated trailer <br>shipping refrigerated or <br>dry goods</p>
 							</div>
 							<div class="service-button">
 								<a href="/services">
@@ -733,12 +794,12 @@
 									<!-- === GET QUOTE FORM ITEM === -->
 									<div class="form-item">
 										<label>Expected shipping goods </label>
-										<select name="category_id">
+										<select name="category">
 											<option value="1" selected>Clothing</option>
 											<option value="2">Refrigerated goods</option>
 											<option value="3">Dry goods</option>
 										</select>
-										@error('category_id')
+										@error('category')
 										<p class="alert" style="color: red;">{{$message}}</p>
 										@enderror
 									</div>
