@@ -20,16 +20,41 @@ use App\Http\Controllers\SessionController;
 |
 */
 
+
+// HOME PAGE
 Route::get('/', function () {
     return view('transaero-transport-logistics-html-template/html/index');
 });
 
+
+Route::get('/#formArea', function () {
+    return view('transaero-transport-logistics-html-template/html/index');
+});
+
+// SERVICE PAGE
 Route::get('/services', function () {
     return view('transaero-transport-logistics-html-template/html/04_services');
 });
 
+// ABOUT US PAGE
+Route::get('/about-us', function () {
+    return view('transaero-transport-logistics-html-template/html/06_about');
+});
 
-// AUTHENTICATE USER LOG REQUEST & DASHBOARD ROUTE
+// QUOTE PAGE
+Route::get('/quote', function () {
+    return view('transaero-transport-logistics-html-template/html/quote');
+});
+
+
+// CONTACT PAGE
+Route::get('/contact', function () {
+    return view('transaero-transport-logistics-html-template/html/13_contacts');
+});
+
+/* CONTROLLER ROUTES */
+
+// AUTHENTICATE USER LOGIN REQUEST & DASHBOARD ROUTE
 Route::get('/login', [LoginController::class,'createLogin']);
 Route::post('/auth/login', [LoginController::class,'authenticate']);
 
@@ -37,24 +62,16 @@ Route::post('/auth/login', [LoginController::class,'authenticate']);
 Route::get('/signup', [RegisterController::class,'createRegister']);
 Route::post('/auth/register',[RegisterController::class, 'authenticate']);
 
-Route::get('/service-detail', function () {
-    return view('transaero-transport-logistics-html-template/html/05_service_detail');
-});
-
-Route::get('/quote', function () {
-    return view('transaero-transport-logistics-html-template/html/quote');
-});
-
-//DASHBOARD REQUEST ROUTE <403>
+// DASHBOARD REQUEST ROUTE <403>
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
-
-Route::get('/about-us', function () {
-    return view('transaero-transport-logistics-html-template/html/06_about');
-});
-
-Route::get('/contact', function () {
-    return view('transaero-transport-logistics-html-template/html/13_contacts');
-});
 
 // USER LOGOUT & DESTROY SESSION
 Route::get('/logout',[SessionController::class, 'destroy']);
+
+// QUOTE REQUEST
+Route::post('/quote/request',[PortalController::class, 'clientQuoteSubmission']);
+
+// Route::get('/service-detail', function () {
+//     return view('transaero-transport-logistics-html-template/html/05_service_detail');
+// });
+

@@ -269,22 +269,22 @@
 								@csrf
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="contact-name" placeholder="Full Name" />
+									<input type="text" name="name" placeholder="FULL NAME" />
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="contact-email" placeholder="Email" />
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="phone" placeholder="Phone" />
-								</div>
-
-
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="shipping_pickup_address" placeholder="Pick up location" />
+									<input type="text" name="email" placeholder="EMAIL" />
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="shipping_dropoff_address" placeholder="Drop off location" />
+									<input type="text" name="location" placeholder="LOCATION" />
+								</div>
+
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="destination" placeholder="TO DESTINATION" />
+								</div>
+
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="phone" placeholder="PHONE" />
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item" style="margin-top:24px">
