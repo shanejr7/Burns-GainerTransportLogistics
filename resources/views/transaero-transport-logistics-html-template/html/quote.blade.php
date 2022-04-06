@@ -256,7 +256,7 @@
 		<div class="def-section">
 			<div class="container">
 				<div class="row">
-					
+
 					@if (\Session::has('success'))
 					<div class="alert alert-success">
 						<ul>
@@ -375,7 +375,7 @@
 								</div>
 
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item">
-									<textarea name="contact-message" placeholder="How can we help?"></textarea>
+									<textarea name="message" placeholder="How can we help?"></textarea>
 									@error('message')
 									<p class="alert" style="color: red;">{{$message}}</p>
 									@enderror
