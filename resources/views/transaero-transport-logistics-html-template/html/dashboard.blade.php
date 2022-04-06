@@ -617,7 +617,7 @@
 		 ============================== -->	
 
 		 <!-- JQUERY -->
-		 		 <script src="assets/js/customDashbaord.js"></script>
+		 <script src="assets/js/customDashboard.js"></script>
 		 <script src="assets/js/jquery-1.11.3.min.js"></script>
 
 		 <!-- BOOTSTRAP -->
