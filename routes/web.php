@@ -41,7 +41,7 @@ Route::get('/about-us', function () {
     return view('transaero-transport-logistics-html-template/html/06_about');
 });
 
-// QUOTE PAGE
+// QUOTE GUEST PAGE
 Route::get('/quote', function () {
     return view('transaero-transport-logistics-html-template/html/quote');
 });
@@ -68,10 +68,6 @@ Route::get('/dashboard', [PortalController::class,'createDashboard']);
 // USER LOGOUT & DESTROY SESSION
 Route::get('/logout',[SessionController::class, 'destroy']);
 
-// QUOTE REQUEST
+// QUOTE GUEST REQUEST
 Route::post('/quote/request',[PortalController::class, 'clientQuoteSubmission']);
-
-// Route::get('/service-detail', function () {
-//     return view('transaero-transport-logistics-html-template/html/05_service_detail');
-// });
 

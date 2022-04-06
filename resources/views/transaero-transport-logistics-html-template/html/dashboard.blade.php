@@ -245,7 +245,7 @@
 
 					<!-- === PAGE HEADER BUTTON === -->
 					<div class="page-header-button" style="margin-top: 3em;">
-						<a href="#">
+						<a href="/quote">
 							<div class="my-btn my-btn-primary">
 								<div class="my-btn-bg-top"></div>
 								<div class="my-btn-bg-bottom"></div>

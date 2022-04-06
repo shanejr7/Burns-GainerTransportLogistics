@@ -282,28 +282,28 @@
 										@csrf
 
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-											<input type="text" name="name" placeholder="Full Name" required />
+											<input type="text" name="name" placeholder="FULL NAME" required />
 											@error('name')
 											<p class="alert" style="color: red;">{{$message}}</p>
 											@enderror
 										</div>
 
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-											<input type="text" name="email" placeholder="Email" required />
+											<input type="text" name="email" placeholder="EMAIL" required />
 											@error('email')
 											<p class="alert" style="color: red;">{{$message}}</p>
 											@enderror
 										</div>
 
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-											<input type="text" name="phone" placeholder="Phone" required />
+											<input type="text" name="phone" placeholder="PHONE" required />
 											@error('phone')
 											<p class="alert" style="color: red;">{{$message}}</p>
 											@enderror
 										</div>
 
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-											<input type="text" name="password" placeholder="password" required />
+											<input type="text" name="password" placeholder="PASSWORD" required />
 											@error('password')
 											<p class="alert" style="color: red;">{{$message}}</p>
 											@enderror

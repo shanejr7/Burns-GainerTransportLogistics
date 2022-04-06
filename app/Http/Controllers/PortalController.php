@@ -366,7 +366,7 @@ class PortalController extends Controller
 
 
     /**
-     * validated client business form.
+     * validated quote form.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -379,7 +379,9 @@ class PortalController extends Controller
 
         // }
 
-      $attributes =  $request->validate([
+       $request['email']= strtolower($request->input('email'));
+
+       $attributes =  $request->validate([
         'name' => 'required|min:3|max:25',
         'phone' => 'required|digits:10',
         'email' => 'required|email|max:255',
@@ -391,7 +393,7 @@ class PortalController extends Controller
 
 
 
-      if ($attributes) {
+       if ($attributes) {
 
 
         $quote = new Quote();
@@ -428,13 +430,14 @@ class PortalController extends Controller
 
     }else{
 
-        return redirect()->to('/#formArea')->withErrors(['name' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
-            'location' => 'required',
-            'destination' =>'required',
-            'category_type' =>'required',
-            'message' =>'required']);
+        return redirect()->to('/#formArea')->withErrors(['name' => 'required|min:3|max:25',
+            'phone' => 'required|digits:10',
+            'email' => 'required|email|max:255',
+            'location' => 'required|max:255',
+            'destination' => 'required|max:255',
+            'category' =>'required',
+            'message' =>'required|max:255',
+        ]);
 
     }
 
@@ -583,84 +586,84 @@ class PortalController extends Controller
           $taxpayer->occupation = $request->input('occupation');
 
           if ($request->input('work_phone') != null) {
-           $taxpayer->work_phone = $request->input('work_phone');
-       }
+             $taxpayer->work_phone = $request->input('work_phone');
+         }
 
 
 
-       if ($request->input('mobile_phone') != null) {
-        $taxpayer->mobile_phone = $request->input('mobile_phone');
-    }
+         if ($request->input('mobile_phone') != null) {
+            $taxpayer->mobile_phone = $request->input('mobile_phone');
+        }
 
-    $taxpayer->address = $request->input('address');
+        $taxpayer->address = $request->input('address');
 
-    if ($request->input('address_2') != null) {
-        $taxpayer->address_2 = $request->input('address_2');
-    }
+        if ($request->input('address_2') != null) {
+            $taxpayer->address_2 = $request->input('address_2');
+        }
 
-    $taxpayer->city = $request->input('city');
-    $taxpayer->state = $request->input('state');
-    $taxpayer->zip = $request->input('zip');
+        $taxpayer->city = $request->input('city');
+        $taxpayer->state = $request->input('state');
+        $taxpayer->zip = $request->input('zip');
 
 
         // spouse
 
 
-    if ($request->input('spouse_first_name') != null) {
+        if ($request->input('spouse_first_name') != null) {
 
 
-        $taxpayer->spouse_first_name = $request->input('spouse_first_name');
+            $taxpayer->spouse_first_name = $request->input('spouse_first_name');
 
-        if ($request->input('spouse_middle_name') != null) {
-           $taxpayer->spouse_middle_name = $request->input('spouse_middle_name');
-       }
+            if ($request->input('spouse_middle_name') != null) {
+             $taxpayer->spouse_middle_name = $request->input('spouse_middle_name');
+         }
 
-       $taxpayer->spouse_last_name = $request->input('spouse_last_name');
+         $taxpayer->spouse_last_name = $request->input('spouse_last_name');
 
 
-       if ($request->input('spouse_suffix') != null) {
-        $taxpayer->spouse_suffix = $request->input('spouse_suffix');
+         if ($request->input('spouse_suffix') != null) {
+            $taxpayer->spouse_suffix = $request->input('spouse_suffix');
+        }
+
+        $taxpayer->spouse_ssn = $request->input('spouse_ssn');
+        $taxpayer->spouse_date_of_birth = $request->input('spouse_date_of_birth');
+        $taxpayer->spouse_occupation = $request->input('spouse_occupation');
+
+        if ($request->input('spouse_work_phone') != null) {
+            $taxpayer->spouse_work_phone = $request->input('spouse_work_phone');
+        }
+
+        if ($request->input('spouse_mobile_phone') != null) {
+            $taxpayer->spouse_mobile_phone = $request->input('spouse_mobile_phone');
+        }
+
+
     }
-
-    $taxpayer->spouse_ssn = $request->input('spouse_ssn');
-    $taxpayer->spouse_date_of_birth = $request->input('spouse_date_of_birth');
-    $taxpayer->spouse_occupation = $request->input('spouse_occupation');
-
-    if ($request->input('spouse_work_phone') != null) {
-        $taxpayer->spouse_work_phone = $request->input('spouse_work_phone');
-    }
-
-    if ($request->input('spouse_mobile_phone') != null) {
-        $taxpayer->spouse_mobile_phone = $request->input('spouse_mobile_phone');
-    }
-
-
-}
 
 
 
         // payment 
 
-$taxpayer->filing_status = $request->input('filing_status');
-$taxpayer->direct_deposit = $request->input('direct_deposit');
+    $taxpayer->filing_status = $request->input('filing_status');
+    $taxpayer->direct_deposit = $request->input('direct_deposit');
 
-if ($request->input('direct_deposit_information_change') != null) {
+    if ($request->input('direct_deposit_information_change') != null) {
 
-    $taxpayer->direct_deposit_information_change = $request->input('direct_deposit_information_change');
+        $taxpayer->direct_deposit_information_change = $request->input('direct_deposit_information_change');
 
-}
+    }
 
-if ($request->input('bank_routing_number') != null) {
- $taxpayer->bank_routing_number = $request->input('bank_routing_number');
-}
-
-
-if ($request->input('bank_account_number') != null) {
- $taxpayer->bank_account_number = $request->input('bank_account_number');
-}
+    if ($request->input('bank_routing_number') != null) {
+       $taxpayer->bank_routing_number = $request->input('bank_routing_number');
+   }
 
 
-if ($request->input('card_holder_name') != null) {
+   if ($request->input('bank_account_number') != null) {
+       $taxpayer->bank_account_number = $request->input('bank_account_number');
+   }
+
+
+   if ($request->input('card_holder_name') != null) {
     $taxpayer->card_holder_name = $request->input('card_holder_name');
 }
 
@@ -906,36 +909,36 @@ if ($dependents_num > 0) {
             $dependents->first_name =  $dependents_first_name[$i];
 
             if (isset($dependents_middle_name[$i])) {
-               $dependents->middle_name = $dependents_middle_name[$i];
-           }
+             $dependents->middle_name = $dependents_middle_name[$i];
+         }
 
-           $dependents->last_name =  $dependents_last_name[$i];
+         $dependents->last_name =  $dependents_last_name[$i];
 
-           if (isset($dependents->suffix[$i])) {
-               $dependents->middle_name = $dependents_suffix[$i];
-           }
-
-
-           $dependents->ssn = $dependents_ssn[$i];
-           $dependents->date_of_birth = $dependents_date_of_birth[$i];
-           $dependents->relationship =  $dependents_relationship[$i];
-           $dependents->child_care = $dependents_child_care[$i];
-           $dependents->college_tuition = $dependents_college_tuition[$i];
-           $dependents->health_insurance = $dependents_health_insurance;
-
-           if (isset($dependents_months_insured[$i])) {
-              $dependents->months_insured = $dependents_months_insured[$i];
-          }
-
-          $dependents->save();
+         if (isset($dependents->suffix[$i])) {
+             $dependents->middle_name = $dependents_suffix[$i];
+         }
 
 
+         $dependents->ssn = $dependents_ssn[$i];
+         $dependents->date_of_birth = $dependents_date_of_birth[$i];
+         $dependents->relationship =  $dependents_relationship[$i];
+         $dependents->child_care = $dependents_child_care[$i];
+         $dependents->college_tuition = $dependents_college_tuition[$i];
+         $dependents->health_insurance = $dependents_health_insurance;
 
+         if (isset($dependents_months_insured[$i])) {
+          $dependents->months_insured = $dependents_months_insured[$i];
       }
 
+      $dependents->save();
 
 
-  }else{
+
+  }
+
+
+
+}else{
 
 
 
@@ -948,27 +951,27 @@ if ($dependents_num > 0) {
         $dependents->first_name =  $dependents_first_name[$i];
 
         if (isset($dependents_middle_name[$i])) {
-           $dependents->middle_name = $dependents_middle_name[$i];
-       }
+         $dependents->middle_name = $dependents_middle_name[$i];
+     }
 
-       $dependents->last_name =  $dependents_last_name[$i];
+     $dependents->last_name =  $dependents_last_name[$i];
 
-       if (isset($dependents->suffix[$i])) {
-           $dependents->middle_name = $dependents_suffix[$i];
-       }
-
-
-       $dependents->ssn = $dependents_ssn[$i];
-       $dependents->date_of_birth = $dependents_date_of_birth[$i];
-       $dependents->relationship =  $dependents_relationship[$i];
-       $dependents->child_care = $dependents_child_care[$i];
-       $dependents->college_tuition = $dependents_college_tuition[$i];
-       $dependents->health_insurance = $dependents_health_insurance;
+     if (isset($dependents->suffix[$i])) {
+         $dependents->middle_name = $dependents_suffix[$i];
+     }
 
 
-       $dependents->save();
+     $dependents->ssn = $dependents_ssn[$i];
+     $dependents->date_of_birth = $dependents_date_of_birth[$i];
+     $dependents->relationship =  $dependents_relationship[$i];
+     $dependents->child_care = $dependents_child_care[$i];
+     $dependents->college_tuition = $dependents_college_tuition[$i];
+     $dependents->health_insurance = $dependents_health_insurance;
 
-   }
+
+     $dependents->save();
+
+ }
 
 }
 }
@@ -1013,9 +1016,9 @@ if ($questionnaires->paid_estimated_tax_payments =="true") {
 
         if (isset($estimated_taxes_paid_date)) {
 
-           $estimated_taxes_paid_and_date = $estimated_taxes_paid_and_date .",".$estimated_taxes_paid[$i] .",". $estimated_taxes_paid_date[$i];
-       }
-   }
+         $estimated_taxes_paid_and_date = $estimated_taxes_paid_and_date .",".$estimated_taxes_paid[$i] .",". $estimated_taxes_paid_date[$i];
+     }
+ }
 }
 
 if ($questionnaires->paid_estimated_tax_payments == "true") {

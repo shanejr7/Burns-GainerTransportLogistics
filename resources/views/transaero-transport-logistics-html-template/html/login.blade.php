@@ -279,13 +279,13 @@
 							<form name="contact-form" id="contact-form" method="POST"  action="/auth/login">
 								@csrf
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="email" placeholder="Email" required />
+									<input type="text" name="email" placeholder="EMAIL" required />
 									@error('email')
 									<p class="alert" style="color: red;">{{$message}}</p>
 									@enderror
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="password" placeholder="password" required />
+									<input type="text" name="password" placeholder="PASSWORD" required />
 									@error('password')
 									<p class="alert" style="color: red">{{$message}}</p>
 									@enderror

@@ -25,7 +25,7 @@ class RegisterController extends Controller
      *
      */
 
-    public function __construct(){
+     public function __construct(){
         $this->middleware('guest');
     }
 
@@ -47,12 +47,12 @@ class RegisterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function authenticate(Request $request)
-    {
+       public function authenticate(Request $request)
+       {
 
-        // validator pipeline unique:users not working for unique email
+        $request['email']= strtolower($request->input('email'));
 
-        $attributes =  $request->validate([
+         $attributes =  $request->validate([
             'name'=>'required|min:3|max:25',
             'email'=> 'required|email|max:255|unique:users',
             'phone'=> 'required|digits:10',
@@ -60,9 +60,9 @@ class RegisterController extends Controller
         ]);
 
 
-        $user = User::create($attributes);
+         $user = User::create($attributes);
 
-        auth()->login($user);
+         auth()->login($user);
 
 
               # Instantiate the client.
@@ -93,9 +93,9 @@ class RegisterController extends Controller
         // Notification::create($notification2);
 
 
-        $request->session()->regenerate();
+         $request->session()->regenerate();
 
-        return redirect('/dashboard');
+         return redirect('/dashboard');
 
-    }
-}
+     }
+ }
