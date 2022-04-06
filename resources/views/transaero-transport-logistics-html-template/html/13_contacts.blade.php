@@ -265,49 +265,22 @@
 	<!-- =========================
 		CONTACTS
 	============================== -->
-    <div class="def-section">
+ <div class="def-section about-text">
 		<div class="container">
-			<div class="row">
-				
-				<!-- === CONTACTS INFO === -->
-				@include('transaero-transport-logistics-html-template/html/components/owner-contact')
-				
-				
-				<!-- === CONTACTS FORM === -->
-				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-					<div class="contacts-form row">
-						<div class="send-result"></div>
-						<form name="contact-form" id="contact-form" method="POST">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-								<input type="text" name="contact-name" placeholder="Full Name" />
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-								<input type="text" name="contact-email" placeholder="Email" />
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-								<input type="text" name="contact-phone" placeholder="Phone" />
-							</div>
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item">
-								<textarea name="contact-message" placeholder="How can we help?"></textarea>
-							</div>
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
-								<button><span class="my-btn my-btn-grey">
-									<span class="my-btn-bg-top"></span>
-									<span class="my-btn-bg-bottom"></span>
-									<span class="my-btn-text">
-										SEND MESSAGE
-									</span>
-								</span></button>
-							</div>
-						</form>
-					</div>
-				</div>
-				
-				
-			</div>
+			<!-- <div class="about-text-image">
+				<img src="assets/media/about/1.jpg" alt="" />
+			</div> -->
+			<h2>Ask us about our shipping operations?</h2>
+			<!-- <p>
+				Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum 
+				In lorem felis sollicit udin sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
+				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+				aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+				proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+				doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+			</p> -->
 		</div>
 	</div>
-	
 	<!-- =========================
 		CONTACTS DETAILS
 	============================== -->
