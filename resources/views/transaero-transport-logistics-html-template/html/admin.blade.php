@@ -348,7 +348,18 @@
 
 
 							<section id="orderRequest">
-								demo
+								  @if(isset($quotes))
+                                    @for($i = 0; $i < sizeof($quotes); $i++)
+                                    	{{$quotes[$i]->id}}
+                                    @endfor
+                                  @endif
+
+                                   @if(count($quotes)==0)
+                                  <div class="col-lg-1"></div>
+                                  <div class="col-lg-6">
+                                  	<h2>There aren't any quotes.</h2>
+                                  </div>
+                                  @endif
 							</section>
 
 

@@ -52,7 +52,7 @@ class PortalController extends Controller
      public function viewAccount()
      {
 
-        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::where('active','=',1)]);
+        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()]);
     
     }
 
@@ -399,6 +399,7 @@ class PortalController extends Controller
 
         $quote = new Quote();
 
+        $quote->active = 1;
         $quote->client_id = $request->input('client_id');
         $quote->name = $request->input('name');
         $quote->phone = $request->input('phone');
