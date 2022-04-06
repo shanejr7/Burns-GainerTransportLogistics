@@ -62,6 +62,9 @@ Route::post('/auth/login', [LoginController::class,'authenticate']);
 Route::get('/signup', [RegisterController::class,'createRegister']);
 Route::post('/auth/register',[RegisterController::class, 'authenticate']);
 
+// ADMIN ACCOUNT REQUEST ROUTE
+Route::get('/admin',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
+
 // DASHBOARD REQUEST ROUTE <403>
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
 

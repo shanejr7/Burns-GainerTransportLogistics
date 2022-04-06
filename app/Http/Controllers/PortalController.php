@@ -36,12 +36,12 @@ class PortalController extends Controller
      * @return \Illuminate\View\View
      */
 
-    public function createAdmin()
-    {
+    // public function createAdmin()
+    // {
 
 
-        return view('/emg-main/web/MalexHTML/App/dist/admin-notifications',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
-    }
+    //     return view('/emg-main/web/MalexHTML/App/dist/admin-notifications',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
+    // }
 
      /**
      * admin account page.
@@ -52,8 +52,7 @@ class PortalController extends Controller
      public function viewAccount()
      {
 
-
-        return view('/emg-main/web/MalexHTML/App/dist/admin-account',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
+        return view('transaero-transport-logistics-html-template/html/admin');
     }
 
      /**
@@ -62,12 +61,12 @@ class PortalController extends Controller
      * @return \Illuminate\View\View
      */
 
-     public function viewClients()
-     {
+    //  public function viewClients()
+    //  {
 
 
-        return view('/emg-main/web/MalexHTML/App/dist/admin-clients',['notifications' => Notification::where('user_id','=',Auth::id())->get()],['client' => Clients::all()]);
-    }
+    //     return view('/emg-main/web/MalexHTML/App/dist/admin-clients',['notifications' => Notification::where('user_id','=',Auth::id())->get()],['client' => Clients::all()]);
+    // }
 
 
     /**
@@ -181,7 +180,7 @@ class PortalController extends Controller
 
         if (auth()->user()->is_admin == true) {
 
-            return redirect()->route('adminNotifications');
+            return redirect()->route('adminAccount');
 
         }
 
