@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('category_id');
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('location');
             $table->string('destination');
             $table->string('message')->nullable();

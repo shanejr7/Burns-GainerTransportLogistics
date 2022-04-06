@@ -504,13 +504,13 @@
 								<input type="hidden" name="client_id" value="{{auth()->user()->id}}">
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="name" placeholder="{{auth()->user()->name}}" value="{{auth()->user()->name}}" disabled />
+									<input type="text" name="name" placeholder="{{auth()->user()->name}}" value="{{auth()->user()->name}}" />
 									@error('name')
 									<p class="alert" style="color: red;">{{$message}}</p>
 									@enderror
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="email" placeholder="{{auth()->user()->email}}" value="{{auth()->user()->email}}" disabled />
+									<input type="text" name="email" placeholder="{{auth()->user()->email}}" value="{{auth()->user()->email}}"/>
 									@error('email')
 									<p class="alert" style="color: red;">{{$message}}</p>
 									@enderror
@@ -532,7 +532,7 @@
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-									<input type="text" name="phone" placeholder="{{auth()->user()->phone}}" value="{{auth()->user()->phone}}" disabled />
+									<input type="text" name="phone" placeholder="{{auth()->user()->phone}}" value="{{auth()->user()->phone}}"/>
 									@error('phone')
 									<p class="alert" style="color: red;">{{$message}}</p>
 									@enderror

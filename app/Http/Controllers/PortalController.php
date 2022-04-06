@@ -399,6 +399,7 @@ class PortalController extends Controller
 
         $quote = new Quote();
 
+        $quote->client_id = $request->input('client_id');
         $quote->name = $request->input('name');
         $quote->phone = $request->input('phone');
         $quote->email = $request->input('email');
