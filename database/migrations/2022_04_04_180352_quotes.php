@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id()->unique();
             $table->integer('client_id')->nullable();
             $table->integer('category_id');
+            $table->integer('active');
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
             $table->string('email');

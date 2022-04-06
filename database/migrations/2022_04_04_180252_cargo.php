@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-         Schema::create('cargo', function (Blueprint $table) {
+         Schema::create('cargos', function (Blueprint $table) {
             $table->id()->unique();
             $table->integer('freight_id');
             $table->rememberToken();
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-         Schema::dropIfExists('cargo');
+         Schema::dropIfExists('cargos');
     }
 };

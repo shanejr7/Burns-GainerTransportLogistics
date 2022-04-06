@@ -616,46 +616,8 @@
 		 SCRIPTS   
 		 ============================== -->	
 
-
-		 <script>
-
-		 	defaultLoad();
-
-		 	function defaultLoad(){
-
-		 		$("#default").show();
-		 		$("#orderHistory").hide();
-		 		$("#orderTracking").hide();
-
-		 	}
-
-
-		 	function orderHistory(){
-
-		 		$("#orderTracking").hide();
-		 		$("#default").hide();
-		 		
-		 		$( "#orderHistory" ).show( "slow", function() {
-		 			
-		 		});
-
-		 	}
-
-
-		 	function orderTracking(){
-
-		 		$("#orderHistory").hide();
-		 		$("#default").hide();
-
-		 		$( "#orderTracking" ).show( "slow", function() {
-		 			
-		 		});
-
-		 	}
-
-		 </script>
-
 		 <!-- JQUERY -->
+		 		 <script src="assets/js/customDashbaord.js"></script>
 		 <script src="assets/js/jquery-1.11.3.min.js"></script>
 
 		 <!-- BOOTSTRAP -->

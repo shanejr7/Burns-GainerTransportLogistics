@@ -114,10 +114,10 @@
 					<ul class="nav navbar-nav">
 
 						<!-- === top menu item === -->
-					
-							<li class="active">
-								<a  href="#">Dashboard</a>
-							</li>
+
+						<li class="active">
+							<a  href="#">Dashboard</a>
+						</li>
 						
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
@@ -126,13 +126,13 @@
 							<a href="/logout">LOGOUT</a>
 
 						</li>
-				
-							<li class="main-menu-separator"></li>
-							<!-- === top menu item === -->
 
-							<li >
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+
+						<!-- 	<li >
 								<a class="latest" href="/contact">Settings</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 
@@ -194,11 +194,11 @@
 								<a href="#default" onclick="orderHistory()">ORDER HISTORY</a>
 							</li>
 							<li>
-								<a href="#default" onclick="orderTracking() ">ORDER TRACKING</a>
+								<a href="#default" onclick="orderTracking()">ORDER TRACKING</a>
 							</li>
 
 							<li>
-								<a href="/quote">REQUEST SHIPPING</a>
+								<a href="#" onclick="orderRequest()">REQUESTED SHIPPING</a>
 							</li>
 						</ul>
 					</div>
@@ -216,9 +216,9 @@
 					</div>
 
 					<div class="bs-example">
-							<blockquote><a href="/orders">ORDERS - 2</a></blockquote>
+						<blockquote><a href="/orders">ORDERS - 2</a></blockquote>
 
-						</div>
+					</div>
 
 				</section>
 
@@ -347,6 +347,11 @@
 							</section>
 
 
+							<section id="orderRequest">
+								demo
+							</section>
+
+
 
 
 							<!-- === BLOG RIGHT BAR === -->
@@ -459,14 +464,14 @@
 	<!-- 	<div class="def-section home-subscribe">
 			<div class="container">
 				<div class="row">
- -->
-					<!-- === SUBSCRIBE TEXT === -->
+				-->
+				<!-- === SUBSCRIBE TEXT === -->
 				<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-text animated wow fadeInUp" data-wow-duration=".5s" data-wow-offset="100">
 						<span class="home-subscribe-icon"><i class="flaticon-email114"></i></span>
 						SIGN UP FOR NEWSLETTER TO GET UPDATES AND NEWS
 					</div>
- -->
-					<!-- === SUBSCRIBE FORM === -->
+				-->
+				<!-- === SUBSCRIBE FORM === -->
 				<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-form animated wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" data-wow-offset="100">
 						<form>
 							<div class="home-subscribe-form-input">
@@ -530,46 +535,9 @@
 		 SCRIPTS   
 		 ============================== -->	
 
-
-		 <script>
-
-		 	defaultLoad();
-
-		 	function defaultLoad(){
-
-		 		$("#default").show();
-		 		$("#orderHistory").hide();
-		 		$("#orderTracking").hide();
-
-		 	}
-
-
-		 	function orderHistory(){
-
-		 		$("#orderTracking").hide();
-		 		$("#default").hide();
-		 		
-		 		$( "#orderHistory" ).show( "slow", function() {
-		 			
-		 		});
-
-		 	}
-
-
-		 	function orderTracking(){
-
-		 		$("#orderHistory").hide();
-		 		$("#default").hide();
-
-		 		$( "#orderTracking" ).show( "slow", function() {
-		 			
-		 		});
-
-		 	}
-
-		 </script>
-
 		 <!-- JQUERY -->
+		  <script src="assets/js/customAdmin.js"></script>
+
 		 <script src="assets/js/jquery-1.11.3.min.js"></script>
 
 		 <!-- BOOTSTRAP -->

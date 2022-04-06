@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-         Schema::create('freight', function (Blueprint $table) {
+         Schema::create('freights', function (Blueprint $table) {
             $table->id()->unique();
             $table->integer('admin_id');
             $table->integer('shipping_id');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-          Schema::dropIfExists('freight');
+          Schema::dropIfExists('freights');
     }
 };
