@@ -118,6 +118,8 @@
 			<!-- === TOP MENU === -->
 
 			<div class="collapse navbar-collapse main-menu main-menu-1" id="main-menu">
+
+				@guest
 				<ul class="nav navbar-nav">
 
 					<!-- === top menu item === -->
@@ -215,6 +217,108 @@
 								<a class="latest" href="/contact">Contact Us</a>
 							</li>
 						</ul>
+						@endguest
+						@auth
+						<ul class="nav navbar-nav">
+
+							<!-- === top menu item === -->
+							<li class="active">
+								<a href="#">Home</a>
+							</li>
+					<!-- 	<li class="active dropdown">
+						<a data-toggle="dropdown" href="/">Home</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li class="active">
+									<a href="/">Home 1</a>
+								</li>
+							</ul> -->
+							<!-- </li> -->
+							<li class="main-menu-separator"></li>
+							<!-- === top menu item === -->
+							<li>
+								<a  href="/services">Services</a>
+							</li>
+					<!-- 	<li class="dropdown">
+						<a data-toggle="dropdown" href="/service">Service</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/services3">Service 1</a>
+								</li>
+								<li>
+									<a href="/services4">Service 2</a>
+								</li>
+								<li>
+									<a href="/service-detail">Service Details</a>
+								</li>
+							</ul> -->
+							<!-- </li> -->
+							<li class="main-menu-separator"></li>
+							<!-- === top menu item === -->
+						<!-- <li class="dropdown">
+							<a data-toggle="dropdown" href="#">Elements</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/typogrpaphy">Typography</a>
+								</li>
+								<li>
+									<a href="/buttons">Buttons</a>
+								</li>
+								<li>
+									<a href="/progress">Progress Bars</a>
+								</li>
+								<li>
+									<a href="/alerts">Alerts</a>
+								</li>
+							</ul>
+						</li>  -->
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+						<li >
+							<a href="/dashboard">DASHBOARD</a>
+
+						</li>
+					<!-- 	<li class="dropdown">
+						<a data-toggle="dropdown" href="/login">LOGIN</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/blog">Blog items</a>
+								</li>
+								<li>
+									<a href="/blog_2">Single Post</a>
+								</li>
+							</ul> -->
+							<!-- </li>  -->
+							<li class="main-menu-separator"></li>
+							<!-- === top menu item === -->
+							<li >
+								<a href="/logout">LOGOUT</a>
+
+							</li>
+					<!-- 	<li class="dropdown">
+						<a data-toggle="dropdown" href="/signup">SIGNUP</a> -->
+							<!-- <ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="/blog">Blog items</a>
+								</li>
+								<li>
+									<a href="/blog_2">Single Post</a>
+								</li>
+							</ul> -->
+							<!-- </li>  -->
+							<li class="main-menu-separator"></li>
+							<!-- === top menu item === -->
+							<li>
+								<a href="/about-us">About us</a>
+							</li> 
+							<li class="main-menu-separator"></li>
+							<!-- === top menu item === -->
+							<li >
+								<a class="latest" href="/contact">Contact Us</a>
+							</li>
+						</ul>
+
+						@endauth
+
 					</div>
 
 				</div>
@@ -526,7 +630,7 @@
 					</div>
 					@enderror
 
-						@error('message')
+					@error('message')
 					<div class="alert alert-danger">
 						<ul>
 
