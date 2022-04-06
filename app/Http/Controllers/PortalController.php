@@ -382,6 +382,7 @@ class PortalController extends Controller
        $request['email']= strtolower($request->input('email'));
 
        $attributes =  $request->validate([
+        'client_id'=>'numeric',
         'name' => 'required|min:3|max:25',
         'phone' => 'required|digits:10',
         'email' => 'required|email|max:255',

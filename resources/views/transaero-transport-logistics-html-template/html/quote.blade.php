@@ -115,13 +115,13 @@
 				<!-- === TOP MENU === -->
 
 				<div class="collapse navbar-collapse main-menu main-menu-1" id="main-menu">
-						@guest
-				<ul class="nav navbar-nav">
+					@guest
+					<ul class="nav navbar-nav">
 
-					<!-- === top menu item === -->
-					<li >
-						<a href="/">Home</a>
-					</li>
+						<!-- === top menu item === -->
+						<li >
+							<a href="/">Home</a>
+						</li>
 					<!-- 	<li class="active dropdown">
 						<a data-toggle="dropdown" href="/">Home</a> -->
 							<!-- <ul class="dropdown-menu" role="menu">
@@ -408,7 +408,7 @@
 					</div>
 					@enderror
 
-						@error('message')
+					@error('message')
 					<div class="alert alert-danger">
 						<ul>
 
@@ -424,6 +424,8 @@
 					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
 						<div class="contacts-form row">
 							<div class="send-result"></div>
+
+							@guest
 							<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
 
 								@csrf
@@ -492,6 +494,80 @@
 									</span></button>
 								</div>
 							</form>
+							@endguest
+
+							@auth
+							<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
+
+								@csrf
+
+								<input type="hidden" name="client_id" value="{{auth()->user()->id}}">
+
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="name" placeholder="{{auth()->user()->name}}" value="{{auth()->user()->name}}" disabled />
+									@error('name')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="email" placeholder="{{auth()->user()->email}}" value="{{auth()->user()->email}}" disabled />
+									@error('email')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+								</div>
+
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="location" placeholder="LOCATION" />
+									@error('location')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+
+								</div>
+
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="destination" placeholder="TO DESTINATION" />
+									@error('destination')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+								</div>
+
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+									<input type="text" name="phone" placeholder="{{auth()->user()->phone}}" value="{{auth()->user()->phone}}" disabled />
+									@error('phone')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+								</div>
+
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item" style="margin-top:24px">
+									<label>Expected shipping goods </label>
+									<select name="category">
+										<option value="1" selected>Clothing</option>
+										<option value="2">Refrigerated goods</option>
+										<option value="3">Dry goods</option>
+									</select>
+									@error('category')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+
+								</div>
+
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item">
+									<textarea name="message" placeholder="How can we help?"></textarea>
+									@error('message')
+									<p class="alert" style="color: red;">{{$message}}</p>
+									@enderror
+								</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+									<button type="submit"><span class="my-btn my-btn-grey">
+										<span class="my-btn-bg-top"></span>
+										<span class="my-btn-bg-bottom"></span>
+										<span class="my-btn-text">
+											SEND QUOTE
+										</span>
+									</span></button>
+								</div>
+							</form>
+							@endauth
 						</div>
 					</div>
 
