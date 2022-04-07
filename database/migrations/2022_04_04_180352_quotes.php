@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('location');
             $table->string('destination');
             $table->string('message')->nullable();
+            $table->float('total_price')->nullable();
+            $table->string('private_key')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

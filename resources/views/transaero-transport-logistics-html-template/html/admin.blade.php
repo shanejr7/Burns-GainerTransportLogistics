@@ -29,7 +29,7 @@
 <![endif]-->
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body>
+<body onload="defaultLoad()">
 
 	<!-- =========================
      PRE LOADER       
@@ -188,17 +188,17 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<ul class="service-menu">
 							<li class="active">
-								<a href="#" onload="defaultLoad()" onclick="defaultLoad()">ACCOUNT</a>
+								<a href="#account" onclick="defaultLoad()">ACCOUNT</a>
 							</li>
 							<li>
-								<a href="#" onclick="orderHistory()">ORDER HISTORY</a>
+								<a href="#history" onclick="orderHistory()">ORDER HISTORY</a>
 							</li>
 							<li>
-								<a href="#" onclick="orderTracking()">ORDER TRACKING</a>
+								<a href="#tracking" onclick="orderTracking()">ORDER TRACKING</a>
 							</li>
 
 							<li>
-								<a href="#" onclick="orderRequest()">REQUESTED SHIPPING</a>
+								<a href="/quotes">REQUESTED SHIPPING</a>
 							</li>
 						</ul>
 					</div>
@@ -217,6 +217,7 @@
 
 					<div class="bs-example">
 						<blockquote><a href="#" onclick="orderTracking()">ORDERS - {{count($orders)}}</a></blockquote>
+						<blockquote><a href="/quotes">QUOTES - {{count($quotes)}}</a></blockquote>
 
 					</div>
 
@@ -303,7 +304,7 @@
 								</div>
 
 							</div>
-								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
 							@endfor
 							@endif
 
@@ -317,25 +318,11 @@
 						</section>
 
 
-						<section id="orderRequest">
-							@if(isset($quotes))
-							@for($i = 0; $i < sizeof($quotes); $i++)
-							{{$quotes[$i]->id}}
-							@endfor
-							@endif
-
-							@if(count($quotes)==0)
-							<div class="col-lg-1"></div>
-							<div class="col-lg-6">
-								<h2>There aren't any quotes.</h2>
-							</div>
-							@endif
-						</section>
+					
 
 
 
-
-						<!-- === BLOG RIGHT BAR === -->
+									<!-- === BLOG RIGHT BAR === -->
 
 			<!-- 	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 				<div class="blog-right-bar"> -->

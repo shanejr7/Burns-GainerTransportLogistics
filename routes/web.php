@@ -46,6 +46,9 @@ Route::get('/quote', function () {
     return view('transaero-transport-logistics-html-template/html/quote');
 });
 
+// GUEST QUOTE CHECKOUT ROUTE
+Route::get('/checkout={authString}',[PortalController::class,'showGuestQuoteCheckout']);
+
 
 // CONTACT PAGE
 Route::get('/contact', function () {
@@ -63,14 +66,22 @@ Route::get('/signup', [RegisterController::class,'createRegister']);
 Route::post('/auth/register',[RegisterController::class, 'authenticate']);
 
 // ADMIN ACCOUNT REQUEST ROUTE
-Route::get('/admin',[PortalController::class,'viewAccount'])->name('adminAccount')->middleware('admin');
+Route::get('/admin',[PortalController::class,'adminAccount'])->name('adminAccount')->middleware('admin');
+Route::get('/quotes',[PortalController::class,'adminQuotes'])->name('adminQuotes')->middleware('admin');
+
+// CLIENT ACCOUNT REQUEST ROUTE
+Route::get('/client',[PortalController::class,'clientAccount'])->name('clientAccount');
 
 // DASHBOARD REQUEST ROUTE <403>
 Route::get('/dashboard', [PortalController::class,'createDashboard']);
 
+
 // USER LOGOUT & DESTROY SESSION
 Route::get('/logout',[SessionController::class, 'destroy']);
 
-// QUOTE GUEST REQUEST
+// QUOTE REQUEST
 Route::post('/quote/request',[PortalController::class, 'clientQuoteSubmission']);
+
+// QUOTE ESTIMATE REQUEST
+Route::post('/quote/estimate',[PortalController::class, 'submitQuoteEstimate']);
 

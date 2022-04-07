@@ -29,7 +29,7 @@
 <![endif]-->
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body>
+<body onload="orderRequest()">
 
 	<!-- =========================
      PRE LOADER       
@@ -114,58 +114,11 @@
 					<ul class="nav navbar-nav">
 
 						<!-- === top menu item === -->
-						<li>
-							<a href="/">Home</a>
+
+						<li class="active">
+							<a  href="#">Dashboard</a>
 						</li>
-					<!-- 	<li class="active dropdown">
-						<a data-toggle="dropdown" href="/">Home</a> -->
-							<!-- <ul class="dropdown-menu" role="menu">
-								<li class="active">
-									<a href="/">Home 1</a>
-								</li>
-							</ul> -->
-							<!-- </li> -->
-							<li class="main-menu-separator"></li>
-							<!-- === top menu item === -->
-							<li>
-								<a  href="/services">Services</a>
-							</li>
-					<!-- 	<li class="dropdown">
-						<a data-toggle="dropdown" href="/service">Service</a> -->
-							<!-- <ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="/services3">Service 1</a>
-								</li>
-								<li>
-									<a href="/services4">Service 2</a>
-								</li>
-								<li>
-									<a href="/service-detail">Service Details</a>
-								</li>
-							</ul> -->
-							<!-- </li> -->
-							<li class="main-menu-separator"></li>
-							<li class="active">
-								<a  href="#">Dashboard</a>
-							</li>
-							<!-- === top menu item === -->
-						<!-- <li class="dropdown">
-							<a data-toggle="dropdown" href="#">Elements</a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="/typogrpaphy">Typography</a>
-								</li>
-								<li>
-									<a href="/buttons">Buttons</a>
-								</li>
-								<li>
-									<a href="/progress">Progress Bars</a>
-								</li>
-								<li>
-									<a href="/alerts">Alerts</a>
-								</li>
-							</ul>
-						</li>  -->
+						
 						<li class="main-menu-separator"></li>
 						<!-- === top menu item === -->
 
@@ -173,41 +126,13 @@
 							<a href="/logout">LOGOUT</a>
 
 						</li>
-					<!-- 	<li class="dropdown">
-						<a data-toggle="dropdown" href="/login">LOGIN</a> -->
-							<!-- <ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="/blog">Blog items</a>
-								</li>
-								<li>
-									<a href="/blog_2">Single Post</a>
-								</li>
-							</ul> -->
-							<!-- </li>  -->
-							<li class="main-menu-separator"></li>
-							<!-- === top menu item === -->
 
-					<!-- 	<li class="dropdown">
-						<a data-toggle="dropdown" href="/signup">SIGNUP</a> -->
-							<!-- <ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="/blog">Blog items</a>
-								</li>
-								<li>
-									<a href="/blog_2">Single Post</a>
-								</li>
-							</ul> -->
-							<!-- </li>  -->
-							<li class="main-menu-separator"></li>
-							<!-- === top menu item === -->
-							<li>
-								<a href="/about-us">About us</a>
-							</li> 
-							<li class="main-menu-separator"></li>
-							<!-- === top menu item === -->
-							<li >
-								<a class="latest" href="/contact">Contact Us</a>
-							</li>
+						<li class="main-menu-separator"></li>
+						<!-- === top menu item === -->
+
+						<!-- 	<li >
+								<a class="latest" href="/contact">Settings</a>
+							</li> -->
 						</ul>
 					</div>
 
@@ -243,18 +168,7 @@
 						</ol>
 					</div>
 
-					<!-- === PAGE HEADER BUTTON === -->
-					<div class="page-header-button" style="margin-top: 3em;">
-						<a href="/quote">
-							<div class="my-btn my-btn-primary">
-								<div class="my-btn-bg-top"></div>
-								<div class="my-btn-bg-bottom"></div>
-								<div class="my-btn-text">
-									GET A FREE QUOTE
-								</div>
-							</div>
-						</a>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -274,17 +188,17 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<ul class="service-menu">
 							<li class="active">
-								<a href="#" onload="defaultLoad()" onclick="defaultLoad()">ACCOUNT</a>
+								<a href="#account" onclick="defaultLoad()">ACCOUNT</a>
 							</li>
 							<li>
-								<a href="#default" onclick="orderHistory()">ORDER HISTORY</a>
+								<a href="#history" onclick="orderHistory()">ORDER HISTORY</a>
 							</li>
 							<li>
-								<a href="#default" onclick="orderTracking() ">ORDER TRACKING</a>
+								<a href="#tracking" onclick="orderTracking()">ORDER TRACKING</a>
 							</li>
 
 							<li>
-								<a href="/quote">REQUEST SHIPPING</a>
+								<a href="#quotes" onclick="orderRequest()">REQUESTED SHIPPING</a>
 							</li>
 						</ul>
 					</div>
@@ -302,17 +216,18 @@
 					</div>
 
 					<div class="bs-example">
-							<blockquote><a href="#" onclick="orderTracking()">ORDERS - {{count($orders)}}</a></blockquote>
-							<blockquote><a href="#">QUOTES - {{count($quotes)}}</a></blockquote>
+						<blockquote><a href="#" onclick="orderTracking()">ORDERS - {{count($orders)}}</a></blockquote>
+						<blockquote><a href="#" onclick="orderRequest()">QUOTES - {{count($quotes)}}</a></blockquote>
 
-						</div>
+					</div>
 
 				</section>
 
 
 				<section id="orderHistory">
 
-				
+					<!-- === BLOG ITEMS === -->
+
 					@if(isset($orders))
 					@for($i = 0; $i < sizeof($orders); $i++)
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -349,6 +264,7 @@
 						<h2>There aren't any orders.</h2>
 					</div>
 					@endif
+					
 
 				</section>
 
@@ -388,7 +304,7 @@
 								</div>
 
 							</div>
-								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
 							@endfor
 							@endif
 
@@ -399,12 +315,167 @@
 							</div>
 							@endif
 
-							</section>
+						</section>
+
+
+						<section id="orderRequest">
+
+
+							@error('price')
+								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
+							<div class="alert alert-danger">
+								<ul>
+
+									<li>{{$message}}</li>
+								</ul>
+							</div>
+						</div>
+							@enderror
+							
+							@if(isset($quotes))
+							@for($i = 0; $i < sizeof($quotes); $i++)
+							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
+
+
+								<h3>SHIPPING QUOTE ({{$i+1}})</h3>
+
+								<div class="media">
+									<!-- <a class="pull-left" href="#">
+										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
+									</a> -->
+									<div class="media-body">
+										<div class="media-body-top">
+											<div class="media-info">
+												<h3 class="media-heading" style="font-size: 30px;">
+													@if($quotes[$i]->category_id == 1)
+													Clothing
+													@endif
+													@if($quotes[$i]->category_id == 2)
+													Refrigerated goods
+													@endif
+													@if($quotes[$i]->category_id == 3)
+													Dry goods
+													@endif
+													- <span class="media-date"style="font-size: 30px;">{{$quotes[$i]->created_at}}</span></h3>
+
+												</div>
+												<div class="media-reply">
+													<a><div class="my-btn my-btn-default" style="font-size: 1em;">
+														<div class="my-btn-bg-top"></div>
+														<div class="my-btn-bg-bottom"></div>
+														<div class="my-btn-text">
+															@if($quotes[$i]->active == 1)
+															Request
+															@endif
+															@if($quotes[$i]->active == 2)
+															Pending
+															@endif
+															@if($quotes[$i]->active == 3)
+															Accepted
+															@endif
+														</div>
+													</div></a>
+												</div>
+											</div>
+
+											<h4>{{$quotes[$i]->message}}<h4>
+
+												<div style="margin-bottom: 2em;"></div>
+												<div>
+													<label>Location: </label>
+													<span class="color-primary">{{$quotes[$i]->location}} </span>
+												</div>
+												<div>
+													<label>Destination: </label>
+													<span class="color-primary">{{$quotes[$i]->destination}}</span>
+												</div>
+
+												<div style="margin-bottom: 2em;"></div>
+
+												<div class="row">
+													<div class="col-lg-3">
+														<h3>Contact info</h3>
+														<h4 class="color-primary">{{$quotes[$i]->name}}</h4>
+														<h4 class="color-primary">{{$quotes[$i]->phone}}</h4>
+														<h4 class="color-primary">{{$quotes[$i]->email}}</h3>
+														</div>
+														<div class="col-lg-2"></div>
+														<div class="col-lg-6">
+															<h3>Shipping quote price</h3>
+
+															@if($quotes[$i]->active == 1)
+															<form name="contact-form" method="POST" action="/quote/estimate">
+
+																@csrf
+
+																<input type="hidden" name="quote_id" value="{{$quotes[$i]->id}}">
+
+																<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 contacts-form-item">
+																	<input type="text" name="price" placeholder="$0.00" />
+																</div>
+
+
+																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+																	<button type="submit"><span class="my-btn my-btn-default">
+																		<span class="my-btn-bg-top"></span>
+																		<span class="my-btn-bg-bottom"></span>
+																		<span class="my-btn-text">
+																			SEND QUOTE
+																		</span>
+																	</span></button>
+																</div>
+															</form>
+															@endif
+															@if($quotes[$i]->active == 2)
+															<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
+
+																@csrf
+
+																<!-- <input type="hidden" name="client_id" value="{{auth()->user()->id}}"> -->
+
+																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
+																</div>
+															</form>
+															@endif
+															@if($quotes[$i]->active == 3)
+															<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
+
+																@csrf
+
+																<!-- <input type="hidden" name="client_id" value="{{auth()->user()->id}}"> -->
+
+																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+																	<input type="text" name="price" placeholder="$quotes[$i]->charge" value="$quotes[$i]->charge" disabled />
+																</div>
+															</form>
+															@endif
+
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+										@endfor
+										@endif
+
+										@if(count($quotes)==0)
+										<div class="col-lg-1"></div>
+										<div class="col-lg-6">
+											<h2>There aren't any quotes.</h2>
+										</div>
+										@endif
+									</section>
 
 
 
 
-							<!-- === BLOG RIGHT BAR === -->
+									<!-- === BLOG RIGHT BAR === -->
 
 			<!-- 	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 				<div class="blog-right-bar"> -->
@@ -514,14 +585,14 @@
 	<!-- 	<div class="def-section home-subscribe">
 			<div class="container">
 				<div class="row">
- -->
-					<!-- === SUBSCRIBE TEXT === -->
+				-->
+				<!-- === SUBSCRIBE TEXT === -->
 				<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-text animated wow fadeInUp" data-wow-duration=".5s" data-wow-offset="100">
 						<span class="home-subscribe-icon"><i class="flaticon-email114"></i></span>
 						SIGN UP FOR NEWSLETTER TO GET UPDATES AND NEWS
 					</div>
- -->
-					<!-- === SUBSCRIBE FORM === -->
+				-->
+				<!-- === SUBSCRIBE FORM === -->
 				<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-form animated wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" data-wow-offset="100">
 						<form>
 							<div class="home-subscribe-form-input">
@@ -586,7 +657,8 @@
 		 ============================== -->	
 
 		 <!-- JQUERY -->
-		 <script src="assets/js/customDashboard.js"></script>
+		 <script src="assets/js/customAdmin.js"></script>
+
 		 <script src="assets/js/jquery-1.11.3.min.js"></script>
 
 		 <!-- BOOTSTRAP -->
