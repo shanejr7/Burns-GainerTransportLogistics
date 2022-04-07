@@ -44,7 +44,7 @@ class PortalController extends Controller
     // }
 
      /**
-     * admin account page.
+     * admin account overview page.
      *
      * @return \Illuminate\View\View
      */
@@ -52,7 +52,7 @@ class PortalController extends Controller
      public function viewAccount()
      {
 
-        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()]);
+        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()],['orders' => Order::all()]);
     
     }
 
@@ -176,7 +176,7 @@ class PortalController extends Controller
 
 
         if (auth()->user()->is_admin != true) {
-            return view('transaero-transport-logistics-html-template/html/dashboard');
+            return view('transaero-transport-logistics-html-template/html/dashboard',['orders' => Order::where('client_id','=',Auth::id())->get()]);
         }
 
         if (auth()->user()->is_admin == true) {

@@ -39,4 +39,4 @@ class Order extends Model
     ];
 
 }
-}
+

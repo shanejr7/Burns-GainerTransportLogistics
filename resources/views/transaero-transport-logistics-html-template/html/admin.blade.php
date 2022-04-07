@@ -191,10 +191,10 @@
 								<a href="#" onload="defaultLoad()" onclick="defaultLoad()">ACCOUNT</a>
 							</li>
 							<li>
-								<a href="#default" onclick="orderHistory()">ORDER HISTORY</a>
+								<a href="#" onclick="orderHistory()">ORDER HISTORY</a>
 							</li>
 							<li>
-								<a href="#default" onclick="orderTracking()">ORDER TRACKING</a>
+								<a href="#" onclick="orderTracking()">ORDER TRACKING</a>
 							</li>
 
 							<li>
@@ -216,7 +216,7 @@
 					</div>
 
 					<div class="bs-example">
-						<blockquote><a href="/orders">ORDERS - 2</a></blockquote>
+						<blockquote><a href="#" onclick="orderTracking()">ORDERS - {{count($orders)}}</a></blockquote>
 
 					</div>
 
@@ -226,8 +226,10 @@
 				<section id="orderHistory">
 
 					<!-- === BLOG ITEMS === -->
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
+					@if(isset($orders))
+					@for($i = 0; $i < sizeof($orders); $i++)
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
 						<!-- === BLOG ITEM === -->
 						<div class="single-post">
@@ -244,46 +246,37 @@
 								<a href="12_blog_detail.html">26 may 2015</a>
 							</div>
 							<div class="single-post-title">
-								<h3><a href="12_blog_detail.html">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</a></h3>
+								<h3><a href="#">{{$orders[$i]->status}}</a></h3>
 							</div>
 
 
 						</div>			
 
 					</div>
+					@endfor
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					@endif
 
-
-						<!-- === BLOG ITEM === -->
-						<div class="single-post">
-							<div class="single-post-date">
-								<div class="single-post-date-number">26</div>MAY
-							</div>
-							<div class="single-post-image">
-								<img src="assets/media/blog/5.jpg" alt="" />
-							</div>
-							<div class="single-post-info">
-								<span class="author-icon"><i class="fa fa-user"></i></span>
-								<a href="#">Admin</a>
-								<span class="date-icon"><i class="fa fa-calendar"></i></span>
-								<a href="12_blog_detail.html">26 may 2015</a>
-							</div>
-							<div class="single-post-title">
-								<h3><a href="12_blog_detail.html">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</a></h3>
-							</div>
-
-
-						</div>			
-
+					@if(count($orders)==0)
+					<div class="col-lg-1"></div>
+					<div class="col-lg-6">
+						<h2>There aren't any orders.</h2>
 					</div>
+					@endif
+					
 
 				</section>
 
 
 				<section id="orderTracking">
+
+
+					@if(isset($orders))
+					@for($i = 0; $i < sizeof($orders); $i++)
 					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="comments">
-						<h3>SHIPPING ORDER (093233232)</h3>
+
+						
+						<h3>SHIPPING ORDER ({{$orders[$i]->order_tracking_number}})</h3>
 
 						<div class="media">
 									<!-- <a class="pull-left" href="#">
@@ -305,67 +298,44 @@
 												</div></a>
 											</div> -->
 										</div>
-										Fusce ante augue, convallis sit amet volutpat posuere vel quam. Lorem ipsuml dolor sit nsece tcsladipiscing elit. 
-										Vestibulum acd risus nec eros auctor egestas. Maece dolor sed ipsuunc molestiaLorem ipsum dolor sit amet 
-										consecte tur adipisicing elit.
+										{$orders[$i]->status}}
 									</div>
 								</div>
 
 							</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+							@endfor
+							@endif
 
-							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+							@if(count($orders)==0)
+							<div class="col-lg-1"></div>
+							<div class="col-lg-6">
+								<h2>There aren't any orders.</h2>
+							</div>
+							@endif
 
-							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="comments">
-								<h3>SHIPPING ORDER (43344234244)</h3>
-								
-								<div class="media">
-								<!-- 	<a class="pull-left" href="#">
-										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
-									</a> -->
-									<div class="media-body">
-										<div class="media-body-top">
-											<div class="media-info">
-												<h4 class="media-heading">Clothing</h4>
-												<span class="media-date">25 AUG 2015 at 5:00 PM</span>
-											</div>
-											<!-- <div class="media-reply">
-												<a href="#"><div class="my-btn my-btn-default">
-													<div class="my-btn-bg-top"></div>
-													<div class="my-btn-bg-bottom"></div>
-													<div class="my-btn-text">
-														REPLY
-													</div>
-												</div></a>
-											</div> -->
-										</div>
-										Fusce ante augue, convallis sit amet volutpat posuere vel quam. Lorem ipsuml dolor sit nsece tcsladipiscing elit. 
-										Vestibulum acd risus nec eros auctor egestas. Maece dolor sed ipsuunc molestiaLorem ipsum dolor sit amet 
-										consecte tur adipisicing elit.
-									</div>
-								</div>
-
-							</section>
+						</section>
 
 
-							<section id="orderRequest">
-								  @if(isset($quotes))
-                                    @for($i = 0; $i < sizeof($quotes); $i++)
-                                    	{{$quotes[$i]->id}}
-                                    @endfor
-                                  @endif
+						<section id="orderRequest">
+							@if(isset($quotes))
+							@for($i = 0; $i < sizeof($quotes); $i++)
+							{{$quotes[$i]->id}}
+							@endfor
+							@endif
 
-                                   @if(count($quotes)==0)
-                                  <div class="col-lg-1"></div>
-                                  <div class="col-lg-6">
-                                  	<h2>There aren't any quotes.</h2>
-                                  </div>
-                                  @endif
-							</section>
+							@if(count($quotes)==0)
+							<div class="col-lg-1"></div>
+							<div class="col-lg-6">
+								<h2>There aren't any quotes.</h2>
+							</div>
+							@endif
+						</section>
 
 
 
 
-							<!-- === BLOG RIGHT BAR === -->
+						<!-- === BLOG RIGHT BAR === -->
 
 			<!-- 	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 				<div class="blog-right-bar"> -->
@@ -547,7 +517,7 @@
 		 ============================== -->	
 
 		 <!-- JQUERY -->
-		  <script src="assets/js/customAdmin.js"></script>
+		 <script src="assets/js/customAdmin.js"></script>
 
 		 <script src="assets/js/jquery-1.11.3.min.js"></script>
 
