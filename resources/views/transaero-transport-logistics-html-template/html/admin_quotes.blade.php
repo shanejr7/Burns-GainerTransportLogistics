@@ -181,6 +181,21 @@
 		============================== -->
 		<div class="def-section single-blog-section">
 			<div class="container">
+
+					@if (\Session::has('success'))
+								<div class="row">
+					<div class="alert alert-success">
+						<ul>
+							<li>{!! \Session::get('success') !!}</li>
+						</ul>
+					</div>
+								</div>
+					@endif
+
+
+					
+
+			
 				<div class="row">
 
 					<!-- === BLOG RIGHT BAR === -->
@@ -299,7 +314,7 @@
 												</div></a>
 											</div> -->
 										</div>
-										{$orders[$i]->status}}
+										{{$orders[$i]->status}}
 									</div>
 								</div>
 
@@ -439,14 +454,27 @@
 															</form>
 															@endif
 															@if($quotes[$i]->active == 3)
-															<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
+															<form name="contact-form" id="contact-form" method="POST" action="/quote/order">
 
 																@csrf
 
-																<!-- <input type="hidden" name="client_id" value="{{auth()->user()->id}}"> -->
+																<input type="hidden" name="client_id" value="{{auth()->user()->id}}">
 
+																<input type="hidden" name="quote_id" value="{{$quotes[$i]->id}}">
+
+																
 																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-																	<input type="text" name="price" placeholder="$quotes[$i]->charge" value="$quotes[$i]->charge" disabled />
+																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
+																</div>
+
+																	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+																	<button type="submit"><span class="my-btn my-btn-default">
+																		<span class="my-btn-bg-top"></span>
+																		<span class="my-btn-bg-bottom"></span>
+																		<span class="my-btn-text">
+																			Start order
+																		</span>
+																	</span></button>
 																</div>
 															</form>
 															@endif

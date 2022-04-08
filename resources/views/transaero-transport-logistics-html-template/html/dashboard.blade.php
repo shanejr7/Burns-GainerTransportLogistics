@@ -302,17 +302,17 @@
 					</div>
 
 					<div class="bs-example">
-							<blockquote><a href="#" onclick="orderTracking()">ORDERS - {{count($orders)}}</a></blockquote>
-							<blockquote><a href="#">QUOTES - {{count($quotes)}}</a></blockquote>
+						<blockquote><a href="#" onclick="orderTracking()">ORDERS - {{count($orders)}}</a></blockquote>
+						<blockquote><a href="#" onclick="quotes()" >QUOTES - {{count($quotes)}}</a></blockquote>
 
-						</div>
+					</div>
 
 				</section>
 
 
 				<section id="orderHistory">
 
-				
+
 					@if(isset($orders))
 					@for($i = 0; $i < sizeof($orders); $i++)
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -388,7 +388,7 @@
 								</div>
 
 							</div>
-								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
 							@endfor
 							@endif
 
@@ -399,12 +399,150 @@
 							</div>
 							@endif
 
-							</section>
+						</section>
+
+
+						<section id="quotes">
+
+							@if(isset($quotes))
+							@for($i = 0; $i < sizeof($quotes); $i++)
+							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
+
+
+								<h3>SHIPPING QUOTE ({{$i+1}})</h3>
+
+								<div class="media">
+									<!-- <a class="pull-left" href="#">
+										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
+									</a> -->
+									<div class="media-body">
+										<div class="media-body-top">
+											<div class="media-info">
+												<h3 class="media-heading" style="font-size: 30px;">
+													@if($quotes[$i]->category_id == 1)
+													Clothing
+													@endif
+													@if($quotes[$i]->category_id == 2)
+													Refrigerated goods
+													@endif
+													@if($quotes[$i]->category_id == 3)
+													Dry goods
+													@endif
+													- <span class="media-date"style="font-size: 30px;">{{$quotes[$i]->created_at}}</span></h3>
+
+												</div>
+												<div class="media-reply">
+													<a><div class="my-btn my-btn-default" style="font-size: 1em;">
+														<div class="my-btn-bg-top"></div>
+														<div class="my-btn-bg-bottom"></div>
+														<div class="my-btn-text">
+															@if($quotes[$i]->active == 1)
+															Request
+															@endif
+															@if($quotes[$i]->active == 2)
+															Pending
+															@endif
+															@if($quotes[$i]->active == 3)
+															Accepted
+															@endif
+														</div>
+													</div></a>
+												</div>
+											</div>
+
+											<!-- 		<h4>{{$quotes[$i]->message}}<h4> -->
+
+												<div style="margin-bottom: 2em;"></div>
+												<div style="font-size:25px">
+													<label>Location: </label>
+													<span class="color-primary">{{$quotes[$i]->location}} </span>
+												</div>
+												<div style="font-size:25px">
+													<label>Destination: </label>
+													<span class="color-primary" style="font-size:25px">{{$quotes[$i]->destination}}</span>
+												</div>
+
+												<div style="margin-bottom: 2em;"></div>
+
+												<div class="row">
+													<div class="col-lg-4">
+														<h3>Contact info</h3>
+														<h4 class="color-primary">{{$quotes[$i]->name}}</h4>
+														<h4 class="color-primary">{{$quotes[$i]->phone}}</h4>
+														<h4 class="color-primary">{{$quotes[$i]->email}}</h3>
+														</div>
+														<div class="col-lg-2"></div>
+														<div class="col-lg-6">
+															<h3>Shipping quote price</h3>
+
+															@if($quotes[$i]->active == 1)
+																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+																	<input type="text" name="price" placeholder="pending" disabled />
+																</div>
+															@endif
+
+															@if($quotes[$i]->active == 2)
+															<form name="contact-form" method="POST" action="/quote/accepted">
+
+																@csrf
+
+																<input type="hidden" name="quote_id" value="{{$quotes[$i]->id}}">
+
+																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
+																</div>
+
+																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+																	<button type="submit"><span class="my-btn my-btn-default">
+																		<span class="my-btn-bg-top"></span>
+																		<span class="my-btn-bg-bottom"></span>
+																		<span class="my-btn-text">
+																			Accept shipping charge
+																		</span>
+																	</span></button>
+																</div>
+															</form>
+															@endif
+															
+															@if($quotes[$i]->active == 3)
+															<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
+
+																@csrf
+
+																<input type="hidden" name="client_id" value="{{auth()->user()->id}}">
+
+																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
+																</div>
+															</form>
+															@endif
+
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+										@endfor
+										@endif
+
+										@if(count($quotes)==0)
+										<div class="col-lg-1"></div>
+										<div class="col-lg-6">
+											<h2>There aren't any quotes.</h2>
+										</div>
+										@endif
+
+									</section>
 
 
 
 
-							<!-- === BLOG RIGHT BAR === -->
+									<!-- === BLOG RIGHT BAR === -->
 
 			<!-- 	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 				<div class="blog-right-bar"> -->
@@ -514,14 +652,14 @@
 	<!-- 	<div class="def-section home-subscribe">
 			<div class="container">
 				<div class="row">
- -->
-					<!-- === SUBSCRIBE TEXT === -->
+				-->
+				<!-- === SUBSCRIBE TEXT === -->
 				<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-text animated wow fadeInUp" data-wow-duration=".5s" data-wow-offset="100">
 						<span class="home-subscribe-icon"><i class="flaticon-email114"></i></span>
 						SIGN UP FOR NEWSLETTER TO GET UPDATES AND NEWS
 					</div>
- -->
-					<!-- === SUBSCRIBE FORM === -->
+				-->
+				<!-- === SUBSCRIBE FORM === -->
 				<!-- 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-form animated wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" data-wow-offset="100">
 						<form>
 							<div class="home-subscribe-form-input">

@@ -15,7 +15,7 @@ return new class extends Migration
     {
          Schema::create('orders', function (Blueprint $table) {
             $table->id()->unique();
-            $table->integer('client_id');
+            $table->integer('client_id')->nullable();
             $table->integer('category_id');
             $table->integer('address_id');
             $table->integer('shipping_address_id');
@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('total_quantity');
             $table->float('total_price');
             $table->string('status');
+            $table->string('private_key')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

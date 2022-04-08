@@ -51,6 +51,7 @@ class PortalController extends Controller
 
      public function adminAccount()
      {
+        // merge address with orders
 
         return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()],['orders' => Order::all()]);
 
@@ -136,18 +137,28 @@ class PortalController extends Controller
 //     }
 
 
-    public function showGuestQuoteCheckout($private_key)
-    {
+       /**
+     * show guest quote checkout page.
+     *
+     * @return \Illuminate\View\View
+     */
+
+
+       public function showGuestQuoteCheckout($private_key)
+       {
 
         $private_key = filter_var($private_key, FILTER_SANITIZE_STRING);
 
         $quote = Quote::where('private_key','=',$private_key)->get();
 
-        if($quote!=null){
+
+        if(sizeof($quote)!=0){
 
          return view('transaero-transport-logistics-html-template/html/guest_quote_checkout')->with('private_key', $private_key)->with('quotes',$quote);
 
      }else{
+
+
         return view('transaero-transport-logistics-html-template/html/index');
 
     }
@@ -155,6 +166,150 @@ class PortalController extends Controller
 
 
 }
+
+      /**
+     * show guest order page.
+     *
+     * @return \Illuminate\View\View
+     */
+
+
+      public function showGuestOrder($private_key)
+      {
+
+        $private_key = filter_var($private_key, FILTER_SANITIZE_STRING);
+
+        $order = Order::where('private_key','=',$private_key)->where('client_id','=',null)->get();
+
+
+        if(sizeof($order)!=0){
+
+          return view('transaero-transport-logistics-html-template/html/guest_order')->with('private_key', $private_key)->with('orders',$order);
+
+      }else{
+
+
+        return view('transaero-transport-logistics-html-template/html/index');
+
+    }
+
+
+
+}
+
+
+
+       /**
+     * guest accept quote estimate.
+     *
+     * @return \Illuminate\View\View
+     */
+
+       // add stripe payment
+       // email user / admin
+       public function guestAcceptQuoteEstimate(Request $request)
+       {
+
+        $quote_id = $request->input('quote_id');
+
+        $quote = Quote::where('id','=',$quote_id)->find($quote_id);
+
+        $quote->active = 3;
+
+        $private_key = $this->randomString();
+
+        $quote->private_key = $private_key;
+
+        $quote->save();
+
+        $quote = Quote::where('id','=',$quote_id)->get();
+
+
+        if(sizeof($quote)!=0){
+
+            return redirect()->route('guestcheckout', ['authString' => $private_key])->with('success', 'Order sent!!!');
+
+        }else{
+            return view('transaero-transport-logistics-html-template/html/index');
+
+        }
+
+
+
+    }
+
+
+
+       /**
+     * start quote order.
+     *
+     * @return \Illuminate\View\View
+     */
+
+       // email user
+       public function submitQuoteOrder(Request $request)
+       {
+
+          $attributes =  $request->validate([
+            'client_id' => 'required|numeric',
+            'quote_id' => 'required|numeric',
+        ]);
+
+          $quote_id = $request->input('quote_id');
+
+          $client_id = $request->input('client_id');
+
+          $quote = Quote::where('id','=',$quote_id)->find($quote_id);
+
+          $private_key = $this->randomString();
+
+          $order = new Order();
+          $order->client_id = $client_id;
+          $order->category_id = $quote->category_id;
+
+
+          // client address
+          $address = new Address();
+          $address->full_address=$quote->destination;
+          $address->save();
+          $order->address_id = $address->id;
+          $order->billing_id = $address->id;
+
+
+          // dynamnic shipping address
+          $address = new Address();
+          $address->full_address=$quote->location;
+          $address->save();
+          $order->shipping_address_id = $address->id;
+
+
+          $order->order_tracking_number =  $this->randomString();
+          $order->total_quantity = 1;
+          $order->total_price = $quote->total_price;
+          $order->status = 'shipping';
+          $order->private_key = $private_key;
+
+          $order->save();
+          $order = Order::where('id','=',$order->id)->find($order->id);
+
+          $quote->where('id','=', $quote_id)->delete();
+
+
+          if(sizeof($order)>0){
+
+            return redirect()->back()->with('success', 'Order started!!!');
+
+        }else{
+
+           return redirect()->back()->withErrors();
+
+       }
+
+
+
+   }
+
+
 
 
     /**
@@ -177,7 +332,7 @@ class PortalController extends Controller
             $quote_id = $request->input('quote_id');
 
 
-            $quote = Quote::where('id','=',$quote_id)->first();
+            $quote = Quote::where('id','=',$quote_id)->find($quote_id);
             $quote->active = 2;
             $quote->total_price = $request->input('price');
 
@@ -198,7 +353,7 @@ class PortalController extends Controller
             // $mgClient->messages()->send($domain, $params);
 
 
-            return redirect()->back();
+            return redirect()->back()->with('success', 'Estimate sent!!!');
 
 
 
@@ -268,102 +423,6 @@ class PortalController extends Controller
 
 
     /**
-     * validated user account form.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    // public function accountUpdateSubmission(Request $request, string $attribute)
-    // {
-
-    //     if (auth()->guest()) {
-    //         abort(403);
-
-    //     }
-    
-
-    //     $attributes = '';
-
-    //     $email = $request->input('email');
-    //     $name = $request->input('name');
-
-
-
-
-    //     if ($email && $attribute == 'email') {
-
-
-
-    //         $attributes =  $request->validate([
-    //         'email'=> 'required|email',
-
-    //     ]);
-
-    //     }else if($attribute == 'email'){
-
-    //             $attributes =  $request->validate([
-    //         'email'=> 'required|email',
-
-    //     ]);
-
-    //     }
-
-
-
-
-    //     if ($name  && $attribute == 'name') {
-
-    //         $attributes =  $request->validate([
-    //         'name'=> 'required',
-
-    //     ]);
-
-
-    //     }else if($attribute == 'name'){
-
-    //         $attributes =  $request->validate([
-    //         'name'=> 'required',
-
-    //     ]);
-
-
-
-    //     }
-
-    //     if ($attributes) {
-
-    //           $user = auth()->user();
-
-
-    //         if ($attribute == 'email') {
-
-
-    //             $user->email = $attributes['email'];
-
-    //             $user->save();
-
-
-    //         }else if($attribute == 'name'){
-
-
-    //             $user->name = $attributes['name'];
-
-    //             $user->save();
-
-    //         }
-
-
-    //         $request->session()->regenerate();
-
-    //         return redirect('/account');
-    //     }
-
-
-    //     return redirect()->back()->withErrors();
-    // }
-
-
-    /**
      * validated quote form.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -371,11 +430,6 @@ class PortalController extends Controller
      */
     public function clientQuoteSubmission(Request $request)
     {
-
-        // if (auth()->guest()) {
-        //     abort(403);
-
-        // }
 
        $request['email']= strtolower($request->input('email'));
 
@@ -407,16 +461,8 @@ class PortalController extends Controller
         $quote->category_id = $request->input('category');
         $quote->message = $request->input('message');
 
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $private_key = '';
 
-        for ($i = 0; $i < 20; $i++) {
-            $private_key .= $characters[rand(0, $charactersLength - 1)];
-        }
-     
-
-        $quote->private_key = $private_key;
+        $quote->private_key = $this->randomString();
 
 
         $quote->save();
@@ -502,6 +548,28 @@ class PortalController extends Controller
         return redirect()->back()->withErrors();
 
     } 
+
+
+
+       /**
+     * random string generated.
+     *
+     * @return \Illuminate\View\View
+     */
+       public function randomString(){
+
+         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+         $charactersLength = strlen($characters);
+         $private_key = '';
+
+         for ($i = 0; $i < 20; $i++) {
+            $private_key .= $characters[rand(0, $charactersLength - 1)];
+        }
+
+        return $private_key;
+
+
+    }
 
     
 }

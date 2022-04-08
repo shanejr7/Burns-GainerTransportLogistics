@@ -279,6 +279,18 @@
 						
 						<h3>SHIPPING ORDER ({{$orders[$i]->order_tracking_number}})</h3>
 
+						<div style="margin-bottom: 2em;"></div>
+												<div>
+													<label>Location: </label>
+													<span class="color-primary">{{$orders[$i]->location}} </span>
+												</div>
+												<div>
+													<label>Destination: </label>
+													<span class="color-primary">{{$orders[$i]->destination}}</span>
+												</div>
+
+												<div style="margin-bottom: 2em;"></div>
+
 						<div class="media">
 									<!-- <a class="pull-left" href="#">
 										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
@@ -299,7 +311,7 @@
 												</div></a>
 											</div> -->
 										</div>
-										{$orders[$i]->status}}
+										{{$orders[$i]->status}}
 									</div>
 								</div>
 

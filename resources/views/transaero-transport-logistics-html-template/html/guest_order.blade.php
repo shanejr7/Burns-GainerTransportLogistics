@@ -368,6 +368,55 @@
 					</div>
 					@endif
 
+					@error('name')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('phone')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('email')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('location')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+					@error('category')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
+
+					@error('message')
+					<div class="alert alert-danger">
+						<ul>
+
+							<li>{{$message}}</li>
+						</ul>
+					</div>
+					@enderror
 
 					<!-- === CONTACTS INFO === -->
 					@include('transaero-transport-logistics-html-template/html/components/owner-contact')
@@ -384,7 +433,7 @@
 						</div>
 							@enderror
 							
-							@if(isset($quotes))
+							@if(isset($order))
 							@for($i = 0; $i < 1; $i++)
 							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
 
@@ -399,16 +448,16 @@
 										<div class="media-body-top">
 											<div class="media-info">
 												<h3 class="media-heading" style="font-size: 30px;">
-													@if($quotes[$i]->category_id == 1)
+													@if($order[$i]->category_id == 1)
 													Clothing
 													@endif
-													@if($quotes[$i]->category_id == 2)
+													@if($order[$i]->category_id == 2)
 													Refrigerated goods
 													@endif
-													@if($quotes[$i]->category_id == 3)
+													@if($order[$i]->category_id == 3)
 													Dry goods
 													@endif
-													- <span class="media-date"style="font-size: 30px;">{{$quotes[$i]->created_at}}</span></h3>
+													- <span class="media-date"style="font-size: 30px;">{{$order[$i]->created_at}}</span></h3>
 
 												</div>
 												<div class="media-reply">
@@ -416,13 +465,13 @@
 														<div class="my-btn-bg-top"></div>
 														<div class="my-btn-bg-bottom"></div>
 														<div class="my-btn-text">
-															@if($quotes[$i]->active == 1)
+															@if($order[$i]->active == 1)
 															Request
 															@endif
-															@if($quotes[$i]->active == 2)
+															@if($order[$i]->active == 2)
 															Pending
 															@endif
-															@if($quotes[$i]->active == 3)
+															@if($order[$i]->active == 3)
 															Accepted
 															@endif
 														</div>
@@ -430,16 +479,16 @@
 												</div>
 											</div>
 
-									<!-- 		<h4>{{$quotes[$i]->message}}<h4> -->
+									<!-- 		<h4>{{$order[$i]->message}}<h4> -->
 
 												<div style="margin-bottom: 2em;"></div>
 												<div style="font-size:25px">
 													<label>Location: </label>
-													<span class="color-primary">{{$quotes[$i]->location}} </span>
+													<span class="color-primary">{{$order[$i]->location}} </span>
 												</div>
 												<div style="font-size:25px">
 													<label>Destination: </label>
-													<span class="color-primary" style="font-size:25px">{{$quotes[$i]->destination}}</span>
+													<span class="color-primary" style="font-size:25px">{{$order[$i]->destination}}</span>
 												</div>
 
 												<div style="margin-bottom: 2em;"></div>
@@ -447,23 +496,23 @@
 												<div class="row">
 													<div class="col-lg-3">
 														<h3>Contact info</h3>
-														<h4 class="color-primary">{{$quotes[$i]->name}}</h4>
-														<h4 class="color-primary">{{$quotes[$i]->phone}}</h4>
-														<h4 class="color-primary">{{$quotes[$i]->email}}</h3>
+														<h4 class="color-primary">{{$order[$i]->name}}</h4>
+														<h4 class="color-primary">{{$order[$i]->phone}}</h4>
+														<h4 class="color-primary">{{$order[$i]->email}}</h3>
 														</div>
 														<div class="col-lg-2"></div>
 														<div class="col-lg-6">
 															<h3>Shipping quote price</h3>
 
-															@if($quotes[$i]->active == 2)
+															@if($order[$i]->active == 2)
 															<form name="contact-form" method="POST" action="/quote/accepted">
 
 																@csrf
 
-																<input type="hidden" name="quote_id" value="{{$quotes[$i]->id}}">
+																<input type="hidden" name="quote_id" value="{{$order[$i]->id}}">
 
 																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
+																	<input type="text" name="price" placeholder="${{$order[$i]->total_price}}" disabled />
 																</div>
 
 																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
@@ -478,7 +527,7 @@
 															</form>
 															@endif
 															
-															@if($quotes[$i]->active == 3)
+															@if($order[$i]->active == 3)
 															<form name="contact-form" id="contact-form" method="POST" action="/quote/request">
 
 																@csrf
@@ -486,7 +535,7 @@
 																<input type="hidden" name="client_id" value="{{auth()->user()->id}}">
 
 																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
+																	<input type="text" name="price" placeholder="${{$order[$i]->total_price}}" disabled />
 																</div>
 															</form>
 															@endif

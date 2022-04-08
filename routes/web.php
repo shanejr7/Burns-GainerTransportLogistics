@@ -47,7 +47,10 @@ Route::get('/quote', function () {
 });
 
 // GUEST QUOTE CHECKOUT ROUTE
-Route::get('/checkout={authString}',[PortalController::class,'showGuestQuoteCheckout']);
+Route::get('/checkout={authString}',[PortalController::class,'showGuestQuoteCheckout'])->name('guestcheckout');
+
+// GUEST QUOTE CHECKOUT ROUTE
+Route::get('/order={authString}',[PortalController::class,'showGuestOrder'])->name('guestorder');
 
 
 // CONTACT PAGE
@@ -84,4 +87,8 @@ Route::post('/quote/request',[PortalController::class, 'clientQuoteSubmission'])
 
 // QUOTE ESTIMATE REQUEST
 Route::post('/quote/estimate',[PortalController::class, 'submitQuoteEstimate']);
+Route::post('/quote/order',[PortalController::class, 'submitQuoteOrder']);
+
+// QUOTE GUEST ACCEPTED REQUEST
+Route::post('/quote/accepted',[PortalController::class, 'guestAcceptQuoteEstimate']);
 

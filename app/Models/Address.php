@@ -18,6 +18,7 @@ class Address extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'full_address',
         'street',
         'city',
         'state',
@@ -34,5 +35,4 @@ class Address extends Model
         'remember_token',
     ];
 
-}
 }
