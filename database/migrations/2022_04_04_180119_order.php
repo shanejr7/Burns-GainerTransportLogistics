@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id()->unique();
             $table->integer('client_id')->nullable();
             $table->integer('category_id');
-            $table->integer('address_id');
-            $table->integer('shipping_address_id');
-            $table->integer('billing_id');
+            $table->string('address');
+            $table->string('shipping_address');
+            $table->string('billing_address');
             $table->string('order_tracking_number');
             $table->integer('total_quantity');
             $table->float('total_price');

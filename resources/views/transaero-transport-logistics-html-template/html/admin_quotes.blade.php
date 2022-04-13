@@ -205,13 +205,14 @@
 							<li class="active">
 								<a href="#account" onclick="defaultLoad()">ACCOUNT</a>
 							</li>
-							<li>
-								<a href="#history" onclick="orderHistory()">ORDER HISTORY</a>
-							</li>
-							<li>
+								<li>
 								<a href="#tracking" onclick="orderTracking()">ORDER TRACKING</a>
 							</li>
 
+							<li>
+								<a href="#history" onclick="orderHistory()">ORDER HISTORY</a>
+							</li>
+						
 							<li>
 								<a href="#quotes" onclick="orderRequest()">REQUESTED SHIPPING</a>
 							</li>
@@ -238,37 +239,161 @@
 
 				</section>
 
+	<section id="orderTracking">
 
-				<section id="orderHistory">
-
-					<!-- === BLOG ITEMS === -->
 
 					@if(isset($orders))
 					@for($i = 0; $i < sizeof($orders); $i++)
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
 
-						<!-- === BLOG ITEM === -->
-						<div class="single-post">
-							<div class="single-post-date">
+
+
+						<h2>Tracking number ({{$orders[$i]->order_tracking_number}})</h2>
+						<div style="margin-bottom: 2em;"></div>
+
+
+
+						<div class="media">
+
+									<!-- <a class="pull-left" href="#">
+										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
+									</a> -->
+									<div class="media-body">
+										<div class="media-body-top">
+											<div class="media-info">
+												<h3>ORDER STATUS: <span class="media-date" style="font-size: 25px;">{{$orders[$i]->status}}</span>
+												<div class="media-reply">
+													<a href="#"><div class="my-btn my-btn-default">
+														<div class="my-btn-bg-top"></div>
+														<div class="my-btn-bg-bottom"></div>
+														<div class="my-btn-text" style="font-size:15px;">
+															DATE: {{$orders[$i]->created_at}}
+														</div>
+													</div></a>
+												</div></h3>
+
+												<h3 class="media-heading" style="font-size: 25px;">
+													CARGO TYPE: <span class="media-date" style="font-size: 25px;">
+														@if($orders[$i]->category_id == 1)
+														Clothing
+														@endif
+														@if($orders[$i]->category_id == 2)
+														Refrigerated goods
+														@endif
+														@if($orders[$i]->category_id == 3)
+														Dry goods
+														@endif
+													</span>
+												</h3>
+
+												<div class="row"> 
+
+													<div class="col-lg-6">
+														<h3>CUSTOMER INFO:</h3>
+
+														<h4 class="color-primary">{{$orders[$i]->name}}</h4>
+														<h4 class="color-primary">{{$orders[$i]->phone}}</h4>
+														<h4 class="color-primary">{{$orders[$i]->email}}</h3>	
+
+														</div>
+
+														<div class="col-lg-6">
+														<h3>SHIPPING INFO:</h3>
+
+														<h4>Location: <span class="color-primary">{{$orders[$i]->shipping_address}}</span></h4>
+														<h4>Destination:  <span class="color-primary">{{$orders[$i]->address}}</span></h4>
+														</div>
+													</div>
+
+
+												</div>
+												
+
+											</div>
+
+
+										</div>
+
+									</div>
+
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+								@endfor
+								@endif
+
+								@if(count($orders)==0)
+								<div class="col-lg-1"></div>
+								<div class="col-lg-6">
+									<h2>There aren't any orders.</h2>
+								</div>
+								@endif
+
+							</section>
+
+
+
+							<section id="orderHistory">
+
+								<!-- === BLOG ITEMS === -->
+
+								@if(isset($orders))
+								@for($i = 0; $i < sizeof($orders); $i++)
+								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+
+									<!-- === BLOG ITEM === -->
+									<div class="single-post">
+							<!-- <div class="single-post-date">
 								<div class="single-post-date-number">26</div>MAY
-							</div>
-							<div class="single-post-image">
+							</div> -->
+						<!-- 	<div class="single-post-image">
 								<img src="assets/media/blog/5.jpg" alt="" />
-							</div>
-							<div class="single-post-info">
+							</div> -->
+							<div class="single-post-info" style="font-size:16px">
 								<span class="author-icon"><i class="fa fa-user"></i></span>
 								<a href="#">Admin</a>
 								<span class="date-icon"><i class="fa fa-calendar"></i></span>
-								<a href="12_blog_detail.html">26 may 2015</a>
+								<a href="12_blog_detail.html">{{$orders[$i]->created_at}}</a>
 							</div>
-							<div class="single-post-title">
-								<h3><a href="#">{{$orders[$i]->status}}</a></h3>
+
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										<h3><a >Status: {{$orders[$i]->status}}</a></h3>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										<h3><a >Location: {{$orders[$i]->status}}</a></h3>
+									</div>
+								</div>
+								
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										<h3><a >Destination: {{$orders[$i]->status}}</a></h3>
+									</div>
+								</div>
+								
+								
 							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="single-post-title">
+										<h3><a >Contact: {{$orders[$i]->status}}</a></h3>
+									</div>
+									
+								</div>
+								
+							</div>
+
+
+
 
 
 						</div>			
 
 					</div>
+
+					<div class="col-lg-3"></div>
 					@endfor
 
 					@endif
@@ -282,55 +407,6 @@
 					
 
 				</section>
-
-
-				<section id="orderTracking">
-
-
-					@if(isset($orders))
-					@for($i = 0; $i < sizeof($orders); $i++)
-					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="comments">
-
-						
-						<h3>SHIPPING ORDER ({{$orders[$i]->order_tracking_number}})</h3>
-
-						<div class="media">
-									<!-- <a class="pull-left" href="#">
-										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
-									</a> -->
-									<div class="media-body">
-										<div class="media-body-top">
-											<div class="media-info">
-												<h4 class="media-heading">Dry goods</h4>
-												<span class="media-date">25 AUG 2015 at 5:00 PM</span>
-											</div>
-											<!-- <div class="media-reply">
-												<a href="#"><div class="my-btn my-btn-default">
-													<div class="my-btn-bg-top"></div>
-													<div class="my-btn-bg-bottom"></div>
-													<div class="my-btn-text">
-														REPLY
-													</div>
-												</div></a>
-											</div> -->
-										</div>
-										{{$orders[$i]->status}}
-									</div>
-								</div>
-
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-							@endfor
-							@endif
-
-							@if(count($orders)==0)
-							<div class="col-lg-1"></div>
-							<div class="col-lg-6">
-								<h2>There aren't any orders.</h2>
-							</div>
-							@endif
-
-						</section>
 
 
 						<section id="orderRequest">
@@ -458,7 +534,7 @@
 
 																@csrf
 
-																<input type="hidden" name="client_id" value="{{auth()->user()->id}}">
+																<input type="hidden" name="client_id" value="{{$quotes[$i]->client_id}}}">
 
 																<input type="hidden" name="quote_id" value="{{$quotes[$i]->id}}">
 

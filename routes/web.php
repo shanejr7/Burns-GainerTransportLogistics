@@ -82,6 +82,10 @@ Route::get('/dashboard', [PortalController::class,'createDashboard']);
 // USER LOGOUT & DESTROY SESSION
 Route::get('/logout',[SessionController::class, 'destroy']);
 
+// ORDER UPDATE LOCATION
+Route::post('/order/update',[PortalController::class, 'updateOrderLocation'])->middleware('admin');
+
+
 // QUOTE REQUEST
 Route::post('/quote/request',[PortalController::class, 'clientQuoteSubmission']);
 

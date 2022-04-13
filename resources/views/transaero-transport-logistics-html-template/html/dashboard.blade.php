@@ -277,11 +277,12 @@
 								<a href="#" onload="defaultLoad()" onclick="defaultLoad()">ACCOUNT</a>
 							</li>
 							<li>
-								<a href="#default" onclick="orderHistory()">ORDER HISTORY</a>
-							</li>
-							<li>
 								<a href="#default" onclick="orderTracking() ">ORDER TRACKING</a>
 							</li>
+							<li>
+								<a href="#default" onclick="orderHistory()">ORDER HISTORY</a>
+							</li>
+
 
 							<li>
 								<a href="/quote">REQUEST SHIPPING</a>
@@ -308,6 +309,98 @@
 					</div>
 
 				</section>
+
+				
+				<section id="orderTracking">
+
+
+					@if(isset($orders))
+					@for($i = 0; $i < sizeof($orders); $i++)
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
+
+
+
+						<h2>Tracking number ({{$orders[$i]->order_tracking_number}})</h2>
+						<div style="margin-bottom: 2em;"></div>
+
+
+
+						<div class="media">
+
+									<!-- <a class="pull-left" href="#">
+										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
+									</a> -->
+									<div class="media-body">
+										<div class="media-body-top">
+											<div class="media-info">
+												<h3>ORDER STATUS: <span class="media-date" style="font-size: 25px;">{{$orders[$i]->status}}</span>
+												</h3>
+
+												<h3 class="media-heading" style="font-size: 25px;">
+													CARGO TYPE: <span class="media-date" style="font-size: 25px;">
+														@if($orders[$i]->category_id == 1)
+														Clothing
+														@endif
+														@if($orders[$i]->category_id == 2)
+														Refrigerated goods
+														@endif
+														@if($orders[$i]->category_id == 3)
+														Dry goods
+														@endif
+													</span>
+												</h3>
+												<br>
+
+												<div class="row"> 
+													
+
+													<div class="col-lg-12">
+														<h3>SHIPPING INFO:</h3>
+
+														<h4>Location: <span class="color-primary">{{$orders[$i]->shipping_address}}</span></h4>
+														<h4>Destination:  <span class="color-primary">{{$orders[$i]->address}}</span></h4>
+													</div>
+												</div>
+
+												
+
+
+											</div>
+
+
+											<div class="media-reply">
+												<a href="#"><div class="my-btn my-btn-default">
+													<div class="my-btn-bg-top"></div>
+													<div class="my-btn-bg-bottom"></div>
+													<div class="my-btn-text" style="font-size:15px;">
+														DATE: {{$orders[$i]->created_at}}
+													</div>
+												</div></a>
+											</div>
+
+										</div>
+
+
+									</div>
+									
+
+								</div>
+
+
+
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+							@endfor
+							@endif
+
+							@if(count($orders)==0)
+							<div class="col-lg-1"></div>
+							<div class="col-lg-6">
+								<h2>There aren't any orders.</h2>
+							</div>
+							@endif
+
+						</section>
 
 
 				<section id="orderHistory">
@@ -353,60 +446,13 @@
 				</section>
 
 
-				<section id="orderTracking">
-
-
-					@if(isset($orders))
-					@for($i = 0; $i < sizeof($orders); $i++)
-					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="comments">
-
-						
-						<h3>SHIPPING ORDER ({{$orders[$i]->order_tracking_number}})</h3>
-
-						<div class="media">
-									<!-- <a class="pull-left" href="#">
-										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
-									</a> -->
-									<div class="media-body">
-										<div class="media-body-top">
-											<div class="media-info">
-												<h4 class="media-heading">Dry goods</h4>
-												<span class="media-date">25 AUG 2015 at 5:00 PM</span>
-											</div>
-											<!-- <div class="media-reply">
-												<a href="#"><div class="my-btn my-btn-default">
-													<div class="my-btn-bg-top"></div>
-													<div class="my-btn-bg-bottom"></div>
-													<div class="my-btn-text">
-														REPLY
-													</div>
-												</div></a>
-											</div> -->
-										</div>
-										{$orders[$i]->status}}
-									</div>
-								</div>
-
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-							@endfor
-							@endif
-
-							@if(count($orders)==0)
-							<div class="col-lg-1"></div>
-							<div class="col-lg-6">
-								<h2>There aren't any orders.</h2>
-							</div>
-							@endif
-
-						</section>
 
 
 						<section id="quotes">
 
 							@if(isset($quotes))
 							@for($i = 0; $i < sizeof($quotes); $i++)
-							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
+							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
 
 
 								<h3>SHIPPING QUOTE ({{$i+1}})</h3>
@@ -431,23 +477,7 @@
 													- <span class="media-date"style="font-size: 30px;">{{$quotes[$i]->created_at}}</span></h3>
 
 												</div>
-												<div class="media-reply">
-													<a><div class="my-btn my-btn-default" style="font-size: 1em;">
-														<div class="my-btn-bg-top"></div>
-														<div class="my-btn-bg-bottom"></div>
-														<div class="my-btn-text">
-															@if($quotes[$i]->active == 1)
-															Request
-															@endif
-															@if($quotes[$i]->active == 2)
-															Pending
-															@endif
-															@if($quotes[$i]->active == 3)
-															Accepted
-															@endif
-														</div>
-													</div></a>
-												</div>
+												
 											</div>
 
 											<!-- 		<h4>{{$quotes[$i]->message}}<h4> -->
@@ -476,9 +506,9 @@
 															<h3>Shipping quote price</h3>
 
 															@if($quotes[$i]->active == 1)
-																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
-																	<input type="text" name="price" placeholder="pending" disabled />
-																</div>
+															<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacts-form-item">
+																<input type="text" name="price" placeholder="pending" disabled />
+															</div>
 															@endif
 
 															@if($quotes[$i]->active == 2)

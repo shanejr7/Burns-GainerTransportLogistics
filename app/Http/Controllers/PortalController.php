@@ -53,7 +53,7 @@ class PortalController extends Controller
      {
         // merge address with orders
 
-        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()],['orders' => Order::all()]);
+        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()],['orders' => User::join('orders','orders.client_id','=','users.id')->get()]);
 
     }
 
@@ -67,7 +67,7 @@ class PortalController extends Controller
       public function adminQuotes()
       {
 
-        return view('transaero-transport-logistics-html-template/html/admin_quotes',['quotes' => Quote::all()],['orders' => Order::all()]);
+        return view('transaero-transport-logistics-html-template/html/admin_quotes',['quotes' => Quote::all()],['orders' => User::join('orders','orders.client_id','=','users.id')->get()]);
 
     }
 
@@ -89,6 +89,37 @@ class PortalController extends Controller
         return view('transaero-transport-logistics-html-template/html/dashboard',['quotes' => Quote::where('client_id','=',Auth::id())->get()],['orders' => Order::where('client_id','=',Auth::id())->get()]);
 
     }
+
+
+
+
+       /**
+     * admin update order location.
+     *
+     * @return \Illuminate\View\View
+     */
+
+       public function updateOrderLocation(Request $request)
+       {
+
+           $attributes =  $request->validate([
+            'shipping_address' => 'required',
+            'order_id' => 'required|numeric'
+        ]);
+
+           $order_id = $request->input('order_id');
+
+           $order_shipping_address = $request->input('shipping_address');
+
+           $order = Order::where('id', '=', $order_id)->find($order_id);
+
+           $order->shipping_address = $order_shipping_address;
+
+           $order->save();
+
+        return redirect()->back()->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->get()]);
+    }
+
 
      /**
      * admin view clients page.
@@ -251,36 +282,46 @@ class PortalController extends Controller
        {
 
           $attributes =  $request->validate([
-            'client_id' => 'required|numeric',
             'quote_id' => 'required|numeric',
         ]);
 
           $quote_id = $request->input('quote_id');
 
-          $client_id = $request->input('client_id');
 
           $quote = Quote::where('id','=',$quote_id)->find($quote_id);
 
           $private_key = $this->randomString();
 
           $order = new Order();
-          $order->client_id = $client_id;
+
+          if (isset($quote->client_id)) {
+
+              $order->client_id = $quote->client_id;
+              
+          }
+
           $order->category_id = $quote->category_id;
 
 
           // client address
-          $address = new Address();
-          $address->full_address=$quote->destination;
-          $address->save();
-          $order->address_id = $address->id;
-          $order->billing_id = $address->id;
+          // $address = new Address();
+          // $address->full_address=$quote->destination;
+          // $address->save();
+          // $order->address_id = $address->id;
+          // $order->billing_id = $address->id;
 
 
           // dynamnic shipping address
-          $address = new Address();
-          $address->full_address=$quote->location;
-          $address->save();
-          $order->shipping_address_id = $address->id;
+          // $address = new Address();
+          // $address->full_address=$quote->location;
+          // $address->save();
+          // $order->shipping_address_id = $address->id;
+
+
+          $order->address = $quote->destination;
+          $order->billing_address = $quote->destination;
+
+          $order->shipping_address = $quote->location;
 
 
           $order->order_tracking_number =  $this->randomString();
@@ -295,7 +336,7 @@ class PortalController extends Controller
           $quote->where('id','=', $quote_id)->delete();
 
 
-          if(sizeof($order)>0){
+          if(isset($order)){
 
             return redirect()->back()->with('success', 'Order started!!!');
 
