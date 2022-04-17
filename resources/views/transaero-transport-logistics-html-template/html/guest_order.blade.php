@@ -423,24 +423,24 @@
 
 					<!-- === CONTACTS FORM === -->
 					@error('price')
-								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
-							<div class="alert alert-danger">
-								<ul>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
+						<div class="alert alert-danger">
+							<ul>
 
-									<li>{{$message}}</li>
-								</ul>
-							</div>
+								<li>{{$message}}</li>
+							</ul>
 						</div>
-							@enderror
-							
-							@if(isset($order))
-							@for($i = 0; $i < 1; $i++)
-							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
+					</div>
+					@enderror
+					
+					@if(isset($order))
+					@for($i = 0; $i < 1; $i++)
+					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
 
 
-								<h3>SHIPPING QUOTE ({{$i+1}})</h3>
+						<h3>SHIPPING QUOTE ({{$i+1}})</h3>
 
-								<div class="media">
+						<div class="media">
 									<!-- <a class="pull-left" href="#">
 										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
 									</a> -->
@@ -479,7 +479,7 @@
 												</div>
 											</div>
 
-									<!-- 		<h4>{{$order[$i]->message}}<h4> -->
+											<!-- 		<h4>{{$order[$i]->message}}<h4> -->
 
 												<div style="margin-bottom: 2em;"></div>
 												<div style="font-size:25px">
@@ -561,9 +561,9 @@
 										@endif
 
 
-				</div>
-			</div>
-		</div>
+									</div>
+								</div>
+							</div>
 
 	<!-- =========================
 		CONTACTS DETAILS
@@ -585,37 +585,7 @@
 	<!-- ===================================
 		SUBSCRIBE SECTION
 		======================================== -->
-		<div class="def-section home-subscribe">
-			<div class="container">
-				<div class="row">
-
-					<!-- === SUBSCRIBE TEXT === -->
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-text animated wow fadeInUp" data-wow-duration=".5s" data-wow-offset="100">
-						<span class="home-subscribe-icon"><i class="flaticon-email114"></i></span>
-						SIGN UP FOR NEWSLETTER TO GET UPDATES AND NEWS
-					</div>
-
-					<!-- === SUBSCRIBE FORM === -->
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-form animated wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" data-wow-offset="100">
-						<form>
-							<div class="home-subscribe-form-input">
-								<input type="text" name="subscribe" placeholder="YOUR E-MAIL" />
-							</div>
-							<div class="home-subscribe-form-button">
-								<button><span class="my-btn my-btn-primary">
-									<span class="my-btn-bg-top"></span>
-									<span class="my-btn-bg-bottom"></span>
-									<span class="my-btn-text">
-										SUBSCRIBE
-									</span>
-								</span></button>
-							</div>
-						</form>
-					</div>
-
-				</div>
-			</div>
-		</div>
+		@include('transaero-transport-logistics-html-template/html/components/subscribe')
 	<!-- ===================================
 		END SUBSCRIBE SECTION
 		======================================== -->

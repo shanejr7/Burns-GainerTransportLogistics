@@ -182,20 +182,20 @@
 		<div class="def-section single-blog-section">
 			<div class="container">
 
-					@if (\Session::has('success'))
-								<div class="row">
+				@if (\Session::has('success'))
+				<div class="row">
 					<div class="alert alert-success">
 						<ul>
 							<li>{!! \Session::get('success') !!}</li>
 						</ul>
 					</div>
-								</div>
-					@endif
+				</div>
+				@endif
 
 
-					
 
-			
+
+
 				<div class="row">
 
 					<!-- === BLOG RIGHT BAR === -->
@@ -205,14 +205,14 @@
 							<li class="active">
 								<a href="#account" onclick="defaultLoad()">ACCOUNT</a>
 							</li>
-								<li>
+							<li>
 								<a href="#tracking" onclick="orderTracking()">ORDER TRACKING</a>
 							</li>
 
 							<li>
 								<a href="#history" onclick="orderHistory()">ORDER HISTORY</a>
 							</li>
-						
+
 							<li>
 								<a href="#quotes" onclick="orderRequest()">REQUESTED SHIPPING</a>
 							</li>
@@ -239,109 +239,158 @@
 
 				</section>
 
-	<section id="orderTracking">
+				<section id="orderTracking">
 
 
 					@if(isset($orders))
 					@for($i = 0; $i < sizeof($orders); $i++)
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
 
-
-
-						<h2>Tracking number ({{$orders[$i]->order_tracking_number}})</h2>
+						<h2>TRACKING NUMBER: ({{$orders[$i]->order_tracking_number}})</h2>
 						<div style="margin-bottom: 2em;"></div>
-
-
-
 						<div class="media">
 
-									<!-- <a class="pull-left" href="#">
-										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
-									</a> -->
-									<div class="media-body">
-										<div class="media-body-top">
-											<div class="media-info">
-												<h3>ORDER STATUS: <span class="media-date" style="font-size: 25px;">{{$orders[$i]->status}}</span>
-												<div class="media-reply">
-													<a href="#"><div class="my-btn my-btn-default">
-														<div class="my-btn-bg-top"></div>
-														<div class="my-btn-bg-bottom"></div>
-														<div class="my-btn-text" style="font-size:15px;">
-															DATE: {{$orders[$i]->created_at}}
-														</div>
-													</div></a>
-												</div></h3>
 
-												<h3 class="media-heading" style="font-size: 25px;">
-													CARGO TYPE: <span class="media-date" style="font-size: 25px;">
-														@if($orders[$i]->category_id == 1)
-														Clothing
-														@endif
-														@if($orders[$i]->category_id == 2)
-														Refrigerated goods
-														@endif
-														@if($orders[$i]->category_id == 3)
-														Dry goods
-														@endif
-													</span>
-												</h3>
-
-												<div class="row"> 
-
-													<div class="col-lg-6">
-														<h3>CUSTOMER INFO:</h3>
-
-														<h4 class="color-primary">{{$orders[$i]->name}}</h4>
-														<h4 class="color-primary">{{$orders[$i]->phone}}</h4>
-														<h4 class="color-primary">{{$orders[$i]->email}}</h3>	
-
-														</div>
-
-														<div class="col-lg-6">
-														<h3>SHIPPING INFO:</h3>
-
-														<h4>Location: <span class="color-primary">{{$orders[$i]->shipping_address}}</span></h4>
-														<h4>Destination:  <span class="color-primary">{{$orders[$i]->address}}</span></h4>
-														</div>
+							<div class="media-body">
+								<div class="media-body-top">
+									<div class="media-info">
+										<div class="row">
+											<div class="col-lg-6">	<h3>ORDER STATUS: <span class="media-date" style="font-size: 25px;">{{$orders[$i]->status}}</span>
+											</h3></div>
+											<div class="col-lg-6">	<div class="media-reply">
+												<a href="#"><div class="my-btn my-btn-default">
+													<div class="my-btn-bg-top"></div>
+													<div class="my-btn-bg-bottom"></div>
+													<div class="my-btn-text" style="font-size:15px;">
+														REQUEST DATE: {{$orders[$i]->created_at}}
 													</div>
+												</div></a>
+											</div></div>
+										</div>
 
+										<br>
+
+										<div class="row">
+											<div class="col-lg-6">
+												<h3 class="media-heading" style="font-size: 25px;">
+												CARGO TYPE: </h3><span class="media-date" style="font-size: 25px;">
+													@if($orders[$i]->category_id == 1)
+													Clothing
+													@endif
+													@if($orders[$i]->category_id == 2)
+													Refrigerated goods
+													@endif
+													@if($orders[$i]->category_id == 3)
+													Dry goods
+													@endif
+												</span>
+												
+											</div>
+
+
+
+										</div>
+
+
+
+										<br>
+
+										<div class="row"> 
+
+											<div class="col-lg-12">
+												<h3>CUSTOMER INFO:</h3>
+
+												<h4 class="color-primary">{{$orders[$i]->name}}</h4>
+												<h4 class="color-primary">{{$orders[$i]->phone}}</h4>
+												<h4 class="color-primary">{{$orders[$i]->email}}</h3>	
 
 												</div>
-												
 
+												<div class="col-lg-12">
+													<h3>SHIPPING INFO:</h3>
+
+													<h4 style="display: inline-block;">LOCATION: </h4> <h4 style="display: inline-block;" class="color-primary"> {{$orders[$i]->shipping_address}}</h4>
+													<br>
+
+													<h4 style="display: inline-block;" >DESTINATION:</h4>  <h4 style="display: inline-block;"  class="color-primary"> {{$orders[$i]->address}}</h4>
+												</div>
 											</div>
 
 
 										</div>
 
+
+
+
 									</div>
 
+
 								</div>
-								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-								@endfor
-								@endif
+								<form name="contact-form" id="contact-form" method="POST" action="/order/update">
 
-								@if(count($orders)==0)
-								<div class="col-lg-1"></div>
-								<div class="col-lg-6">
-									<h2>There aren't any orders.</h2>
-								</div>
-								@endif
+									@csrf
+									<input type="hidden" name="order_id" value="{{$orders[$i]->id}}">
 
-							</section>
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item">
+										<label style="font-size: 25px;">CURRENT SHIPPING LOCATION</label>
+										<input style="font-size: 18px;" type="text" name="shipping_address" placeholder="{{$orders[$i]->shipping_address}}"/ re
+										>
+									</div>
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+										<button type="submit"><span class="my-btn my-btn-default">
+											<span class="my-btn-bg-top"></span>
+											<span class="my-btn-bg-bottom"></span>
+											<span class="my-btn-text">
+												Update location
+											</span>
+										</span></button>
+									</div>
+								</form>
+								<form name="contact-form" id="contact-form" method="POST" action="/order/complete">
+
+									@csrf
+									<input type="hidden" name="order_id" value="{{$orders[$i]->id}}">
+									
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+										<button type="submit"><span class="my-btn my-btn-default">
+											<span class="my-btn-bg-top"></span>
+											<span class="my-btn-bg-bottom"></span>
+											<span class="my-btn-text">
+												Order complete
+											</span>
+										</span></button>
+									</div>
+								</form>
+
+							</div>
 
 
 
-							<section id="orderHistory">
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+						@endfor
+						@endif
 
-								<!-- === BLOG ITEMS === -->
+						@if(count($orders)==0)
+						<div class="col-lg-1"></div>
+						<div class="col-lg-6">
+							<h2>There aren't any orders.</h2>
+						</div>
+						@endif
 
-								@if(isset($orders))
-								@for($i = 0; $i < sizeof($orders); $i++)
-								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+					</section>
 
-									<!-- === BLOG ITEM === -->
-									<div class="single-post">
+
+					<section id="orderHistory">
+
+						<!-- === BLOG ITEMS === -->
+
+						@if(isset($orders_history))
+						@for($i = 0; $i < sizeof($orders_history); $i++)
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+
+							<!-- === BLOG ITEM === -->
+							<div class="single-post">
 							<!-- <div class="single-post-date">
 								<div class="single-post-date-number">26</div>MAY
 							</div> -->
@@ -352,68 +401,80 @@
 								<span class="author-icon"><i class="fa fa-user"></i></span>
 								<a href="#">Admin</a>
 								<span class="date-icon"><i class="fa fa-calendar"></i></span>
-								<a href="12_blog_detail.html">{{$orders[$i]->created_at}}</a>
+								<a href="12_blog_detail.html">{{$orders_history[$i]->created_at}}</a>
 							</div>
 
 							<div class="row">
 								<div class="col-lg-4">
 									<div class="single-post-title">
-										<h3><a >Status: {{$orders[$i]->status}}</a></h3>
+										<h3><a >STATUS: <span class="color-primary">{{$orders_history[$i]->status}}</span></a></h3>
 									</div>
 								</div>
 								<div class="col-lg-4">
 									<div class="single-post-title">
-										<h3><a >Location: {{$orders[$i]->status}}</a></h3>
+										@if($orders_history[$i]->category_id==1)
+										<h3><a >CARGO TYPE: <span class="color-primary">Clothing</span></a></h3>
+										@endif
+										@if($orders_history[$i]->category_id==2)
+										<h3><a >CARGO TYPE: <span class="color-primary">Refrigerated goods</span> </a></h3>
+										@endif
+										@if($orders_history[$i]->category_id==3)
+										<h3><a >CARGO TYPE: <span class="color-primary">Dry goods</span></a></h3>
+										@endif
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										<h3><a >LOCATION: <span class="color-primary">{{$orders_history[$i]->address}}</span></a></h3>
 									</div>
 								</div>
 								
-								<div class="col-lg-4">
-									<div class="single-post-title">
-										<h3><a >Destination: {{$orders[$i]->status}}</a></h3>
-									</div>
-								</div>
+								
 								
 								
 							</div>
 							<div class="row">
 								<div class="col-lg-6">
 									<div class="single-post-title">
-										<h3><a >Contact: {{$orders[$i]->status}}</a></h3>
+										<h3><a >Contact:</a></h3>
+										<h4 class="color-primary">{{$orders_history[$i]->name}}</h4>
+										<h4 class="color-primary">{{$orders_history[$i]->phone}}</h4>
+										<h4 class="color-primary">{{$orders_history[$i]->email}}</h3>
+										</div>
+
 									</div>
-									
+
 								</div>
-								
-							</div>
 
 
 
 
 
-						</div>			
+							</div>			
 
-					</div>
+						</div>
 
-					<div class="col-lg-3"></div>
-					@endfor
+						<div class="col-lg-3"></div>
+						@endfor
 
-					@endif
+						@endif
 
-					@if(count($orders)==0)
-					<div class="col-lg-1"></div>
-					<div class="col-lg-6">
-						<h2>There aren't any orders.</h2>
-					</div>
-					@endif
-					
-
-				</section>
+						@if(count($orders_history)==0)
+						<div class="col-lg-1"></div>
+						<div class="col-lg-6">
+							<h2>There aren't any completed orders.</h2>
+						</div>
+						@endif
 
 
-						<section id="orderRequest">
+					</section>
 
 
-							@error('price')
-								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
+					<section id="orderRequest">
+
+
+						@error('price')
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
 							<div class="alert alert-danger">
 								<ul>
 
@@ -421,65 +482,82 @@
 								</ul>
 							</div>
 						</div>
-							@enderror
-							
-							@if(isset($quotes))
-							@for($i = 0; $i < sizeof($quotes); $i++)
-							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
+						@enderror
+
+						@if(isset($quotes))
+						@for($i = 0; $i < sizeof($quotes); $i++)
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="comments">
 
 
-								<h3>SHIPPING QUOTE ({{$i+1}})</h3>
+							<h3>SHIPPING QUOTE ({{$i+1}}) 	- <span class="media-date color-primary" style="font-size: 25px;">{{$quotes[$i]->created_at}}</span></h3>
 
-								<div class="media">
+							<div class="media">
 									<!-- <a class="pull-left" href="#">
 										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
 									</a> -->
 									<div class="media-body">
 										<div class="media-body-top">
 											<div class="media-info">
-												<h3 class="media-heading" style="font-size: 30px;">
-													@if($quotes[$i]->category_id == 1)
-													Clothing
-													@endif
-													@if($quotes[$i]->category_id == 2)
-													Refrigerated goods
-													@endif
-													@if($quotes[$i]->category_id == 3)
-													Dry goods
-													@endif
-													- <span class="media-date"style="font-size: 30px;">{{$quotes[$i]->created_at}}</span></h3>
+												<div class="row">
+													<div class="col-lg-12">	
+														<h3 class="media-heading" style="font-size: 30px;">CARGO TYPE </h3>
+														@if($quotes[$i]->category_id == 1)
+														<span class="color-primary" style="font-size: 25px;">Clothing</span>
+														@endif
+														@if($quotes[$i]->category_id == 2)
+														<span class="color-primary" style="font-size: 25px;">Refrigerated goods</span>
+														@endif
+														@if($quotes[$i]->category_id == 3)
+														<span class="color-primary" style="font-size: 25px;">Dry goods</span>
+														@endif
 
-												</div>
-												<div class="media-reply">
-													<a><div class="my-btn my-btn-default" style="font-size: 1em;">
-														<div class="my-btn-bg-top"></div>
-														<div class="my-btn-bg-bottom"></div>
-														<div class="my-btn-text">
-															@if($quotes[$i]->active == 1)
-															Request
-															@endif
-															@if($quotes[$i]->active == 2)
-															Pending
-															@endif
-															@if($quotes[$i]->active == 3)
-															Accepted
-															@endif
-														</div>
-													</div></a>
+
+													</div>
 												</div>
 											</div>
+											<div class="media-reply">
+												<a><div class="my-btn my-btn-default" style="font-size: 1em;">
+													<div class="my-btn-bg-top"></div>
+													<div class="my-btn-bg-bottom"></div>
+													<div class="my-btn-text">
+														@if($quotes[$i]->active == 1)
+														Request
+														@endif
+														@if($quotes[$i]->active == 2)
+														Pending
+														@endif
+														@if($quotes[$i]->active == 3)
+														Accepted
+														@endif
+													</div>
+												</div></a>
+											</div>
+										</div>
 
-											<h4>{{$quotes[$i]->message}}<h4>
+										<div class="row"> 
+											<div class="col-lg-12">
+												<h2>MESSAGE<h2>
+
+													<h2 class="color-primary ">{{$quotes[$i]->message}}<h2>
+
+													</div>
+												</div>
+
 
 												<div style="margin-bottom: 2em;"></div>
-												<div>
-													<label>Location: </label>
-													<span class="color-primary">{{$quotes[$i]->location}} </span>
+												<div class="row">
+													<div class="col-lg-12">
+													<label  style="font-size: 25px;">LOCATION: </label>
+													<h4 class="color-primary"  style="font-size: 25px;">{{$quotes[$i]->location}} </h4>
 												</div>
-												<div>
-													<label>Destination: </label>
-													<span class="color-primary">{{$quotes[$i]->destination}}</span>
 												</div>
+
+												<div class="row"> 
+												<div class="col-lg-12">
+													<label  style="font-size: 25px;">DESTINATION: </label>
+													<h4 class="color-primary"  style="font-size: 25px;">{{$quotes[$i]->destination}}</h4>
+												</div>
+											</div>
 
 												<div style="margin-bottom: 2em;"></div>
 
@@ -492,7 +570,7 @@
 														</div>
 														<div class="col-lg-2"></div>
 														<div class="col-lg-6">
-															<h3>Shipping quote price</h3>
+															<h3>Shipping price</h3>
 
 															@if($quotes[$i]->active == 1)
 															<form name="contact-form" method="POST" action="/quote/estimate">
@@ -543,7 +621,7 @@
 																	<input type="text" name="price" placeholder="${{$quotes[$i]->total_price}}" disabled />
 																</div>
 
-																	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
+																<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-form-item contacts-form-button">
 																	<button type="submit"><span class="my-btn my-btn-default">
 																		<span class="my-btn-bg-top"></span>
 																		<span class="my-btn-bg-bottom"></span>

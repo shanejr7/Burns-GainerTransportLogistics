@@ -17,6 +17,7 @@ use App\Models\Cargo;
 use App\Models\Product;
 use App\Models\Package;
 use App\Models\ProductCategory;
+use App\Models\Subscription;
 use App\Models\Notification;
 
 
@@ -53,7 +54,7 @@ class PortalController extends Controller
      {
         // merge address with orders
 
-        return view('transaero-transport-logistics-html-template/html/admin',['quotes' => Quote::all()],['orders' => User::join('orders','orders.client_id','=','users.id')->get()]);
+        return view('transaero-transport-logistics-html-template/html/admin')->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','!=','Completed')->get()])->with(['orders_history' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','like','%Completed%')->get()]);
 
     }
 
@@ -67,7 +68,7 @@ class PortalController extends Controller
       public function adminQuotes()
       {
 
-        return view('transaero-transport-logistics-html-template/html/admin_quotes',['quotes' => Quote::all()],['orders' => User::join('orders','orders.client_id','=','users.id')->get()]);
+        return view('transaero-transport-logistics-html-template/html/admin_quotes')->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','!=','Completed')->get()])->with(['orders_history' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','like','%Completed%')->get()]);
 
     }
 
@@ -117,8 +118,36 @@ class PortalController extends Controller
 
            $order->save();
 
-        return redirect()->back()->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->get()]);
-    }
+           return redirect()->back()->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','!=','Completed')->get()])->with(['orders_history' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','like','%Completed%')->get()]);
+       }
+
+
+
+       /**
+     * admin update order location.
+     *
+     * @return \Illuminate\View\View
+     */
+
+       public function updateOrderComplete(Request $request)
+       {
+
+           $attributes =  $request->validate([
+            'order_id' => 'required|numeric'
+        ]);
+
+           $order_id = $request->input('order_id');
+
+           $order = Order::where('id', '=', $order_id)->find($order_id);
+
+           $order->shipping_address = $order->address;
+
+           $order->status = 'Completed';
+
+           $order->save();
+
+           return redirect()->back()->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','!=','Completed')->get()])->with(['orders_history' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','like','%Completed%')->get()])->with('success', 'Order completed!!!');
+       }
 
 
      /**
@@ -327,7 +356,7 @@ class PortalController extends Controller
           $order->order_tracking_number =  $this->randomString();
           $order->total_quantity = 1;
           $order->total_price = $quote->total_price;
-          $order->status = 'shipping';
+          $order->status = 'Shipping';
           $order->private_key = $private_key;
 
           $order->save();
@@ -338,7 +367,7 @@ class PortalController extends Controller
 
           if(isset($order)){
 
-            return redirect()->back()->with('success', 'Order started!!!');
+            return redirect()->back()->with(['quotes' => Quote::all()])->with(['orders' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','!=','Completed')->get()])->with(['orders_history' => User::join('orders','orders.client_id','=','users.id')->where('orders.status','like','%Completed%')->get()])->with('success', 'Order started!!!');
 
         }else{
 
@@ -436,6 +465,37 @@ class PortalController extends Controller
         return redirect()->back()->withErrors();
 
     }
+
+        /**
+     * user subscribe.
+     *
+     * @return \Illuminate\View\View
+     */
+
+        public function subscribeUser(Request $request)
+        {
+
+
+          $attributes =  $request->validate([
+            'subscribe' => 'required|required|email|max:255|unique:subscription',
+        ]);
+
+
+          if ($attribute) {
+
+            $subscribe = new Subscription();
+            $subscribe->email = $request->input('subscribe');
+
+            $subscribe->save();
+
+
+            return redirect()->back()->with('success', 'You have been subscribed!!!');
+
+        }
+
+        return redirect()->back()->withErrors();
+
+    } 
 
 
 

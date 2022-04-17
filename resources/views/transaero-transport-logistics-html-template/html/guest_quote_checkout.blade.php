@@ -374,41 +374,46 @@
 
 					<!-- === CONTACTS FORM === -->
 					@error('price')
-								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
-							<div class="alert alert-danger">
-								<ul>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
+						<div class="alert alert-danger">
+							<ul>
 
-									<li>{{$message}}</li>
-								</ul>
-							</div>
+								<li>{{$message}}</li>
+							</ul>
 						</div>
-							@enderror
-							
-							@if(isset($quotes))
-							@for($i = 0; $i < 1; $i++)
-							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
+					</div>
+					@enderror
+					
+					@if(isset($quotes))
+					@for($i = 0; $i < 1; $i++)
+					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="comments">
 
 
-								<h3>SHIPPING QUOTE ({{$i+1}})</h3>
+						<h3>SHIPPING QUOTE ({{$i+1}}) - <span class="media-date color-primary" style="font-size: 25px;">{{$quotes[$i]->created_at}}</span></h3>
 
-								<div class="media">
+						<div class="media">
 									<!-- <a class="pull-left" href="#">
 										<img class="media-object" src="assets/media/team/1.jpg" alt="" />
 									</a> -->
 									<div class="media-body">
 										<div class="media-body-top">
 											<div class="media-info">
-												<h3 class="media-heading" style="font-size: 30px;">
-													@if($quotes[$i]->category_id == 1)
-													Clothing
-													@endif
-													@if($quotes[$i]->category_id == 2)
-													Refrigerated goods
-													@endif
-													@if($quotes[$i]->category_id == 3)
-													Dry goods
-													@endif
-													- <span class="media-date"style="font-size: 30px;">{{$quotes[$i]->created_at}}</span></h3>
+												<div class="row">
+													<div class="col-lg-12">	
+														<h3 class="media-heading" style="font-size: 30px;">CARGO TYPE </h3>
+														@if($quotes[$i]->category_id == 1)
+														<span class="color-primary" style="font-size: 25px;">Clothing</span>
+														@endif
+														@if($quotes[$i]->category_id == 2)
+														<span class="color-primary" style="font-size: 25px;">Refrigerated goods</span>
+														@endif
+														@if($quotes[$i]->category_id == 3)
+														<span class="color-primary" style="font-size: 25px;">Dry goods</span>
+														@endif
+
+
+													</div>
+												</div>
 
 												</div>
 												<div class="media-reply">
@@ -430,18 +435,22 @@
 												</div>
 											</div>
 
-									<!-- 		<h4>{{$quotes[$i]->message}}<h4> -->
+											<!-- 		<h4>{{$quotes[$i]->message}}<h4> -->
 
 												<div style="margin-bottom: 2em;"></div>
-												<div style="font-size:25px">
-													<label>Location: </label>
-													<span class="color-primary">{{$quotes[$i]->location}} </span>
+												<div class="row">
+													<div class="col-lg-12">
+													<h3 style="font-size: 25px;">LOCATION: </h3>
+													<h4 class="color-primary"  style="font-size: 25px;">{{$quotes[$i]->location}} </h4>
 												</div>
-												<div style="font-size:25px">
-													<label>Destination: </label>
-													<span class="color-primary" style="font-size:25px">{{$quotes[$i]->destination}}</span>
 												</div>
 
+												<div class="row"> 
+												<div class="col-lg-12">
+													<h3  style="font-size: 25px;">DESTINATION: </h3>
+													<h4 class="color-primary"  style="font-size: 25px;">{{$quotes[$i]->destination}}</h4>
+												</div>
+											</div>
 												<div style="margin-bottom: 2em;"></div>
 
 												<div class="row">
@@ -453,7 +462,11 @@
 														</div>
 														<div class="col-lg-2"></div>
 														<div class="col-lg-6">
-															<h3>Shipping quote price</h3>
+															<h3>Shipping price</h3>
+
+															@if($quotes[$i]->active == 1)
+															<h4 class="color-primary">pending</h4>
+															@endif
 
 															@if($quotes[$i]->active == 2)
 															<form name="contact-form" method="POST" action="/quote/accepted">
@@ -512,9 +525,9 @@
 										@endif
 
 
-				</div>
-			</div>
-		</div>
+									</div>
+								</div>
+							</div>
 
 	<!-- =========================
 		CONTACTS DETAILS
@@ -536,37 +549,7 @@
 	<!-- ===================================
 		SUBSCRIBE SECTION
 		======================================== -->
-		<div class="def-section home-subscribe">
-			<div class="container">
-				<div class="row">
-
-					<!-- === SUBSCRIBE TEXT === -->
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-text animated wow fadeInUp" data-wow-duration=".5s" data-wow-offset="100">
-						<span class="home-subscribe-icon"><i class="flaticon-email114"></i></span>
-						SIGN UP FOR NEWSLETTER TO GET UPDATES AND NEWS
-					</div>
-
-					<!-- === SUBSCRIBE FORM === -->
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home-subscribe-form animated wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" data-wow-offset="100">
-						<form>
-							<div class="home-subscribe-form-input">
-								<input type="text" name="subscribe" placeholder="YOUR E-MAIL" />
-							</div>
-							<div class="home-subscribe-form-button">
-								<button><span class="my-btn my-btn-primary">
-									<span class="my-btn-bg-top"></span>
-									<span class="my-btn-bg-bottom"></span>
-									<span class="my-btn-text">
-										SUBSCRIBE
-									</span>
-								</span></button>
-							</div>
-						</form>
-					</div>
-
-				</div>
-			</div>
-		</div>
+		@include('transaero-transport-logistics-html-template/html/components/subscribe')
 	<!-- ===================================
 		END SUBSCRIBE SECTION
 		======================================== -->

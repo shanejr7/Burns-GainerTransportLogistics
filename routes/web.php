@@ -84,7 +84,8 @@ Route::get('/logout',[SessionController::class, 'destroy']);
 
 // ORDER UPDATE LOCATION
 Route::post('/order/update',[PortalController::class, 'updateOrderLocation'])->middleware('admin');
-
+// ORDER COMPLETE
+Route::post('/order/complete',[PortalController::class, 'updateOrderComplete'])->middleware('admin');
 
 // QUOTE REQUEST
 Route::post('/quote/request',[PortalController::class, 'clientQuoteSubmission']);
@@ -95,4 +96,8 @@ Route::post('/quote/order',[PortalController::class, 'submitQuoteOrder']);
 
 // QUOTE GUEST ACCEPTED REQUEST
 Route::post('/quote/accepted',[PortalController::class, 'guestAcceptQuoteEstimate']);
+
+// SUBSCRIBE USER
+Route::post('/subscribe',[PortalController::class, 'subscribeUser'])->middleware('guest');
+
 

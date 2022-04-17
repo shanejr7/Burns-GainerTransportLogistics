@@ -51,9 +51,9 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 		<!-- 	<li> 
-				<a href="#">Elements <i class="fa fa-plus arrow"></i></a> -->
-				
-				<!-- === slide menu child === -->	
+			<a href="#">Elements <i class="fa fa-plus arrow"></i></a> -->
+			
+			<!-- === slide menu child === -->	
 			<!-- 	<ul class="slide-menu-child">
 					<li><a href="07_typography.html">Typography</a></li>
 					<li><a href="08_buttons.html">Buttons</a></li>
@@ -64,9 +64,9 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 	<!-- 		<li>
-				<a href="#">Blog <i class="fa fa-plus arrow"></i></a> -->
-				
-				<!-- === slide menu child === -->	
+		<a href="#">Blog <i class="fa fa-plus arrow"></i></a> -->
+		
+		<!-- === slide menu child === -->	
 			<!-- 	<ul class="slide-menu-child">
 					<li><a href="11_blog.html">Blog items</a></li>
 					<li><a href="12_blog_detail.html">Single Post</a></li>
@@ -82,7 +82,7 @@
 		@endguest
 
 		@auth
-			<!-- === SLIDE MENU === -->	
+		<!-- === SLIDE MENU === -->	
 		<ul id="left-menu" class="left-menu">
 			
 			<!-- === SLIDE MENU ITEM === -->	
@@ -112,6 +112,10 @@
 					<li><a href="05_service_detail.html">Service Details</a></li>
 				</ul> -->
 			</li>
+			<li >
+				<a href="/dashboard">DASHBOARD</a>
+
+			</li>
 			
 			<!-- === SLIDE MENU ITEM === -->
 			<li> 
@@ -123,9 +127,9 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 		<!-- 	<li> 
-				<a href="#">Elements <i class="fa fa-plus arrow"></i></a> -->
-				
-				<!-- === slide menu child === -->	
+			<a href="#">Elements <i class="fa fa-plus arrow"></i></a> -->
+			
+			<!-- === slide menu child === -->	
 			<!-- 	<ul class="slide-menu-child">
 					<li><a href="07_typography.html">Typography</a></li>
 					<li><a href="08_buttons.html">Buttons</a></li>
@@ -136,9 +140,9 @@
 			
 			<!-- === SLIDE MENU ITEM === -->	
 	<!-- 		<li>
-				<a href="#">Blog <i class="fa fa-plus arrow"></i></a> -->
-				
-				<!-- === slide menu child === -->	
+		<a href="#">Blog <i class="fa fa-plus arrow"></i></a> -->
+		
+		<!-- === slide menu child === -->	
 			<!-- 	<ul class="slide-menu-child">
 					<li><a href="11_blog.html">Blog items</a></li>
 					<li><a href="12_blog_detail.html">Single Post</a></li>
