@@ -463,14 +463,14 @@ class PortalController extends Controller
 
 
           $attributes =  $request->validate([
-            'subscribe' => 'required|required|email|max:255|unique:subscription',
+            'email' => 'required|required|email|max:255|unique:subscriptions',
         ]);
 
 
-          if ($attribute) {
+          if ($attributes) {
 
             $subscribe = new Subscription();
-            $subscribe->email = $request->input('subscribe');
+            $subscribe->email = $request->input('email');
 
             $subscribe->save();
 

@@ -98,6 +98,6 @@ Route::post('/quote/order',[PortalController::class, 'submitQuoteOrder']);
 Route::post('/quote/accepted',[PortalController::class, 'guestAcceptQuoteEstimate']);
 
 // SUBSCRIBE USER
-Route::post('/subscribe',[PortalController::class, 'subscribeUser'])->middleware('guest');
+Route::post('/subscribe',[PortalController::class, 'subscribeUser']);
 
 
