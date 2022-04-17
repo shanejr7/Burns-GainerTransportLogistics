@@ -547,7 +547,9 @@ class PortalController extends Controller
        // save random user info if no client id
      if(!isset($request->input('client_id'))){
 
-        $user = User::where('email','=',$quote->email)->get();
+        $email = $request->input('email');
+
+        $user = User::where('email','=',$email)->get();
 
         if (!isset($user)) {
 
