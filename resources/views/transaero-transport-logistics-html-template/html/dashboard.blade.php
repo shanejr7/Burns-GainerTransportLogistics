@@ -403,47 +403,76 @@
 						</section>
 
 
-				<section id="orderHistory">
+			<section id="orderHistory">
 
+						<!-- === BLOG ITEMS === -->
 
-					@if(isset($orders))
-					@for($i = 0; $i < sizeof($orders); $i++)
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						@if(isset($orders_history))
+						@for($i = 0; $i < sizeof($orders_history); $i++)
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 
-						<!-- === BLOG ITEM === -->
-						<div class="single-post">
-							<div class="single-post-date">
+							<!-- === BLOG ITEM === -->
+							<div class="single-post">
+							<!-- <div class="single-post-date">
 								<div class="single-post-date-number">26</div>MAY
-							</div>
-							<div class="single-post-image">
+							</div> -->
+						<!-- 	<div class="single-post-image">
 								<img src="assets/media/blog/5.jpg" alt="" />
-							</div>
-							<div class="single-post-info">
-								<span class="author-icon"><i class="fa fa-user"></i></span>
-								<a href="#">Admin</a>
+							</div> -->
+							<div class="single-post-info" style="font-size:16px">
+								<!-- <span class="author-icon"><i class="fa fa-user"></i></span> -->
+								<!-- <a href="#">Admin</a> -->
 								<span class="date-icon"><i class="fa fa-calendar"></i></span>
-								<a href="12_blog_detail.html">26 may 2015</a>
-							</div>
-							<div class="single-post-title">
-								<h3><a href="#">{{$orders[$i]->status}}</a></h3>
+								<a href="12_blog_detail.html">{{$orders_history[$i]->created_at}}</a>
 							</div>
 
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										<h3><a >STATUS: <span class="color-primary">{{$orders_history[$i]->status}}</span></a></h3>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										@if($orders_history[$i]->category_id==1)
+										<h3><a >CARGO TYPE: <span class="color-primary">Clothing</span></a></h3>
+										@endif
+										@if($orders_history[$i]->category_id==2)
+										<h3><a >CARGO TYPE: <span class="color-primary">Refrigerated goods</span> </a></h3>
+										@endif
+										@if($orders_history[$i]->category_id==3)
+										<h3><a >CARGO TYPE: <span class="color-primary">Dry goods</span></a></h3>
+										@endif
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="single-post-title">
+										<h3><a >LOCATION: <span class="color-primary">{{$orders_history[$i]->address}}</span></a></h3>
+									</div>
+								</div>
+								
+								
+								
+								
+							</div>
+							
 
-						</div>			
+						</div>
 
-					</div>
-					@endfor
+						<div class="col-lg-3"></div>
+						@endfor
 
-					@endif
+						@endif
 
-					@if(count($orders)==0)
-					<div class="col-lg-1"></div>
-					<div class="col-lg-6">
-						<h2>There aren't any orders.</h2>
-					</div>
-					@endif
+						@if(count($orders_history)==0)
+						<div class="col-lg-1"></div>
+						<div class="col-lg-6">
+							<h2>There aren't any completed orders.</h2>
+						</div>
+						@endif
 
-				</section>
+
+					</section>
 
 
 

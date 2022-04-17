@@ -31,19 +31,6 @@ class PortalController extends Controller
 {
 
 
-    /**
-     * admin page.
-     *
-     * @return \Illuminate\View\View
-     */
-
-    // public function createAdmin()
-    // {
-
-
-    //     return view('/emg-main/web/MalexHTML/App/dist/admin-notifications',['notifications' => Notification::where('user_id','=',Auth::id())->get()]);
-    // }
-
      /**
      * admin account overview page.
      *
@@ -87,7 +74,7 @@ class PortalController extends Controller
             
         }
 
-        return view('transaero-transport-logistics-html-template/html/dashboard',['quotes' => Quote::where('client_id','=',Auth::id())->get()],['orders' => Order::where('client_id','=',Auth::id())->get()]);
+        return view('transaero-transport-logistics-html-template/html/dashboard')->with(['quotes' => Quote::where('client_id','=',Auth::id())->get()])->with(['orders' => Order::where('client_id','=',Auth::id())->where('orders.status','!=','Completed')->get()])->with(['orders_history' => Order::where('client_id','=',Auth::id())->where('orders.status','like','%Completed%')->get()]);
 
     }
 
