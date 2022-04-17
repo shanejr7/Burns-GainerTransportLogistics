@@ -554,9 +554,9 @@ class PortalController extends Controller
           $user = new User();
 
           $user->is_admin = false;
-          $user->name = $quote->name;
-          $user->phone = $quote->phone;
-          $user->email = $quote->email;
+          $user->name = $request->input('name');
+          $user->phone = $request->input('phone');
+          $user->email = $request->input('email');
           $user->password = $this->randomString();
           $user = User::create($user);
 
